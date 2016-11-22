@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Options">
+        <item>Reiniciar Pontuações</item>
+        <item>Change Log</item>
+        <item>Qualifica Anime Challenge</item>
+        <item>Like us on Facebook!</item>
+        <item>Enviar um e-mail</item>
+        <item>Creditos</item>
+        <item>Audio</item>
+        <item>Vibração</item>
+        <item>Log Out from Google</item>
+    </string-array>
+    <string name="a">a</string>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Navegar para a página inicial"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Navegar para cima"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Mais opções"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Concluído"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Ver tudo"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Selecione um app"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"DESATIVAR"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"ATIVAR"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"Pesquisar..."</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Limpar consulta"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Consulta de pesquisa"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Pesquisar"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Enviar consulta"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Pesquisa por voz"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Compartilhar com"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Compartilhar com %s"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Recolher"</string>
+    <string name="app_name">Anime Challenge</string>
+    <string name="b">b</string>
+    <string name="bronzestars">Estrellas de Bronze:</string>
+    <string name="by">de</string>
+    <string name="changelog">1.0.0 - First Release March 4, 2013.
+	    1.1.1 - March 11. Fixed some bugs, database was corrected, added a new level, added facebook and rate us buttons. </string>
+    <string name="changelog_ok_button">OK</string>
+    <string name="changelog_show_full">more</string>
+    <string name="changelog_title">What\'s New</string>
+    <string name="charcompleted">Concluído!</string>
+    <string name="close">Cerrar</string>
+    <string name="developer"><b>Desenvolvedor</b></string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="disclaimermessage">Os nomes e ilustrações mostrados nesta aplicação são marcas registradas de seus respectivos proprietários.</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="exit">¿Você tem certeza que quer sair?</string>
+    <string name="from">de</string>
+    <string name="games">Gamer</string>
+    <string name="gamescore">Pontuação Total: </string>
+    <string name="gdesigner"><b>Desenhista Gráfico</b></string>
+    <string name="goldenstars">Estrellas Douradas:</string>
+    <string name="gotanime">Adivinhou o anime!</string>
+    <string name="gotfullname">Bem feito! Adivinhou o nome completo</string>
+    <string name="gotname">Adivinhou o nome, parcialmente</string>
+    <string name="hello_world">Hola Mundo!</string>
+    <string name="hint">Hint</string>
+    <string name="hintsused">Sugestões Usado;</string>
+    <string name="level">Nível 1</string>
+    <string name="level10">Nível 10</string>
+    <string name="level11">Nível 11</string>
+    <string name="level12">Nível 12</string>
+    <string name="level13">Nível 13</string>
+    <string name="level14">Nível 14</string>
+    <string name="level15">Nível 15</string>
+    <string name="level16">Nível 16</string>
+    <string name="level17">Nível 17</string>
+    <string name="level18">Nível 18</string>
+    <string name="level19">Nível 19</string>
+    <string name="level2">Nível 2</string>
+    <string name="level20">Nível 20</string>
+    <string name="level21">Nível 21</string>
+    <string name="level22">Nível 22</string>
+    <string name="level23">Nível 23</string>
+    <string name="level24">Nível 24</string>
+    <string name="level25">Nível 25</string>
+    <string name="level26">Nível 26</string>
+    <string name="level27">Nível 27</string>
+    <string name="level28">Nível 28</string>
+    <string name="level29">Nível 29</string>
+    <string name="level3">Nível 3</string>
+    <string name="level30">Nível 30</string>
+    <string name="level4">Nível 4</string>
+    <string name="level5">Nível 5</string>
+    <string name="level6">Nível 6</string>
+    <string name="level7">Nível 7</string>
+    <string name="level8">Nível 8</string>
+    <string name="level9">Nível 9</string>
+    <string name="levelgames">Nível Gamer</string>
+    <string name="levelgames2">Nível Gamer 2</string>
+    <string name="levelmovies">Nível Filmes</string>
+    <string name="levelpets">Nível Pets</string>
+    <string name="logingoogle">Log in Google</string>
+    <string name="logingooglesure">Log into Google?</string>
+    <string name="logoutgoogle">Log out from Google</string>
+    <string name="logoutgooglesure">Do you really want to log out of Google Services?</string>
+    <string name="lvlscore">Nível</string>
+    <string name="menu_settings">Opções</string>
+    <string msgid="3698378085901466129" name="mr_button_content_description">"Botão Transmitir"</string>
+    <string msgid="6349900579507521956" name="mr_chooser_searching">"Localizando dispositivos"</string>
+    <string msgid="414301941546135990" name="mr_chooser_title">"Transmitir para"</string>
+    <string msgid="6422801843540543585" name="mr_controller_album_art">"Arte do álbum"</string>
+    <string msgid="4868457957151124867" name="mr_controller_casting_screen">"Transmitindo a tela"</string>
+    <string msgid="7333862312480583260" name="mr_controller_close_description">"Fechar"</string>
+    <string msgid="7924809056904240926" name="mr_controller_collapse_group">"Recolher"</string>
+    <string msgid="1227264889412989580" name="mr_controller_disconnect">"Desconectar"</string>
+    <string msgid="8062427022744266907" name="mr_controller_expand_group">"Expandir"</string>
+    <string msgid="5585418471741142924" name="mr_controller_no_info_available">"Nenhuma informação disponível"</string>
+    <string msgid="6547130360349182381" name="mr_controller_no_media_selected">"Nenhuma mídia selecionada"</string>
+    <string msgid="5451884435510905406" name="mr_controller_pause">"Pausar"</string>
+    <string msgid="683634565969987458" name="mr_controller_play">"Reproduzir"</string>
+    <string msgid="4570331844078181931" name="mr_controller_stop">"Interromper transmissão"</string>
+    <string msgid="5441529851481176817" name="mr_system_route_name">"Sistema"</string>
+    <string msgid="7498112907524977311" name="mr_user_route_category_name">"Dispositivos"</string>
+    <string name="no">Não</string>
+    <string name="ok">OK</string>
+    <string name="options">  Opções  </string>
+    <string name="qall">Nome o Anime?</string>
+    <string name="qanime">Anime?</string>
+    <string name="qfname">Você sabe o nome completo?</string>
+    <string name="qname">Nome?</string>
+    <string name="quit">  Fechar  </string>
+    <string name="ranking">  Stats  </string>
+    <string name="rateuserror">Couldn\'t open Google Play Store</string>
+    <string name="resetmessage">¿Tem certeza que deseja reiniciar as pontuações?</string>
+    <string name="silverstars">Estrellas de Prata:</string>
+    <string name="specialthanks"><b>Special Thanks</b></string>
+    <string name="start">  Começar  </string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="tab1">Estrelas</string>
+    <string name="tab2">Stats Niveles</string>
+    <string name="tab3">Others</string>
+    <string name="test">Test String</string>
+    <string name="title_activity_character">Personaje</string>
+    <string name="title_activity_edit_preferences">EditPreferences</string>
+    <string name="title_activity_level">Nível</string>
+    <string name="title_activity_level_selection">Selecion de Nível</string>
+    <string name="title_activity_main">Challenge Anime</string>
+    <string name="title_activity_options">OptionsActivity</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_stats">Stats</string>
+    <string name="totalscore">Total</string>
+    <string name="tounlock">Pts para Desbloquear</string>
+    <string name="unlockedtoast">Desbloqueado Nível </string>
+    <string name="unlockedtoast10">Nível 10 Desbloqueado</string>
+    <string name="unlockedtoast11">Nível 11 Desbloqueado</string>
+    <string name="unlockedtoast12">Nível 12 Desbloqueado</string>
+    <string name="unlockedtoast13">Nível 13 Desbloqueado</string>
+    <string name="unlockedtoast14">Nível 14 Desbloqueado</string>
+    <string name="unlockedtoast15">Nível 15 Desbloqueado</string>
+    <string name="unlockedtoast16">Nível 16 Desbloqueado</string>
+    <string name="unlockedtoast17">Nível 17 Desbloqueado</string>
+    <string name="unlockedtoast18">Nível 18 Desbloqueado</string>
+    <string name="unlockedtoast19">Nível 19 Desbloqueado</string>
+    <string name="unlockedtoast20">Nível 20 Desbloqueado</string>
+    <string name="unlockedtoast21">Nível 21 Desbloqueado</string>
+    <string name="unlockedtoast22">Nível 22 Desbloqueado</string>
+    <string name="unlockedtoast23">Nível 23 Desbloqueado</string>
+    <string name="unlockedtoast3">Nível 3 Desbloquado</string>
+    <string name="unlockedtoast4">Nível 4 Desbloqueado</string>
+    <string name="unlockedtoast5">Nível 5 Desbloqueado</string>
+    <string name="unlockedtoast6">Nível 6 Desbloqueado</string>
+    <string name="unlockedtoast7">Nível 7 Desbloqueado</string>
+    <string name="unlockedtoast8">Nível 8 Desbloqueado</string>
+    <string name="unlockedtoast9">Nível 9 Desbloqueado</string>
+    <string name="unlockedtoastgamesspecial">Nível Gamer Desbloqueado</string>
+    <string name="unlockedtoastgamesspecial2">Nível Gamer 2 Desbloqueado</string>
+    <string name="unlockedtoastmovies">Nível de Filmes Desbloqueado</string>
+    <string name="unlockedtoastpets">Nível de Pets Desbloqueado</string>
+    <string name="viboff">Vibração Desativado</string>
+    <string name="vibon">Vibração Ativado</string>
+    <string name="vibration">Vibração</string>
+    <string name="voloff">Som Desativado</string>
+    <string name="volon">Som Ativado</string>
+    <string name="volume">Volume</string>
+    <string name="wrong">Errado</string>
+    <string name="yes">Se</string>
+    <string name="zero">0</string>
+</resources>

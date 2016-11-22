@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <style type='text/css'>
+      a            { color:#a0a0e0 }
+      div.title    { 
+          color:#C0F0C0; 
+          font-size:1.2em; 
+          font-weight:bold; 
+          margin-top:1em; 
+          margin-bottom:0.5em; 
+          text-align:center }
+      div.subtitle { 
+          color:#C0F0C0; 
+          font-size:0.8em; 
+          margin-bottom:1em; 
+          text-align:center }
+      div.freetext { color:#F0F0F0 }
+      div.list     { color:#C0C0F0 }
+    </style>
+  </head>
+  <body>
+    $ 2.0.0
+% Version 2.0.0 The Brand new Update
+  _ February 1 2016
+    *Appearance updated to material design.
+    *App runs only on portrait mode.
+    *Adjusted app for better performance on all devices.
+    *Now works in newer devices too.
+  	*Rewrote most of the code from scrap.
+  	*Heavy bug fixing.
+  	*Improved achievement unlocking logic.
+  	*Added animations.
+  	*Better image compression to make the app lighter.
+    $ 1.3.4
+% Version 1.3.4
+  _ September 23 2014
+  	*Fixed a bug in large screen devices.
+    $ 1.3.3
+% Version 1.3.3
+  _ September 19 2014
+  	*Added Levels 22 and 23
+      $ 1.3.2
+% Version 1.3.2
+  _ July 16 2014
+  	*Faster transition between characters.
+  	*Fixed a sound bug.
+  	*Fixed an issue with Google Services.
+    $ 1.3.1
+% Version 1.3.1
+  _ July 1, 2014
+  	*Leaderboards are now available.
+  	*Score is now named "Power Level".
+    $ 1.3.0
+% Version 1.3.0
+  _ June 26, 2014
+  	*Fixed the issue in level 23 with "Golden Time" characters.
+  	*Added Google Play Service Support.
+  	*Added Interstitials.
+  	*Added Achievements & Leaderboard.
+  	*Added Volume and Vibration buttons to the character screen.
+  	*This version is intended to be an open test of the Google Play Services functionalities, in preparation of the 2.0 versions.
+    $ 1.2.2
+% Version 1.2.2
+  _ January 16, 2014
+  	*Some bug fixes.
+  	*Added "Swipe Gesture" detection.
+  	*Added Levels "Movies" and 23. 
+   $ 1.2.1
+% Version 1.2.1
+  _ September 22, 2013
+  	*Fixed Tablets Issues.
+  	*Some reported bugs fixed.
+  $ 1.2.0
+% Version 1.2.0
+  _ September 21, 2013
+  	*Added Hint Button.
+  	*Added 10 more characters to Gamer Level.
+  	*Added 4 more levels, 18, 19, 20 and Gamer Level 2.
+  	*Device now vibrates according to the answer.
+  	*Improved stability.
+  	*Scores needed to unlock were rebalanced.
+  	*Added Credits Screen.
+  	*Audio and Vibration on/off controls added.
+  	*Views were improved for 7" screens.
+ $ 1.1.3
+  % Version 1.1.3
+  _ May 28, 2013
+  	*In the previous release we left all the levels Unlocked, it was an epic Error, sorry about that.
+ $ 1.1.2
+  % Version 1.1.2
+  _ May 27, 2013
+  	*Fixed a Database Bug.
+  	*Database was rechecked and corrected.
+  	*Some typos were corrected.
+  	*Facebook Button was added.
+  	*Added and option to send an e-mail to the developers.
+  	*Added Level 17 and Pets Level.
+  	*Added more Characters to all Levels but Gamer Level.
+  	*Changed the unlocking logic and required scores.
+  	*Now you may know how much points you need to unlock a level.
+  	*The level gold star, is achieved only with 100% of the level completed.
+  	*Added "next" and "previous" buttons to ease the navigation.
+  	*The Stats Tab Host was recreated with Fragments Activities.
+$ 1.1.1
+  % Version 1.1.1
+  _ March 12, 2013
+    *Some bugs where fixed.
+    *Database was rechecked and corrected.
+    *Added this changelog.
+    *Added "rate us" button.
+    *Added level 16, and 2 more characters to level 15.
+$ 1.1.0
+  % Version 1.1.0
+  _ March 4, 2013
+    * First public release.
+    * Stable version.
+$ 1.0.0
+  % Version 1.0.0
+  * Internal testing, not released.
+$ END_OF_CHANGE_LOG
+  </body>
+</html>

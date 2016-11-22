@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Anime Challenge</string>
+    <string name="hello_world">Hola Mundo!</string>
+    <string name="menu_settings">Opciones</string>
+    <string name="title_activity_main">Challenge Anime</string>
+    <string name="start">  Empezar  </string>
+    <string name="options">  Opciones  </string>
+    <string name="ranking">  Stats  </string>
+    <string name="quit">  Salir  </string>
+    <string name="title_activity_level_selection">Selecion de Nivel</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="title_activity_level">Nivel</string>
+    <string name="tounlock"> Pts para Desbloquear</string>
+    <string name="level">Nivel 1</string>
+    <string name="title_activity_character">Personaje</string>
+    <string name="level2">Nivel 2</string>
+    <string name="level3">Nivel 3</string>
+    <string name="level4">Nivel 4</string>
+    <string name="level5">Nivel 5</string>
+    <string name="level6">Nivel 6</string>
+    <string name="level7">Nivel 7</string>
+    <string name="level8">Nivel 8</string>
+    <string name="level9">Nivel 9</string>
+    <string name="level10">Nivel 10</string>
+    <string name="level11">Nivel 11</string>
+    <string name="level12">Nivel 12</string>
+    <string name="level13">Nivel 13</string>
+    <string name="level14">Nivel 14</string>
+    <string name="level15">Nivel 15</string>
+    <string name="level16">Nivel 16</string>
+    <string name="level17">Nivel 17</string>
+    <string name="level18">Nivel 18</string>
+    <string name="level19">Nivel 19</string>
+    <string name="level20">Nivel 20</string>
+    <string name="level21">Nivel 21</string>
+    <string name="level22">Nivel 22</string>
+    <string name="level23">Nivel 23</string>
+    <string name="level24">Nivel 24</string>
+    <string name="level25">Nivel 25</string>
+    <string name="level26">Nivel 26</string>
+    <string name="level27">Nivel 27</string>
+    <string name="level28">Nivel 28</string>
+    <string name="level29">Nivel 29</string>
+    <string name="level30">Nivel 30</string>
+    <string name="levelpets">Nivel Pets</string>
+    <string name="levelgames">Nivel Gamer</string>
+    <string name="levelgames2">Nivel Gamer 2</string>
+    <string name="levelmovies">Nivel Peliculas</string>
+    <string name="gotname">Acertaste el nombre, parcialmente</string>
+    <string name="gotfullname">¡Bien hecho! Acertaste el nombre completo</string>
+    <string name="gotanime">Acertaste el anime!</string>
+    <string name="wrong">No acertaste</string>
+    <string name="charcompleted">¡Completado!</string>
+    <string name="qname">¿Nombre?</string>
+    <string name="qanime">¿Anime?</string>
+    <string name="qfname">¿Sabes el nombre completo?</string>
+    <string name="qall">¿Nombre o Anime?</string>
+    <string name="a">a</string>
+    <string name="b">b</string>
+    <string name="title_activity_options">OptionsActivity</string>
+    <string name="exit">¿Esta seguro que desea salir?</string>
+    <string name="volon">Audio Activado</string>
+    <string name="voloff">Audio Desactivado</string>
+    <string name="vibon">Vibracion Activada</string>
+	<string name="viboff">Vibracion Desactivada</string>
+	<string name="hintsused">Pistas Usadas: </string>
+	
+    <string-array name="Options">
+        <item>Reestablecer Puntajes</item>
+        <item>Ver Change Log</item>
+        <item>Calificar Anime Challenge</item>
+        <item>Danos un Me Gusta en Facebook!</item>
+        <item>Envie un correo a los desarrolladores</item>
+        <item>Mostrar Creditos</item>
+        <item>Audio</item>
+        <item>Vibracion</item>
+        <item>Log in/out from Google</item>
+    </string-array>
+    
+    <string name="logingoogle">Acceder a Google</string>
+    <string name="logoutgoogle">Salir de Google</string>
+    <string name="logingooglesure">Ingresar a los Servicios de Google?</string>
+    <string name="logoutgooglesure">¿Realmente desea salir de los Servicios de Google?</string>
+    
+    <string name="unlockedtoast3">Nivel 3 Desbloquado</string>
+    <string name="unlockedtoast4">Nivel 4 Desbloqueado</string>
+    <string name="unlockedtoast5">Nivel 5 Desbloqueado</string>
+    <string name="unlockedtoast6">Nivel 6 Desbloqueado</string>
+    <string name="unlockedtoast7">Nivel 7 Desbloqueado</string>
+    <string name="unlockedtoast8">Nivel 8 Desbloqueado</string>
+    <string name="unlockedtoastgamesspecial">Nivel Gamer Desbloqueado</string>
+    <string name="unlockedtoast9">Nivel 9 Desbloqueado</string>
+    <string name="unlockedtoast10">Nivel 10 Desbloqueado</string>
+    <string name="unlockedtoast11">Nivel 11 Desbloqueado</string>
+    <string name="unlockedtoast12">Nivel 12 Desbloqueado</string>
+    <string name="unlockedtoast13">Nivel 13 Desbloqueado</string>
+    <string name="unlockedtoast14">Nivel 14 Desbloqueado</string>
+    <string name="unlockedtoast15">Nivel 15 Desbloqueado</string>
+    <string name="unlockedtoast16">Nivel 16 Desbloqueado</string>
+    <string name="unlockedtoastpets">Nivel de Pets Desbloqueado</string>
+    <string name="unlockedtoast17">Nivel 17 Desbloqueado</string>
+    <string name="unlockedtoast18">Nivel 18 Desbloqueado</string>
+    <string name="unlockedtoastgamesspecial2">2ndo Nivel Gamer Desbloqueado</string>
+    <string name="unlockedtoast19">Nivel 19 Desbloqueado</string>
+    <string name="unlockedtoast20">Nivel 20 Desbloqueado</string>
+    <string name="unlockedtoastmovies">Nivel de Peliculas Desbloqueado</string>
+    <string name="unlockedtoast21">Nivel 21 Desbloqueado</string>
+    <string name="lvlscore">Nivel</string>
+    <string name="totalscore">Total</string>
+    <string name="gamescore">Power Level: </string>
+    <string name="ok">OK</string>
+    <string name="hint">Pista</string>
+    <string name="test">Test String</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_edit_preferences">EditPreferences</string>
+    <string name="title_activity_stats">Stats</string>
+    <string name="tab1">Estrellas</string>
+    <string name="tab2">Stats Niveles</string>
+    <string name="tab3">Others</string>
+    <string name="goldenstars">Estrellas de Oro:</string>
+    <string name="silverstars">Estrellas de Plata:</string>
+    <string name="bronzestars">Estrellas de Bronce:</string>
+    <string name="zero">0</string>
+    <string name="games">Gamer</string>
+    <string name="resetmessage">¿Estas seguro de reestablecer los puntajes?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="from">de</string>
+    <string name="close">Cerrar</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="disclaimermessage">Los nombres e ilustraciones mostrados en esta aplicacion son marcas registradas de sus respectivos dueños.</string>
+    <string name="changelog_title">Novedades</string>
+    <string name="changelog_ok_button">OK</string>
+    <string name="changelog_show_full">mas</string>
+    <string name="rateuserror">No se pudo abrir Google Play</string>
+    
+        
+    <string name="by">por</string>
+    <string name="developer"><b>Desarrollador</b></string>
+    <string name="gdesigner"><b>Diseñador Gráfico</b></string>
+    <string name="specialthanks"><b>Agradecimientos</b></string>
+
+    <string name="vibration">Vibración</string>
+    <string name="volume">Volumen</string>
+    <string name="unlockedtoast22">Nivel 22 Desbloqueado</string>
+    <string name="unlockedtoast23">Nivel 23 Desbloqueado</string>
+    <string name="changelog">1.0.0 - First Release March 4, 2013. 	    1.1.1 - March 11. Fixed some bugs, database was corrected, added a new level, added facebook and rate us buttons.</string>
+    <string name="unlockedtoast">Desbloqueado el nivel </string>
+
+
+</resources>

@@ -1,0 +1,6 @@
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/disclaimlpress"/> <!-- currently pressed turning the toggle off! -->
+    <item android:drawable="@drawable/disclaiml"/> <!-- default non-pressed non-checked -->
+</selector>

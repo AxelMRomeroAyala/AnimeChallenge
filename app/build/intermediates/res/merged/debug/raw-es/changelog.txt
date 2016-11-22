@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <style type='text/css'>
+      a            { color:#a0a0e0 }
+      div.title    { 
+          color:#C0F0C0; 
+          font-size:1.2em; 
+          font-weight:bold; 
+          margin-top:1em; 
+          margin-bottom:0.5em; 
+          text-align:center }
+      div.subtitle { 
+          color:#C0F0C0; 
+          font-size:0.8em; 
+          margin-bottom:1em; 
+          text-align:center }
+      div.freetext { color:#F0F0F0 }
+      div.list     { color:#C0C0F0 }
+    </style>
+  </head>
+  <body>
+        $ 1.3.4
+% Version 1.3.4 (Pre 2.0)
+  _ Septiembre 23 2014
+  	*Solucionado un bug en dispositivos con pantallas grandes
+        $ 1.3.3
+% Version 1.3.3 (Pre 2.0)
+  _ Septiembre 19 2014
+  	*Agregados niveles 22 y 23
+        $ 1.3.2
+% Version 1.3.2 (Pre 2.0)
+  _ Julio 16, 2014
+  	*Transicion mas rapida entre personajes.
+  	*Solucionado un bug de audio.
+  	*Arreglado un problema con los servicios de Google.
+    $ 1.3.1
+% Version 1.3.1 (Pre 2.0)
+  _ Julio 1, 2014
+  	*Tabla de Clasificacion disponible.
+  	*La puntuacion ahora es llamada "Power Level".
+    $ 1.3.0
+% Version 1.3.0 (Pre 2.0)
+  _ Junio 24, 2014
+  	*Arreglado el problema con los personajes de "Golden Time" en el nivel 23.
+  	*Agregado el soporte con los servicios de Google Play.
+  	*Se agregaron "Intersitials".
+  	*Añadidos Logros y Tabla de Clasificacion.
+  	*En la pantalla de personajes se agregaron botones de Volumen y Vibracion.
+  	*Esta version se concibe como prueba de los servicios de Google Play, en preparacion para las versiones 2.0.
+     $ 1.2.2
+% Version 1.2.2
+  _ Enero 16, 2014
+  	*Se corrigieron bugs especificos con algunos dispositivos
+  	*Se añadio la deteccion de gestos "Swipe"
+  	*Añadidos los niveles "Movies" y 23.
+    $ 1.2.1
+% Version 1.2.1
+  _ Septiembre 22, 2013
+  	*Arreglado un problema con las Tablets
+  	*Se corrigieron unos bugs reportados
+  $ 1.2.0
+% Version 1.2.0
+  _ Septiembre 21, 2013
+  	*Agregado Boton "Pista" (Hint)
+  	*Se agregaron 10 personajes al Nivel Gamer
+  	*Agregados 4 niveles: 18, 19, 20 y Nivel Gamer 2
+  	*Ahora el dispositivo vibra segun la respuesta
+  	*Se mejoro la estabilidad
+  	*Se rebalancearon los puntajes para desbloquear niveles
+  	*Creditos agregados
+  	*Se agregaron controles de vibracion y sonidos
+  	*Se maqueto la aplicacion para tablets de 7"
+$ 1.1.3
+  % Version 1.1.3
+  _ Mayo 28, 2013
+  	*En la version anterior, dejamos todos los niveles desbloqueado por error. Pedimos disculpas.
+$ 1.1.2
+  % Version 1.1.2
+  _ Mayo 26, 2013
+  	*Arreglado un bug en la base de datos
+  	*La base de datos fue corregida.
+  	*Se corrigieron algunos errores ortograficos
+  	*Se agrego el boton de Facebook
+  	*Se agrego la opcion de enviar un mail a los desarrolladores
+  	*Agregados 2 nuevos niveles, Nivel 17 y Mascotas
+  	*Se agregaron mas personajes a todos los niveles menos el Nivel Gamer
+  	*Se cambio la logica de desbloqueo y se cambiaron los puntajes necesarios
+  	*Ahora se muestra la cantidad de puntos necesarios para desbloquear los niveles
+  	*Las estrellas de oro del nivel solo se consiguen con 100% del mismo completado
+  	*Se añadieron los botones "anterior" y "siguiente" para mejorar la navegacion
+  	*El "Tab Host" del menu de estadisticas fue recreado con Fragments
+$ 1.1.1
+  % Version 1.1.1
+  _ Marzo 12, 2013
+    *Algunos bugs fueron arreglados
+    *La base de datos fue corregida.
+    *Se agrego este changelog
+    *Boton "rate us" agregado
+    *Agregados 2 personajes mas al nivel 15 y 22 al nuevo nivel 16
+$ 1.1.0
+  % Version 1.1.0
+  _ Marzo 4, 2013
+    * Primera version publicada.
+    * Estable.
+$ 1.0.0
+  % Version 1.0.0
+  * Para prueba interna, no fue publicada.
+$ END_OF_CHANGE_LOG
+  </body>
+</html>

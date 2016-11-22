@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-430de4f81d5d2a4074d2b0672397cb8446c67cef.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="58c9f5ee817fdb8b658fd7455fadfb74119f7ee9">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-1d1377642fb30b68bcc4f2e00452339754bfa42e.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-d34dd365c5ec5b2d1e87193e398f9ac1f7b20868.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-c714270d20500042d9587031ea63f397300771f8.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-ece975b5da1daf26d1ff1774e8740c2265dfe76a.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="1bbccf762e4dd23c6d2e39050554b9dba170690f">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-1d9b0ac0f3da4e8919b1e8363026469602860475.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-59b1494008c9372520f2a19a340191faf82cc2ea.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="0b060160e7daee343f5315b3da91b0ff2d7eed89">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-b5432f85f4541681206de75d4565469fb52aa3ba.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="dd51b31890731591729f046d7a09c4fe4e483ed1">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-d27743031775e51d74e038d78cc1092056592612.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="4b6d9b70f93bbeb872d0948bc064ae3f3f2bcbac">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-d7060bbec0408130b3a837ed7501b882ca55d24c.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-fec7ae42ac4f46d34653f59b94e873f218227592.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="736d8893fb702f128a153c9d87c9c29724d37872">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-a9db5faaef335b0046c893dd33b45115c573b8e8.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-55203a9d24c965045bd8d9102bff990f69a63b6d.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-7917f566d67e9fc610333f6086c54edef1207112.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/classes.jar"
+        revision="24.0.0"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-7e21ec173b100734defce08da5fd8b5a8b00a20b.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="e6e2251f3d3abf4eecd6bf6919d41fc7af497852">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-db7f83639ece3fcc0af96c7301acdefb3eb2c914.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="461e4257888c25ec05abcd91e758fe7f4949230a">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-518520a29f4db862682876ee5b2fcb61652cacb5.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="8ce5e7a4a146dddd1d9e66b09c714a6c149916d8">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-71be560663d45ac5bdf57a6528498fcfbd78e60e.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-9924bb8ea637784b9a426b4b41bbc9b69704f6d7.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="d49118ba67a101c4895f0581f17142cba85b330b">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-f9813d4e03110965be23b92e9f4804050713a893.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="670df81539ab71918d49b186598b7eff08ef6563">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-9cf34c5adf3321242b471e3b247082c980b4ce49.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="8197651ce1af4d89b47f4545cc720bc4f8611e7d">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-f78437d90ba4b6adede3cfb1edbf9e2faff3fb8b.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="e35002351f2d415093a9b564652d4b56be6a0593">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-afe1b1a4d51f1e1968927dd6946b957adb17e844.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="4348dd26d83b56c2058b768222c3271bce911724">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-e92bafe1a623b94f0c88d1bf0be5559727edf8c1.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="7ea53c4458b80e8ea71f7fd6831fa184c501377b">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-553e9c6088ccd4b3c3519eef176ae44d63645533.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-contextmanager/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="72eacac37fc64e95d53abd2a041bf81a952d8615">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-7052d6edfb754a7ae1119cdecac1638594bd6c1e.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="a432629397351d3ec7f27a23d258b229b81af08f">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-419c878c42b07de78b4fbde7fbc0a99c2595edb4.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="6bc41d9d6fd12d2ef23c785a259011001f4a1a5b">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-51c6f06f016a696764d3d4f9bb68980bae161bae.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-9a227f8bbd97c3d8e7066bf0cbaa68ef7471b1db.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-d7cae2ffb293b90922eebb82fabf114062af3384.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-6dbced9817ed44d50d265d73b1197d436a715a3a.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="84bf369090a8f7e293817efbd6ccf31ada1be32b">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-73f9fdce5871e3969d6049e76a5dbb33c66ebbff.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="ba47b210d36301e237ccfea860eaada04590f12a">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-ad33326178314a986695f3c7d67cd97c8bfb1f83.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-4c5a8609395b4a12107a49217667f6871d1b9da3.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="e5e8e535d15834e824817bdf5370556f62b4b2a5">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-81d6e64d7ea5704cfc4add24bfbaa377cde55c64.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="0ad33eb600f3d80bdff5ce355c90d5533ade652a">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-6f7cbcb11685c01f3e9cc105d96343b2dd9ea8bb.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.1.1/jars/classes.jar"
+        revision="24.0.0"
+        sha1="787871951412550519b0222aba3c9df4cea49875">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-7b9bec85d3cb571468956f66f2fd97e3f629e39b.jar" />
+    </item>
+    <item
+        jar="/home/aromero/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.1.1/3af19f153122737b372622fa6c81dd11a1c6b999/support-annotations-24.1.1.jar"
+        revision="24.0.0"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/support-annotations-24.1.1-7110a290d13e944f301d4daee110557bfa8c947f.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="c8f5d56f8f8a287c95e02c542baade138a378048">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-8ab5acf79d069581a865bc23f3a35990ee8bfa07.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-d14eea6c38607c64651795db314357c366f75f14.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="03829a2618892d438a1f59c6286699ca1f476e93">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-9cca77f77554e39d41c4b705039d8ea7fe341cf4.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="954697ee6ea7bdd596babf4f70e8b7a17ca7649e">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-225f3ebd28a4f70c825e6a529ad38f0fd8700ae1.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="7bc6ea2bcfd6de4b7085e0f3a01616c5c8e0e2ad">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-2b104e7e0bf2a72a77059d56d7ec2fa2efa773d5.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="0e4d53465cc141bec58f18a894e4c4e80633fa32">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-f3c97bbc29fcaa5cab5ba62fde84521b6ac60cd0.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/libs/internal_impl-24.1.1.jar"
+        revision="24.0.0"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/internal_impl-24.1.1-8ebe3640bc899c32700c00a3ee239dee97282845.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="98e97da89d4df8e2f6eba63498d3d46a587372f2">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-622a8125eec26883dbb98f7d3c1c04ac3031cb31.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="b1acf13f1b7d8232af78a30833f9a966d1394c84">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-cd17a268ce68c143d92332a572d1d8350c11b1ba.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-0ea0554d8d2162f62c7c22931597b92b8ef7375f.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="b9d48baf96c7e187991a9befa833bebd181960a9">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-f9bd0d6992c44ac6cc593e3ef4752168a9e53cc6.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="5e04c0b3683ca45b343284d93e5594b5f9044551">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-e631a4f1bd58f7c158c54e0b46d58d9609ca98ea.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-0d35f0bf80507fd076eb94a056da94b21a978521.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-39c58821675c9885d047aceaf3821f9c7ca53d4d.jar" />
+    </item>
+    <item
+        jar="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.4.0/jars/classes.jar"
+        revision="24.0.0"
+        sha1="c10df7344e31161852c20bb8143fc37319aa10ec">
+        <dex dex="/home/aromero/Desktop/Anime Challenge AndStudio/AnimeChallenge/app/build/intermediates/jill/debug/packaged/classes-67637afed8d7e8d717d9a2ff53d8632f089615d7.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,1426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/statslvl1frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/statslvl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl1pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl1" />
+
+                <ImageView
+                    android:id="@+id/starsanim1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl1starsstring"
+                    android:contentDescription="@string/dummy_content"
+                    />
+
+                <TextView
+                    android:id="@+id/statslvl1starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl1pbar"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl1score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl1"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/statslvl2frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl1frame" >
+
+                <TextView
+                    android:id="@+id/statslvl2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level2"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl2pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl2" />
+
+                <ImageView
+                    android:id="@+id/starsanim2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl2starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl2starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl2pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl2score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl2"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/statslvl3frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl2frame" >
+
+                <TextView
+                    android:id="@+id/statslvl3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level3"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl3pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl3" />
+
+                <ImageView
+                    android:id="@+id/starsanim3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl3starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl3starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl3pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl3score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl3"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl4frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl3frame" >
+
+                <TextView
+                    android:id="@+id/statslvl4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level4"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl4pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl4" />
+
+                <ImageView
+                    android:id="@+id/starsanim4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl4starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl4starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl4pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl4score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl4"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl5frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl4frame" >
+
+                <TextView
+                    android:id="@+id/statslvl5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level5"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl5pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl5" />
+
+                <ImageView
+                    android:id="@+id/starsanim5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl5starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl5starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl5pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl5score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl5"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl6frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl5frame" >
+
+                <TextView
+                    android:id="@+id/statslvl6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level6"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl6pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl6" />
+
+                <ImageView
+                    android:id="@+id/starsanim6"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl6starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl6starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl6pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl6score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl6"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl7frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl6frame" >
+
+                <TextView
+                    android:id="@+id/statslvl7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level7"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl7pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl7" />
+
+                <ImageView
+                    android:id="@+id/starsanim7"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl7starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl7starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl7pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl7score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl7"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvlgamesframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl7frame" >
+
+                <TextView
+                    android:id="@+id/statslvlgames"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/levelgames"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvlgamespbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvlgames" />
+
+                <ImageView
+                    android:id="@+id/starsanimgames"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvlgamesstarsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvlgamesstarsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvlgamespbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvlgamesscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvlgames"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl8frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvlgamesframe" >
+
+                <TextView
+                    android:id="@+id/statslvl8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level8"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl8pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl8" />
+
+                <ImageView
+                    android:id="@+id/starsanim8"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl8starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl8starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl8pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl8score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl8"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl9frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl8frame" >
+
+                <TextView
+                    android:id="@+id/statslvl9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level9"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl9pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl9" />
+
+                <ImageView
+                    android:id="@+id/starsanim9"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl9starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl9starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl9pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl9score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl9"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl10frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl9frame" >
+
+                <TextView
+                    android:id="@+id/statslvl10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level10"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl10pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl10" />
+
+                <ImageView
+                    android:id="@+id/starsanim10"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl10starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl10starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl10pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl10score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl10"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl11frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl10frame" >
+
+                <TextView
+                    android:id="@+id/statslvl11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level11"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl11pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl11" />
+
+                <ImageView
+                    android:id="@+id/starsanim11"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl11starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl11starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl11pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl11score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl11"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl12frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl11frame" >
+
+                <TextView
+                    android:id="@+id/statslvl12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level12"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl12pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl12" />
+
+                <ImageView
+                    android:id="@+id/starsanim12"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl12starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl12starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl12pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl12score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl12"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl13frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl12frame" >
+
+                <TextView
+                    android:id="@+id/statslvl13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level13"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl13pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl13" />
+
+                <ImageView
+                    android:id="@+id/starsanim13"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl13starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl13starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl13pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl13score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl13"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl14frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl13frame" >
+
+                <TextView
+                    android:id="@+id/statslvl14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level14"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl14pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl14" />
+
+                <ImageView
+                    android:id="@+id/starsanim14"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl14starsstring"
+                    android:contentDescription="@string/dummy_content" />
+
+                <TextView
+                    android:id="@+id/statslvl14starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl14pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl14score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl14"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl15frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl14frame" >
+
+                <TextView
+                    android:id="@+id/statslvl15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level15"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl15pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl15" />
+
+                <ImageView
+                    android:id="@+id/starsanim15"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl15starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl15starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl15pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl15score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl15"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl16frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl15frame" >
+
+                <TextView
+                    android:id="@+id/statslvl16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level16"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl16pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl16" />
+
+                <ImageView
+                    android:id="@+id/starsanim16"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl16starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl16starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl16pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl16score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl16"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvlpetsframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl16frame" >
+
+                <TextView
+                    android:id="@+id/statslvlpets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/levelpets"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvlpetspbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvlpets" />
+
+                <ImageView
+                    android:id="@+id/starsanimpets"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvlpetsstarsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvlpetsstarsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvlpetspbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvlpetsscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvlpets"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl17frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvlpetsframe" >
+
+                <TextView
+                    android:id="@+id/statslvl17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level17"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl17pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl17" />
+
+                <ImageView
+                    android:id="@+id/starsanim17"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl17starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl17starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl17pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl17score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl17"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl18frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl17frame" >
+
+                <TextView
+                    android:id="@+id/statslvl18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level18"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl18pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl18" />
+
+                <ImageView
+                    android:id="@+id/starsanim18"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl18starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl18starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl18pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl18score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl18"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvlgames2frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl18frame" >
+
+                <TextView
+                    android:id="@+id/statslvlgames2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/levelgames2"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvlgames2pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvlgames2" />
+
+                <ImageView
+                    android:id="@+id/starsanimgames2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvlgames2starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvlgames2starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvlgames2pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvlgames2score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvlgames2"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl19frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvlgames2frame" >
+
+                <TextView
+                    android:id="@+id/statslvl19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level19"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl19pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl19" />
+
+                <ImageView
+                    android:id="@+id/starsanim19"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl19starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl19starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl19pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl19score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl19"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl20frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl19frame" >
+
+                <TextView
+                    android:id="@+id/statslvl20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level20"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl20pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl20" />
+
+                <ImageView
+                    android:id="@+id/starsanim20"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl20starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl20starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl20pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl20score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl20"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvlmoviesframe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl20frame" >
+
+                <TextView
+                    android:id="@+id/statslvlmovies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/levelmovies"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvlmoviespbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvlmovies" />
+
+                <ImageView
+                    android:id="@+id/starsanimmovies"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvlmoviesstarsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvlmoviesstarsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvlmoviespbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvlmoviesscore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvlmovies"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl21frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvlmoviesframe" >
+
+                <TextView
+                    android:id="@+id/statslvl21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level21"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl21pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl21" />
+
+                <ImageView
+                    android:id="@+id/starsanim21"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl21starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl21starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl21pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl21score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl21"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl22frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl21frame" >
+
+                <TextView
+                    android:id="@+id/statslvl22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level22"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl22pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl22" />
+
+                <ImageView
+                    android:id="@+id/starsanim22"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl22starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl22starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl22pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl22score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl22"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/statslvl23frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statslvl22frame" >
+
+                <TextView
+                    android:id="@+id/statslvl23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/level23"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <ProgressBar
+                    android:id="@+id/statslvl23pbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/statslvl23" />
+
+                <ImageView
+                    android:id="@+id/starsanim23"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/statslvl23starsstring"
+                    android:contentDescription="@string/dummy_content"/>
+
+                <TextView
+                    android:id="@+id/statslvl23starsstring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/statslvl23pbar"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/statslvl23score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/statslvl23"
+                    android:text="@string/zero"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </RelativeLayout>
+	            
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

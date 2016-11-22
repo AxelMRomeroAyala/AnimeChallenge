@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_id" translatable="false">370587435948</string>
+    <string name="app_name">Anime Challenge</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Anime Challenge</string>
+    <string name="start">  Start  </string>
+    <string name="challenge" translatable="false">  Challenge  </string>
+    <string name="options">  Options  </string>
+    <string name="ranking">  Stats</string>
+    <string name="quit">  Quit  </string>
+    <string name="title_activity_level_selection">LevelSelection</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="title_activity_level">Level</string>
+    <string name="tounlock"> Pts to Unlock</string>
+    <string name="level">Level 1</string>
+    <string name="title_activity_character">Character</string>
+    <string name="level2">Level 2</string>
+    <string name="level3">Level 3</string>
+    <string name="level4">Level 4</string>
+    <string name="level5">Level 5</string>
+    <string name="level6">Level 6</string>
+    <string name="level7">Level 7</string>
+    <string name="level8">Level 8</string>
+    <string name="level9">Level 9</string>
+    <string name="level10">Level 10</string>
+    <string name="level11">Level 11</string>
+    <string name="level12">Level 12</string>
+    <string name="level13">Level 13</string>
+    <string name="level14">Level 14</string>
+    <string name="level15">Level 15</string>
+    <string name="level16">Level 16</string>
+    <string name="level17">Level 17</string>
+    <string name="level18">Level 18</string>
+    <string name="level19">Level 19</string>
+    <string name="level20">Level 20</string>
+    <string name="level21">Level 21</string>
+    <string name="level22">Level 22</string>
+    <string name="level23">Level 23</string>
+    <string name="level24">Level 24</string>
+    <string name="level25">Level 25</string>
+    <string name="level26">Level 26</string>
+    <string name="level27">Level 27</string>
+    <string name="level28">Level 28</string>
+    <string name="level29">Level 29</string>
+    <string name="level30">Level 30</string>
+    <string name="levelpets">Pets Level</string>
+    <string name="levelgames">Gamer Level</string>
+    <string name="levelgames2">Gamer Level 2</string>
+    <string name="levelmovies">Movies Level</string>
+    <string name="gotname">You got the name, partially</string>
+    <string name="gotfullname">Well done, you got the full name!</string>
+    <string name="gotanime">You got the anime!</string>
+    <string name="wrong">Got nothing</string>
+    <string name="charcompleted">Completed!</string>
+    <string name="qname">Name?</string>
+    <string name="qanime">Anime?</string>
+    <string name="qfname">Could you guess the full name?</string>
+    <string name="qall">Name or Anime?</string>
+    <string name="a">a</string>
+    <string name="b">b</string>
+    <string name="title_activity_options">OptionsActivity</string>
+    <string name="exit">Are you sure you want to exit?</string>
+    <string name="volon">Audio Enabled</string>
+    <string name="voloff">Audio Disabled</string>
+    <string name="vibon">Vibration Enabled</string>
+    <string name="viboff">Vibration Disabled</string>
+    <string name="hintsused">Hints Count: </string>
+    <string name="logout" translatable="false">Logged Out of Google Play</string>
+
+    <string-array name="Options">
+        <item>Reset Scores</item>
+        <item>View Change Log</item>
+        <item>Rate Anime Challenge</item>
+        <item>Like us on Facebook!</item>
+        <item>Send an e-mail to the Developers</item>
+        <item>Show credits</item>
+        <item>Audio</item>
+        <item>Vibration</item>
+        <item>Log Out from Google</item>
+        <item>More from Yacarex</item>
+    </string-array>
+
+    <string name="logingoogle">Log in Google</string>
+    <string name="logoutgoogle">Log out from Google</string>
+    <string name="logingooglesure">Log into Google?</string>
+    <string name="logoutgooglesure">Do you really want to log out of Google Services?</string>
+    <string name="unlockedtoast">Unlocked level</string>
+    <string name="unlockedtoast3">Unlocked level 3</string>
+    <string name="unlockedtoast4">Unlocked level 4</string>
+    <string name="unlockedtoast5">Unlocked level 5</string>
+    <string name="unlockedtoast6">Unlocked level 6</string>
+    <string name="unlockedtoast7">Unlocked level 7</string>
+    <string name="unlockedtoast8">Unlocked level 8</string>
+    <string name="unlockedtoastgamesspecial">Unlocked Gamer Level</string>
+    <string name="unlockedtoast9">Unlocked level 9</string>
+    <string name="unlockedtoast10">Unlocked level 10</string>
+    <string name="unlockedtoast11">Unlocked level 11</string>
+    <string name="unlockedtoast12">Unlocked level 12</string>
+    <string name="unlockedtoast13">Unlocked level 13</string>
+    <string name="unlockedtoast14">Unlocked level 14</string>
+    <string name="unlockedtoast15">Unlocked level 15</string>
+    <string name="unlockedtoast16">Unlocked level 16</string>
+    <string name="unlockedtoastpets">Unlocked Pets Level</string>
+    <string name="unlockedtoast17">Unlocked level 17</string>
+    <string name="unlockedtoast18">Unlocked level 18</string>
+    <string name="unlockedtoastgamesspecial2">Unlocked 2nd Gamer Level</string>
+    <string name="unlockedtoast19">Unlocked level 19</string>
+    <string name="unlockedtoast20">Unlocked level 20</string>
+    <string name="unlockedtoastmovies">Unlocked Movies Level</string>
+    <string name="unlockedtoast21">Unlocked level 21</string>
+    <string name="unlockedtoast22">Unlocked level 22</string>
+    <string name="unlockedtoast23">Unlocked level 23</string>
+    <string name="lvlscore">Level</string>
+    <string name="totalscore">Game</string>
+    <string name="gamescore">Power Level: </string>
+    <string name="ok">OK</string>
+    <string name="hint">Hint</string>
+    <string name="test">Test String</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_edit_preferences">EditPreferences</string>
+    <string name="title_activity_stats">Stats</string>
+    <string name="tab1">General Stats</string>
+    <string name="tab2">Levels Stats</string>
+    <string name="tab3">Others</string>
+    <string name="goldenstars">Golden Stars:</string>
+    <string name="silverstars">Silver Stars:</string>
+    <string name="bronzestars">Bronze Stars:</string>
+    <string name="zero">0</string>
+    <string name="games">Gamer</string>
+    <string name="resetmessage">Are you sure you want to reset the scores?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="from">from</string>
+    <string name="close">Close</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="disclaimermessage">The names and illustrations shown in this application are trademarks of their respective owners.</string>
+    <string name="changelog_full_title" translatable="false">Change Log</string>
+    <string name="changelog_title">What\'s New</string>
+    <string name="changelog_ok_button">OK</string>
+    <string name="changelog_show_full">more</string>
+    <string name="rateuserror">Couldn\'t open Google Play Store</string>
+    <string name="facebook" translatable="false">Facebook</string>
+    <string name="title_activity_credits" translatable="false">CreditsActivity</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="by">by</string>
+    <string name="yacarexgames" translatable="false">Yacarex Games</string>
+    <string name="developer"><b>Developer</b></string>
+    <string name="developers" translatable="false">Axel Maximiliano Romero Ayala</string>
+    <string name="gdesigner"><b>Graphic Designer</b></string>
+    <string name="gdesigners" translatable="false">Luciano Pablo Pereira</string>
+    <string name="betatester" translatable="false"><b>Beta Testers</b></string>
+    <string name="betatesters" translatable="false">Santiago Alberto Diaz\nRaul Hernan Luna</string>
+    <string name="specialthanks"><b>Special Thanks</b></string>
+    <string name="specialthanksto" translatable="false">Cristian Quiroz\nEdgar Luna\nBryan Eata </string>
+    <string name="adunitid" translatable="false">ca-app-pub-5318551320912238/6158016309</string>
+    <string name="adunitinterad" translatable="false">ca-app-pub-5318551320912238/7634749508</string>
+    <string name="leaderboardPLVL" translatable="false">CgkIrIfuxeQKEAIQEg</string>
+    <string name="play10" translatable="false">CgkIrIfuxeQKEAIQAQ</string>
+    <string name="play100" translatable="false">CgkIrIfuxeQKEAIQAg</string>
+    <string name="play500" translatable="false">CgkIrIfuxeQKEAIQAw</string>
+    <string name="hint100" translatable="false">CgkIrIfuxeQKEAIQCg</string>
+    <string name="hint500" translatable="false">CgkIrIfuxeQKEAIQCw</string>
+    <string name="fail100" translatable="false">CgkIrIfuxeQKEAIQDA</string>
+    <string name="fail250" translatable="false">CgkIrIfuxeQKEAIQDQ</string>
+    <string name="fail500" translatable="false">CgkIrIfuxeQKEAIQDg</string>
+    <string name="score9k" translatable="false">CgkIrIfuxeQKEAIQBg</string>
+    <string name="score30k" translatable="false">CgkIrIfuxeQKEAIQBw</string>
+    <string name="score60k" translatable="false">CgkIrIfuxeQKEAIQCQ</string>
+    <string name="petsachievement" translatable="false">CgkIrIfuxeQKEAIQDw</string>
+    <string name="moviesachievement" translatable="false">CgkIrIfuxeQKEAIQEA</string>
+    <string name="player1achievement" translatable="false">CgkIrIfuxeQKEAIQBA</string>
+    <string name="gamerachievement" translatable="false">CgkIrIfuxeQKEAIQBQ</string>
+    <string name="title_activity_challenge" translatable="false">ChallengeActivity</string>
+    <string name="title_activity_challenge_act" translatable="false">ChallengeActActivity</string>
+    <string name="title_activity_main_frag" translatable="false">MainFragActivity</string>
+    <string name="vibration">Vibration</string>
+    <string name="volume">Volume</string>
+    <string name="signin_other_error" translatable="false">Sign in error, try again later.</string>
+    <string name="signin_failure" translatable="false">Sign in Failed</string>
+
+</resources>

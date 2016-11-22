@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/credits"
+    tools:context=".activities.CreditsActivity" >
+	
+    <ImageView 
+        android:id="@+id/logoview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:layout_centerHorizontal="true"
+        android:onClick="musicRandom"/>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoview"
+        android:layout_centerHorizontal="true"
+        android:measureAllChildren="true" >
+        
+    <RelativeLayout
+        android:id="@+id/creditstext"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="1080dp">
+        
+        <TextView
+            android:id="@+id/developer" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/developer"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/creditscloud"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/developers"
+            android:layout_below="@+id/developer" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/developers"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="30dp"/>
+        <TextView
+            android:id="@+id/gdesigner"
+            android:layout_below="@+id/developers" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gdesigner"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:background="@drawable/creditscloud"/>
+        <TextView
+            android:id="@+id/gdesigners"
+            android:layout_below="@+id/gdesigner" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gdesigners"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="30dp"/>
+        <TextView 
+            android:id="@+id/betatester"
+            android:layout_below="@+id/gdesigners"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/betatester"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:background="@drawable/creditscloud"/>
+        <TextView 
+            android:id="@+id/betatesters"
+            android:layout_below="@+id/betatester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/betatesters"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="30dp"/>
+        <TextView 
+            android:id="@+id/specialthanks"
+            android:layout_below="@+id/betatesters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/specialthanks"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:background="@drawable/creditscloud"/>
+        <TextView 
+            android:id="@+id/specialthanksto"
+            android:layout_below="@+id/specialthanks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/specialthanksto"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"/>
+        
+        
+    </RelativeLayout>
+    </FrameLayout>
+
+    
+    
+
+</RelativeLayout>

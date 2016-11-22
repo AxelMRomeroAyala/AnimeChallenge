@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b75ecdd04a37d31b4a0da2729fc5c558962a529b">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.6.1_60f07174992456a3da94bdbabc4f1ab45b8668a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f6aa7c76cbaa867e05dbad0afab1ef0e65c4e55f">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.6.1_5b03497d6bdf4c3bb8c4fb97c87a626d52e4d6dd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ee61ace5f3e488fc610e1c67693c49186a441f32">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-9.6.1_1edd76b39629497a17137948a9c55ba019a5f080\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d45c048bb1c55cf963899190e507065aea8e5be9">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.6.1_337e22eff0949e136e469ec0790cd8194ac6f96f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_3592588932625ba50359325a9498f55559bd52af\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="79f521967ad7f49b34748db89df02852c2b2f87b">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.6.1_2e6d70680ce7afdb60d263fb2b191f87f156b662\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.6.1_e0452502976cb5ae008d1842e36ca34a3fe656b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.0_919a8c481beb784917f6d59c00803f67f98e5250\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.6.1_51498dc59fba41bf9117eb5b48f016f14e735daa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.0_30ff7b4e28252d62a28b99a7f2f73c044183df50\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="da3f763afd39da1c947d9442847c837e9182a09f">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.6.1_ec51c1d0826af2ce84886425cfae367327fbdb0e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-24.0.0_020cd2f62df67eec4de17298aebb7c57a9c364cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.0_4d51459396e76fc9f7a25bedb1f133042dc61237\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="1810ae0df0a1b9b539ce97df54e96f2bf8f5ff94">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-9.6.1_a64aeaa0e4e9eeecdc1abf320b6df14012ab7fb5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_6c600ee4ff5506b7d39825e4599f0feb62cda102\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a1c351dc10b92d638da57f3a6513f87cfbdc9f83">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.6.1_0e36846bb962ecca4eec5164c5d6d6a8d7c2c184\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ff9be0a1e75a21c372735930d8987a55b5e6065f">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.6.1_57412afb9d25d3de55d991dc85b86285cf8bdc0d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.0_9fc2793a822a47f8b077cc874050aea46fb78c7c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="cf2c4e6607c77b0e671dc5ca252c5ea0d9c1ce0d">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.6.1_fa062e1504490b144911724dbe063e79551a7caf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a53ac0560ab915a02c50d2e5c7b003381e6fb5e3">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.6.1_06a124fd7a40d563357eadf70af2432028613676\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_c3156b03d6c74fc3f108e88f2fb5df1506bb4f87\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="518adc52081d41724932b41bc132e4d50a352b86">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.6.1_4e2e49126c6b9b28f60e294d990ec82f9bc88255\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.4\dd9eeb557650c4ad7394df23f0f5cf27a7cfc697\universal-image-loader-1.9.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="dd9eeb557650c4ad7394df23f0f5cf27a7cfc697">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\universal-image-loader-1.9.4_f228d58f0cb893695bc3324e6eb7f2cb1bdc4cad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="87377876b88e405378a8b3349f28a3cb4c2b84f2">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_896d578e32992e7ae7ca578e210a268dcdb14c28\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ac8365c87591065db07f7bac8551504504832cd4">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.6.1_f975aa8195e2c737f40d31adccbf6b6842db5518\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0_f5661aeb10edbe5f4c24e82511d31ada0cdd3443\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="526f4b02f1771fa7607ff1b89fe2e9bd0344fee8">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.6.1_3295b9de06e38eb33dba0d619f40bac9d537573d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.6.1_4678b6e051a5af5017b4d427f0d8d61dec9582cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="465f40f840e583f8b7421a3aacf3fbf08c28f00a">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.6.1_aefd5c25a7da836655811ffdcc293d724ab32729\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="77558e74bb2056ef38516296f13a27c4c4fc3e5c">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.6.1_d4153fba9f15b853f20b6407de94885ce93ae582\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="dfcba20b85ef3669a8ced0a8760a6df281cbd7c7">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.6.1_c2440f11072fd840050e5cbad847a61467b0c11f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_dd57627911f227cf19c4bd74d8640761026921d7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0e0e0681c26a1f575d3e4c542182dd59bab75fd6">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.6.1_19c36c95deaa468cceddc66888857455373b751d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.0_c877b8be392a20428574581cf02390d0f6adc396\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e39851d7057ed4abf68d703245c49f3bae007d45">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_33b3225106ea4691de9374c5e6e4fa26c61f64d9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c4394d46152165cd3256fb711ac94f66a28fbae1">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.6.1_80ca081bfb7826bc9c110d0c1ad1f70083b11d6d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.0\support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.0_40821c527ca929aa8ad7fec4fadf9eec8ccc8da6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ad7706f8bb4a985656a8d2142f74021c8b0e03d8">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.6.1_50c2d77da4cb95fa31d6879b561eaf1391b161f8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0cae6511c5705869cacf199f8abb0ea84cd10157">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.6.1_2b269f6de0de073e4e779a27e6d9dfc9a51cb5fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="159494eb362396d073d8c922b77e40c0da5fc5bc">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.6.1_70ba44e86cef5b9d1bc51d89827d6f5ea76fdb12\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c828add497d2b7a3de7c047bf72050cd4b7521a1">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.6.1_e1af2e4a1ef129528357e5ca5dce277d4d9257f9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.github.Q42\AndroidScrollingImageView\1.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c92f2300efc61cd335166af30bfd34d528114598">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.Q42-AndroidScrollingImageView-1.2_39f9913f331c735dbfdae5409adf1cb84562178a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_f3c27cf41d9733776521852a593cd1b76ffd70a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="cdddf21e0a8205e9955661061d1735ed10e44a7b">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-9.6.1_21e87192033a48346bd13e5f46cc7586abf11d35\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8ebae43cd06058e99e08c8b4d305b72f2b9927c6">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.6.1_6f19de99916456abfc19dcb74e4e4eaa32a3c96f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2a18547ea91d258866d132c2a763185f15b01b25">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.6.1_8e2db63dd6af22a3826e7c6d7eb03223d0933ff7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a76a6983a23788b3689524d4bed763955afbd306">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.6.1_1f8d01784f040035bed6e159d22dbb7befa58f25\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="47bbb3ec4b31ba71e125241c090dabe70cbb4de7">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.6.1_a7a3fcb1d92309fc4ac46cc7fecbd045d126aa85\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0dfc12e4aacf514346ea866560c99807d032bc48">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.6.1_87266456d339601d6ace7dc506b3f77783f5475c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f0e96478ca3147bc588aadb9ae467d85b42473cc">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.6.1_7d15942dc9838f2bdc71bd4cbb2510b9fe4338be\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a136366045678579300d161de97c2211c4c4f7a0">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.6.1_cc69b8e4f8cbe669a7491d070b2136ef482c78dc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.0_4a872852e83ac0227b31a757a56eb46d8bf74dad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.6.1_56c2087af1b3e8b12f213af654179bd15cf4eda7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="ee0ccb43f6ab276191b7f2d77c305fa9beb26db9">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-9.6.1_3b19a64541100341c9778bd59d2a913f852c6524\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8c6ef5bd4072f8cda2b89d8356ea7d8acd0683aa">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-9.6.1_d7f20342d760f3a420325219ec313ae579b5338e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4df40545c9b875855f3dd9d4928e5d07f07c20ba">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.6.1_1d63220a88f466b921690fc1170f7cf2c9242468\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_eec44a9335cf72b1dd47bbc04833fa62d9238d03\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="af7582c6b327449c6d32518e6a10307860b7b5d6">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.6.1_815c47d49b2337a6c11e00a970650b2bec8907a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f8db47be01cbe8cfa81e9cecce5ff1371ed1ad95">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.6.1_d5b1cf3c148a4139a467eec55566deb22af58912\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.0_719a4f0022062becc9a6560878412de1ddfdd06a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c0cf3d4f9d7d076f301e110b92e18ae23da12c2">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-9.6.1_03efdd22037bd3391164580f7c499bc02038a970\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6ffe8b28ab61e5ee92ab9431a220379790c71ddf">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.6.1_65ac34c260e74fbe1a9c647a36278d1a80bfd0af\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="6ff796a3173787afe2e712f3aec6f5b99796118e">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.6.1_72266b8d042e97830a288724e97af16ee09bf019\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_e3815a9bc8bf5434757954bf52e1902c4d19d37f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.6.1_6594110d78bfc198dcb76ae95998438a60a59914\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.0\jars\libs\internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.0_4cd4b391c2fe415149f29b05584580eb7c7b255d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="cc39b4bcc9e7062891db90d5a752fa9e4986f447">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.6.1_f014145e7ee32cafba7bd9d095c2c9d0e32d6963\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0_34fa1189739e7644a6e51db18a0ce8721ad36d83\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0_e9485018d9e4213f1ee5957ae95c0bd344269802\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="babb25794a7599069d34705038744c5760a9a88c">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-9.6.1_3d18e728c4325cf44ee4543d2a2ba3c13f902112\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.6.1_1e2493d6e7044b7037d2078afbb7f654e6ccbb7a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="62ff84124b89177abc0c27f3e38c9732f2d41617">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.6.1_88deb9dc04fe7fe451e441485f7338d793e601ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\9.6.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="90be14317e3f26d18438e8dbf8544500d1dfe07f">
+        <dex dex="C:\Users\axel.romero\Documents\Yacarex\AnimeChallenge\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-9.6.1_3ffdcec8bbbc756d8f57e945ba482585427a620e\classes.dex" />
+    </item>
+
+</items>
