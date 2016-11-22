@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -23,6 +22,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -34,10 +34,10 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
-import com.google.example.games.basegameutils.BaseGameUtils;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.example.games.basegameutils.BaseGameUtils;
 import com.yakarex.animequiz.utils.DataBaseHelper;
 import com.yakarex.animequiz.fragments.FragLevel;
 import com.yakarex.animequiz.fragments.FragOptions;
@@ -445,12 +445,13 @@ public class MainFragActivity extends FragmentActivity implements
     	String message= getString(R.string.disclaimermessage);
     	String close= getString(R.string.close);
     	String title= getString(R.string.disclaimer);
-    	
-    	new AlertDialog.Builder(this)
-        .setMessage(message)
-        .setCancelable(false)
-        .setNeutralButton(close, null).setTitle(title)
-        .show();
+
+		new AlertDialog.Builder(this)
+				.setMessage(message)
+				.setCancelable(false)
+				.setNeutralButton(close, null).setTitle(title)
+				.show();
+
     }
 
 	protected void adThread(){
