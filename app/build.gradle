@@ -28,7 +28,6 @@ android {
     }
 
     dexOptions {
-        incremental true
         preDexLibraries = false
         javaMaxHeapSize "4g"
     }
@@ -39,11 +38,11 @@ repositories {
 }
 
 dependencies {
-    compile project(':BaseGameUtils')
     compile 'com.android.support:support-v4:25.0.0'
     compile 'com.google.android.gms:play-services:9.6.1'
     compile 'com.google.android.gms:play-services-ads:9.6.1'
     compile 'com.android.support:recyclerview-v7:25.0.0'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
     compile 'com.github.Q42:AndroidScrollingImageView:1.2'
+    compile project(path: ':BaseGameUtils')
 }

@@ -25,6 +25,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.fragments.FragCharacter;
 import com.yakarex.animequiz.R;
+import com.yakarex.animequiz.fragments.FragCharacterSwiper;
 import com.yakarex.animequiz.utils.ScoreDbHelper;
 
 import java.io.FileNotFoundException;
@@ -105,7 +106,8 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
             public void onClick(View v) {
                 Bundle bundle= new Bundle();
                 bundle.putInt("position", position);
-                ((MainFragActivity)context).changeFragment(FragCharacter.instantiate(context, FragCharacter.class.getName(), bundle), true, false);
+                //((MainFragActivity)context).changeFragment(FragCharacter.instantiate(context, FragCharacter.class.getName(), bundle), true, false);
+                ((MainFragActivity)context).changeFragment(FragCharacterSwiper.instantiate(context, FragCharacterSwiper.class.getName(), bundle), true, false);
             }
         });
 

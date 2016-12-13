@@ -64,29 +64,6 @@
       	android:textColor="@color/white"
         android:text="@string/test"
         android:background="@drawable/chartextbar"/>
-    
-    		
-	<RelativeLayout
-	    android:id="@+id/topbar"
-	    android:layout_height="30dp"
-	    android:layout_width="match_parent"
-	    android:layout_alignParentTop="true"
-	    android:background="@drawable/graybar" >
-    <TextView
-        android:id="@+id/scoreviewchar"
-        android:layout_width="fill_parent"
-        android:layout_height="30dp"
-        android:layout_centerHorizontal="true"
-        android:ellipsize="marquee"
-        android:fadingEdge="horizontal"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:scrollHorizontally="true"
-        android:singleLine="true"
-      	android:gravity="center"
-        android:text="@string/test"
-        android:textColor="@color/white"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-    </RelativeLayout>
 
     <ImageView
         android:id="@+id/characterframefrag"
@@ -121,7 +98,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="10dp"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp" />
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/nextButton"
@@ -132,7 +110,8 @@
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginEnd="10dp"
+        android:visibility="invisible"/>
     
 
 </RelativeLayout>
