@@ -8,12 +8,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-hdpi-v4\\quantum_ic_clear_white_24.png"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_pressed.9.png",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_pressed.9.png"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_media_route_off_mono_dark.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-hdpi-v4\\ic_media_route_off_mono_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_pressed.9.png",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_light_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_replay_10_white_24.png",
@@ -28,24 +28,24 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-hdpi-v4\\quantum_ic_stop_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\cast_ic_stop_circle_filled_white.png",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-hdpi-v4\\cast_ic_stop_circle_filled_white.png"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\common_full_open_on_phone.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-hdpi-v4\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\cast_ic_stop_circle_filled_white.png",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-hdpi-v4\\cast_ic_stop_circle_filled_white.png"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_white_36.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-hdpi-v4\\quantum_ic_pause_circle_filled_white_36.png"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\lvlbackground.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable-hdpi\\lvlbackground.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_pause_grey600_36.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-hdpi-v4\\quantum_ic_pause_grey600_36.png"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\lvlbackground.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable-hdpi\\lvlbackground.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_48dp.png",

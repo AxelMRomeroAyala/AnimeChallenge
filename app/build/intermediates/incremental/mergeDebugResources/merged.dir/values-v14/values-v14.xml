@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar"/>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">
+            @color/cast_libraries_material_featurehighlight_outer_highlight_default_color
+        </item>
+    </style>
     <style name="Base.TextAppearance.AppCompat.Button">
         <item name="android:textSize">@dimen/abc_text_size_button_material</item>
         <item name="android:textAllCaps">true</item>

@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_pause_light.png",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_pause_light.png"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\quantum_ic_skip_next_white_24.png",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-xxhdpi-v4\\quantum_ic_skip_next_white_24.png"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\quantum_ic_forward_30_grey600_36.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-xxhdpi-v4\\quantum_ic_forward_30_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\quantum_ic_skip_next_white_24.png",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-xxhdpi-v4\\quantum_ic_skip_next_white_24.png"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_pause_light.png",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_pause_light.png"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_dark_pressed.9.png",
@@ -36,12 +36,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_pressed.9.png",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_pressed.9.png"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_pressed.9.png",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_pressed.9.png"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\quantum_ic_forward_30_white_24.png",
@@ -84,12 +84,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_connecting_02_dark.png"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_on_01_light.png",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_on_01_light.png"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_focused.9.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.6.1\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_icon_light_focused.9.png"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_on_01_light.png",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_on_01_light.png"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\common_google_signin_btn_text_light_pressed.9.png",
@@ -116,12 +116,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable-xxhdpi-v4\\quantum_ic_skip_next_white_36.png"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_on_22_light.png",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_on_22_light.png"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_on_02_light.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_on_02_light.png"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_on_22_light.png",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_on_22_light.png"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_speaker_group_dark.png",
@@ -196,12 +196,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_connecting_04_dark.png"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_on_light.png",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_on_light.png"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_on_light.png",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_on_light.png"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_connecting_04_light.png",
@@ -264,12 +264,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_on_15_dark.png"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_audiotrack_light.png",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_audiotrack_light.png"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_on_00_light.png",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_media_route_on_00_light.png"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_audiotrack_light.png",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable-xxhdpi-v4\\ic_audiotrack_light.png"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_media_route_connecting_21_dark.png",

@@ -20,12 +20,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\tsukune_aono.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\uzumaki_naruto.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\uzumaki_naruto.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sonoda_yuu.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\sonoda_yuu.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\uzumaki_naruto.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\uzumaki_naruto.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\makoto_tachibana.jpg",
@@ -48,16 +48,16 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\usui_takumi.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shinku.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\shinku.jpg"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\barnaby_brooks_jr.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\barnaby_brooks_jr.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\gasai_yuno.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\gasai_yuno.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\barnaby_brooks_jr.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\barnaby_brooks_jr.jpg"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shinku.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\shinku.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kojima_kirie.jpg",
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\sanzenin_nagi.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\nino.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\nino.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rena_ryuugu.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\rena_ryuugu.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\nino.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\nino.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\konno_makoto.jpg",
@@ -156,12 +156,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\kogoro_ran.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ratingbar_small_material.xml"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\komatsu.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\komatsu.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kuga_kyouhei.jpg",
@@ -256,24 +256,24 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\releena_peacecraft.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\araragi.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\araragi.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chiba_atsuko.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\chiba_atsuko.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\araragi.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\araragi.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sakura_haruno.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\sakura_haruno.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mizutani_shizuku.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\mizutani_shizuku.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
@@ -320,12 +320,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\yoshino.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yatogami_tohka.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\yatogami_tohka.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\aihara_enju.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\aihara_enju.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yatogami_tohka.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\yatogami_tohka.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\metabi.jpg",
@@ -384,12 +384,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\shaga_ayame.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\akaza_akari.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\akaza_akari.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\amane_misa.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\amane_misa.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\akaza_akari.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\akaza_akari.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shana.jpg",
@@ -408,12 +408,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\menchi.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cc.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\cc.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\souichirou_arima.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\souichirou_arima.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cc.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\cc.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mononoke.jpg",
@@ -488,16 +488,16 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\fuwa_aika.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_light.xml",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_pause_light.xml"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sol_badguy.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\sol_badguy.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\himeko.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\himeko.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sol_badguy.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\sol_badguy.jpg"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_pause_light.xml",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\24.0.0\\res\\drawable\\mr_ic_pause_light.xml"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\lime.jpg",
@@ -648,12 +648,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\narusegawa_naru.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shinohara_natsuki.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\shinohara_natsuki.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kotetsu_t_kaburagi.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\kotetsu_t_kaburagi.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shinohara_natsuki.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\shinohara_natsuki.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\himeji_mizuki.jpg",
@@ -700,36 +700,36 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\homunculous.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\miyamae_kanako.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\miyamae_kanako.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\echizen_ryouma.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\echizen_ryouma.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\miyamae_kanako.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\miyamae_kanako.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ayanami_rei.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\ayanami_rei.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bossun.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\bossun.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\griffith.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\griffith.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bossun.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\bossun.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\petralka.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\petralka.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tohru_honda.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\tohru_honda.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tsugumi_harudori.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\tsugumi_harudori.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tohru_honda.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\tohru_honda.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\suzuhara_misaki.jpg",
@@ -760,12 +760,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable\\cast_ic_mini_controller_pause_large.xml"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\li_shaoran.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\li_shaoran.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shinpachi_shimura.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\shinpachi_shimura.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\li_shaoran.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\li_shaoran.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\lei_fang.jpg",
@@ -784,12 +784,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable\\cast_ic_notification_disconnect.xml"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ichinomiya_kou.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\ichinomiya_kou.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\miroku.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\miroku.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ichinomiya_kou.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\ichinomiya_kou.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yukinoshita_yukino.jpg",
@@ -808,12 +808,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\emilia_yusa.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\oga_tatsumi.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\oga_tatsumi.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dio_jyunyou_weinberg.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\dio_jyunyou_weinberg.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\oga_tatsumi.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\oga_tatsumi.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\meme_tatane.jpg",
@@ -828,12 +828,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\hibiki_tachibana.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tokishima_haruto.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\tokishima_haruto.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\davis.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\davis.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tokishima_haruto.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\tokishima_haruto.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bomberman.jpg",
@@ -924,16 +924,16 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\haruka_nanase.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shichijou_aria.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\shichijou_aria.jpg"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\zero_kiryu.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\zero_kiryu.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\merry_nightmare.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\merry_nightmare.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\zero_kiryu.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\zero_kiryu.jpg"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shichijou_aria.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\shichijou_aria.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chiyo_mihama.jpg",
@@ -944,12 +944,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\juubee.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kon.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\kon.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\adol_christin.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\adol_christin.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kon.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\kon.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\charles_di_britannia.jpg",
@@ -1072,12 +1072,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\drawable\\cast_ic_notification_skip_prev.xml"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\totoro.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\totoro.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\soul_eater_evans.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\soul_eater_evans.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\totoro.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\totoro.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\yoshida_kazumi.jpg",
@@ -1244,16 +1244,16 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\krilin.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kanoe_yuuko.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\kanoe_yuuko.jpg"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tokaku_azuma.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\tokaku_azuma.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\eren_jaeger.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\eren_jaeger.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tokaku_azuma.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\tokaku_azuma.jpg"
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\kanoe_yuuko.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\kanoe_yuuko.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\seiya.jpg",
@@ -1268,12 +1268,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\busujima_saeko.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jin.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\jin.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\akihisa.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\akihisa.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jin.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\jin.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rikuo_nura.jpg",
@@ -1288,12 +1288,12 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\enma_ai.jpg"
     },
     {
-        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\haruyuki_arita.jpg",
-        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\haruyuki_arita.jpg"
-    },
-    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ookami_amaterasu.jpg",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\ookami_amaterasu.jpg"
+    },
+    {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\haruyuki_arita.jpg",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\drawable\\haruyuki_arita.jpg"
     },
     {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\charlotte_belew.jpg",

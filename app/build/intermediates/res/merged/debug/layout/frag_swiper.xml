@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/graybar" >
+        <TextView
+            android:id="@+id/scoreviewchar"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="@string/test"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/characters_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

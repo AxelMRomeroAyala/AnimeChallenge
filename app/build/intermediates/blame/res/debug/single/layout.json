@@ -64,6 +64,10 @@
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\notification_media_action.xml"
     },
     {
+        "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\layout\\frag_swiper.xml",
+        "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\layout\\frag_swiper.xml"
+    },
+    {
         "merged": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_expanded_controller_activity.xml",
         "source": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast-framework\\9.6.1\\res\\layout\\cast_expanded_controller_activity.xml"
     },

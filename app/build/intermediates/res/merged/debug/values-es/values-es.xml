@@ -72,7 +72,6 @@
     <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"Aceptar"</string>
     <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"Subtítulos"</string>
     <string msgid="2913461521603516868" name="cast_unmute">"Activar sonido"</string>
-    <string name="changelog">1.0.0 - First Release March 4, 2013. 	    1.1.1 - March 11. Fixed some bugs, database was corrected, added a new level, added facebook and rate us buttons.</string>
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">mas</string>
     <string name="changelog_title">Novedades</string>

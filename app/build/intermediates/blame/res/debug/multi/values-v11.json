@@ -7,8 +7,9 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 62,
-                    "endOffset": 113
+                    "endLine": 6,
+                    "endColumn": 12,
+                    "endOffset": 268
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\values-v11\\styles.xml",
@@ -16,19 +17,20 @@
                         "startLine": 3,
                         "startColumn": 4,
                         "startOffset": 59,
-                        "endColumn": 63,
-                        "endOffset": 118
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 277
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 118,
-                    "endLine": 8,
+                    "startOffset": 273,
+                    "endLine": 12,
                     "endColumn": 12,
-                    "endOffset": 532
+                    "endOffset": 687
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -44,12 +46,12 @@
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 537,
-                    "endLine": 14,
+                    "startOffset": 692,
+                    "endLine": 18,
                     "endColumn": 12,
-                    "endOffset": 957
+                    "endOffset": 1112
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -65,12 +67,12 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 962,
-                    "endLine": 20,
+                    "startOffset": 1117,
+                    "endLine": 24,
                     "endColumn": 12,
-                    "endOffset": 1385
+                    "endOffset": 1540
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -86,12 +88,12 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1390,
-                    "endLine": 26,
+                    "startOffset": 1545,
+                    "endLine": 30,
                     "endColumn": 12,
-                    "endOffset": 1811
+                    "endOffset": 1966
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -107,12 +109,12 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 1816,
-                    "endLine": 32,
+                    "startOffset": 1971,
+                    "endLine": 36,
                     "endColumn": 12,
-                    "endOffset": 2238
+                    "endOffset": 2393
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -128,12 +130,12 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 2243,
-                    "endLine": 38,
+                    "startOffset": 2398,
+                    "endLine": 42,
                     "endColumn": 12,
-                    "endOffset": 2663
+                    "endOffset": 2818
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -149,11 +151,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 2668,
+                    "startOffset": 2823,
                     "endColumn": 88,
-                    "endOffset": 2752
+                    "endOffset": 2907
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -168,11 +170,11 @@
             },
             {
                 "to": {
-                    "startLine": 40,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 2757,
+                    "startOffset": 2912,
                     "endColumn": 100,
-                    "endOffset": 2853
+                    "endOffset": 3008
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -187,11 +189,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 2858,
+                    "startOffset": 3013,
                     "endColumn": 102,
-                    "endOffset": 2956
+                    "endOffset": 3111
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -206,12 +208,12 @@
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 2961,
-                    "endLine": 46,
+                    "startOffset": 3116,
+                    "endLine": 50,
                     "endColumn": 12,
-                    "endOffset": 3364
+                    "endOffset": 3519
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -227,12 +229,12 @@
             },
             {
                 "to": {
-                    "startLine": 47,
+                    "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 3369,
-                    "endLine": 51,
+                    "startOffset": 3524,
+                    "endLine": 55,
                     "endColumn": 12,
-                    "endOffset": 3784
+                    "endOffset": 3939
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -248,12 +250,12 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 3789,
-                    "endLine": 56,
+                    "startOffset": 3944,
+                    "endLine": 60,
                     "endColumn": 12,
-                    "endOffset": 4206
+                    "endOffset": 4361
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -269,12 +271,12 @@
             },
             {
                 "to": {
-                    "startLine": 57,
+                    "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 4211,
-                    "endLine": 58,
+                    "startOffset": 4366,
+                    "endLine": 62,
                     "endColumn": 12,
-                    "endOffset": 4313
+                    "endOffset": 4468
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -290,12 +292,12 @@
             },
             {
                 "to": {
-                    "startLine": 59,
+                    "startLine": 63,
                     "startColumn": 4,
-                    "startOffset": 4318,
-                    "endLine": 60,
+                    "startOffset": 4473,
+                    "endLine": 64,
                     "endColumn": 12,
-                    "endOffset": 4442
+                    "endOffset": 4597
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -311,53 +313,53 @@
             },
             {
                 "to": {
-                    "startLine": 61,
+                    "startLine": 65,
                     "startColumn": 4,
-                    "startOffset": 4447,
-                    "endLine": 63,
+                    "startOffset": 4602,
+                    "endLine": 67,
                     "endColumn": 12,
-                    "endOffset": 4606
-                },
-                "from": {
-                    "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\values-v11\\styles.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 126,
-                        "endLine": 7,
-                        "endColumn": 12,
-                        "endOffset": 287
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 64,
-                    "startColumn": 4,
-                    "startOffset": 4611,
-                    "endLine": 68,
-                    "endColumn": 12,
-                    "endOffset": 4888
+                    "endOffset": 4761
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 295,
-                        "endLine": 13,
+                        "startOffset": 285,
+                        "endLine": 11,
                         "endColumn": 12,
-                        "endOffset": 576
+                        "endOffset": 446
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 69,
+                    "startLine": 68,
                     "startColumn": 4,
-                    "startOffset": 4893,
+                    "startOffset": 4766,
+                    "endLine": 72,
+                    "endColumn": 12,
+                    "endOffset": 5043
+                },
+                "from": {
+                    "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 454,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 735
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 73,
+                    "startColumn": 4,
+                    "startOffset": 5048,
                     "endColumn": 70,
-                    "endOffset": 4959
+                    "endOffset": 5114
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -372,11 +374,11 @@
             },
             {
                 "to": {
-                    "startLine": 70,
+                    "startLine": 74,
                     "startColumn": 4,
-                    "startOffset": 4964,
+                    "startOffset": 5119,
                     "endColumn": 82,
-                    "endOffset": 5042
+                    "endOffset": 5197
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -391,12 +393,12 @@
             },
             {
                 "to": {
-                    "startLine": 71,
+                    "startLine": 75,
                     "startColumn": 4,
-                    "startOffset": 5047,
-                    "endLine": 119,
+                    "startOffset": 5202,
+                    "endLine": 123,
                     "endColumn": 12,
-                    "endOffset": 8657
+                    "endOffset": 8812
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -412,12 +414,12 @@
             },
             {
                 "to": {
-                    "startLine": 120,
+                    "startLine": 124,
                     "startColumn": 4,
-                    "startOffset": 8662,
-                    "endLine": 169,
+                    "startOffset": 8817,
+                    "endLine": 173,
                     "endColumn": 12,
-                    "endOffset": 12412
+                    "endOffset": 12567
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -433,11 +435,11 @@
             },
             {
                 "to": {
-                    "startLine": 170,
+                    "startLine": 174,
                     "startColumn": 4,
-                    "startOffset": 12417,
+                    "startOffset": 12572,
                     "endColumn": 90,
-                    "endOffset": 12503
+                    "endOffset": 12658
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\values-v11\\values-v11.xml",
@@ -452,11 +454,11 @@
             },
             {
                 "to": {
-                    "startLine": 171,
+                    "startLine": 175,
                     "startColumn": 4,
-                    "startOffset": 12508,
+                    "startOffset": 12663,
                     "endColumn": 117,
-                    "endOffset": 12621
+                    "endOffset": 12776
                 },
                 "from": {
                     "file": "C:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-appinvite\\9.6.1\\res\\values-v11\\values.xml",

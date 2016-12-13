@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="android:Theme.Holo.Light"/>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">
+            @color/cast_libraries_material_featurehighlight_outer_highlight_default_color
+        </item>
+    </style>
     <style name="Base.TextAppearance.AppCompat.Inverse">
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
         <item name="android:textColorHint">?android:attr/textColorHintInverse</item>
