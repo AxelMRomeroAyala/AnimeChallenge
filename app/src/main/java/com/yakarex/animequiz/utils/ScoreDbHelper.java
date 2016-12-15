@@ -26,8 +26,6 @@ public class ScoreDbHelper extends SQLiteOpenHelper{
 	@SuppressWarnings("unused")
 	private final Context myContext;
 	
-	
-	
 	public ScoreDbHelper(Context context) {
 		super(context, DB_NAME, null, 1);
 		this.myContext= context;
@@ -448,7 +446,6 @@ public class ScoreDbHelper extends SQLiteOpenHelper{
 	   		finally {
 	   			myScoreDataBase.endTransaction();
 	   		}
-		 
 	 }
 	 
 	 public String getInputedName(int id){
@@ -498,10 +495,4 @@ public class ScoreDbHelper extends SQLiteOpenHelper{
 		 	}
 		 
 	 }
-
-	 
-	 
-	 
-		
-
 }

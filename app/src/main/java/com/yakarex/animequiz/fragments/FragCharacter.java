@@ -1,22 +1,18 @@
 package com.yakarex.animequiz.fragments;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.R;
-import com.yakarex.animequiz.R.id;
 import com.yakarex.animequiz.models.AChaCharacterModel;
 import com.yakarex.animequiz.utils.FinalStringsUtils;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,9 +20,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,17 +41,17 @@ public class FragCharacter extends Fragment{
 
     int score;
 
-    String scoreString;
-    TextView charscoreView;
-
     ImageView charimage;
     ImageView prevBtn;
     ImageView nextBtn;
     EditText textInput;
     ProgressBar pbar;
     TextView charDialog;
+    LinearLayout buttonsContainer;
     Button okButton;
     Button hintButton;
+
+    Toast gotNameToast, gotFnameToast, gotAnimeToast, charCompletedToast;
 
     public static String CHARACTER= "character";
 
@@ -61,7 +59,7 @@ public class FragCharacter extends Fragment{
         FragCharacter fragment = new FragCharacter();
 
         Bundle args = new Bundle();
-        args.putSerializable(CHARACTER, characterModel);
+        args.putParcelable(CHARACTER, characterModel);
         fragment.setArguments(args);
         return fragment;
     }
@@ -75,8 +73,10 @@ public class FragCharacter extends Fragment{
         cursor = ((MainFragActivity) getActivity()).getLvlCursor();
         cursor.moveToPosition(position);
 
-        characterModel = (AChaCharacterModel) getArguments().getSerializable(CHARACTER);
+        characterModel = (AChaCharacterModel) getArguments().getParcelable(CHARACTER);
 
+        Log.e("Getting Score: ", String.valueOf(score));
+        score = ((MainFragActivity) getActivity()).getCharScore(characterModel.getCharid(), characterModel.getLevel());
 
         View rootView = inflater.inflate(R.layout.frag_character, container,
                 false);
@@ -88,17 +88,21 @@ public class FragCharacter extends Fragment{
 
     private void setUpView(View rootView){
 
+        prepareToasts();
+
         charimage = (ImageView) rootView.findViewById(R.id.characterframefrag);
         textInput = (EditText) rootView.findViewById(R.id.editText1);
         pbar = (ProgressBar) rootView.findViewById(R.id.progressBar1);
         charDialog = (TextView) rootView.findViewById(R.id.chardialog);
+
+        buttonsContainer=(LinearLayout) rootView.findViewById(R.id.buttons);
 
         okButton = (Button) rootView.findViewById(R.id.okbutton);
         okButton.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
 
-                checkInput(v);
+                checkInput();
             }
         });
 
@@ -131,6 +135,25 @@ public class FragCharacter extends Fragment{
         showScore();
     }
 
+    private void prepareToasts(){
+
+        Context context = ((MainFragActivity) getActivity()).getApplicationContext();
+        gotNameToast = Toast.makeText(context, R.string.gotname,
+                Toast.LENGTH_SHORT);
+        gotNameToast.setGravity(Gravity.TOP, 0, 0);
+        gotFnameToast = Toast.makeText(context, R.string.gotfullname,
+                Toast.LENGTH_SHORT);
+        gotFnameToast.setGravity(Gravity.TOP, 0, 0);
+        gotAnimeToast = Toast.makeText(context, R.string.gotanime,
+                Toast.LENGTH_SHORT);
+        gotAnimeToast.setGravity(Gravity.TOP, 0, 0);
+        charCompletedToast = Toast.makeText(context,
+                R.string.charcompleted, Toast.LENGTH_SHORT);
+        charCompletedToast.setGravity(Gravity.TOP, 0, 0);
+        wrongToast = Toast.makeText(context, R.string.wrong, Toast.LENGTH_SHORT);
+        wrongToast.setGravity(Gravity.TOP, 0, 0);
+    }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -138,25 +161,7 @@ public class FragCharacter extends Fragment{
         charDialog.setSelected(true);
     }
 
-//    public void btnBehaviour(String behaviour) {
-//
-//        if (behaviour == "next") {
-//            cursor.moveToNext();
-//        } else if (behaviour == "prev") {
-//            cursor.moveToPrevious();
-//        }
-//
-//        buttonsVisibility();
-//
-//        characterModel = new AChaCharacterModel(cursor);
-//
-//        charimage.setImageURI(characterModel.getUri());
-//
-//        setButtonsStatus();
-//
-//    }
-
-    public void checkInput(View view) {
+    public void checkInput() {
 
         String text = textInput.getText().toString().trim().toLowerCase();
         // we clean the input
@@ -176,28 +181,11 @@ public class FragCharacter extends Fragment{
         String[][] beforecompareanime = stringSplitter(characterModel.getAnime());
         String[] animeArray = beforecompareanime[0];
 
-        pbar.setProgress(score);
-        Context context = ((MainFragActivity) getActivity()).getApplicationContext();
-        Toast gotNameToast = Toast.makeText(context, R.string.gotname,
-                Toast.LENGTH_SHORT);
-        gotNameToast.setGravity(Gravity.TOP, 0, 0);
-        Toast gotFnameToast = Toast.makeText(context, R.string.gotfullname,
-                Toast.LENGTH_SHORT);
-        gotFnameToast.setGravity(Gravity.TOP, 0, 0);
-        Toast gotAnimeToast = Toast.makeText(context, R.string.gotanime,
-                Toast.LENGTH_SHORT);
-        gotAnimeToast.setGravity(Gravity.TOP, 0, 0);
-        Toast charCompletedToast = Toast.makeText(context,
-                R.string.charcompleted, Toast.LENGTH_SHORT);
-        charCompletedToast.setGravity(Gravity.TOP, 0, 0);
-        wrongToast = Toast
-                .makeText(context, R.string.wrong, Toast.LENGTH_SHORT);
-        wrongToast.setGravity(Gravity.TOP, 0, 0);
+        updateCharacterView(true);
+
 
         switch (score) {
             case 0:
-
-                charDialog.setText(R.string.qall);
 
                 if (animematches >= animeArray.length) {
                     score = score + 30;
@@ -205,36 +193,23 @@ public class FragCharacter extends Fragment{
                     ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 30, characterModel.getLevel());
-                    charDialog.setText(R.string.qname);
-                    showScore();
-                    pbar.setProgress(score);
+                    updateCharacterView(true);
                     unlockingCheck(30);
                 } else if (matches >= nameArray.length) {
                     score = score + 70;
                     gotFnameToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    charDialog.setText(R.string.qanime);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 70, characterModel.getLevel());
-                    showScore();
-                    pbar.setProgress(score);
+                    updateCharacterView(true);
                     unlockingCheck(70);
                 } else if (matches > 0) {
                     score = score + 35;
                     gotNameToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    charDialog.setText(R.string.qanime);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    showScore();
-                    pbar.setProgress(score);
+                    updateCharacterView(true);
                     unlockingCheck(35);
                 }
-
-                // else if (extra.compareTo(text) == 0) {
-                // score = score + 25;
-                // textInput.setText("Got extra data ;) Score +25");
-                // scoreHelper.setCharScore(charid, 25, level);
-                // pbar.setProgress(score);
-                // }
 
                 else {
                     wrongAnswer();
@@ -243,7 +218,6 @@ public class FragCharacter extends Fragment{
                 break;
             case 35:
                 // Only got the name partially
-                charDialog.setText(R.string.qanime);
                 // therefore if we get the full name here we must add 35 to the
                 // value not 70
                 if (animematches >= animeArray.length) {
@@ -251,19 +225,15 @@ public class FragCharacter extends Fragment{
                     gotAnimeToast.show();
                     ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    charDialog.setText(R.string.qfname);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 30, characterModel.getLevel());
-                    showScore();
-                    pbar.setProgress(score);
+                    updateCharacterView(true);
                     unlockingCheck(30);
                 } else if (matches >= nameArray.length) {
                     score = score + 35;
                     gotFnameToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    charDialog.setText(R.string.qanime);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    showScore();
-                    pbar.setProgress(score);
+                    updateCharacterView(true);
                     unlockingCheck(35);
                 } else {
                     wrongAnswer();
@@ -272,12 +242,10 @@ public class FragCharacter extends Fragment{
                 break;
             case 30:
                 // Only got the anime
-                charDialog.setText(R.string.qname);
                 if (matches >= nameArray.length) {
                     score = score + 70;
                     charCompletedToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    charDialog.setText(R.string.charcompleted);
                     String animeforcomplete;
                     String fnameforcomplete;
                     if (characterModel.getAnime().contains("@")) {
@@ -296,28 +264,15 @@ public class FragCharacter extends Fragment{
                     String stringforcompletedialog = fnameforcomplete + " "
                             + separator + " " + animeforcomplete;
 
-                    charDialog.setText(stringforcompletedialog.toUpperCase());
-
-                    pbar.setProgress(100);
-                    okButton.setEnabled(false);
-                    hintButton.setEnabled(false);
-                    textInput.setEnabled(false);
-                    textInput.setClickable(false);
-                    okButton.setEnabled(false);
-                    textInput.setEnabled(false);
-                    textInput.setClickable(false);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 70, characterModel.getLevel());
-                    showScore();
-                    pbar.setProgress(score);
+                    updateCharacterView(true);
                     unlockingCheck(70);
                 } else if (matches > 0) {
                     score = score + 35;
                     gotNameToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    charDialog.setText(R.string.qfname);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    showScore();
-                    pbar.setProgress(score);
+                    updateCharacterView(true);
                     unlockingCheck(35);
                 } else {
                     wrongAnswer();
@@ -325,16 +280,13 @@ public class FragCharacter extends Fragment{
                 break;
             case 70:
                 // Only got the full name
-                charDialog.setText("anime?");
                 if (animematches >= animeArray.length) {
                     score = score + 30;
                     charCompletedToast.show();
                     ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 30, characterModel.getLevel());
-                    showScore();
-                    pbar.setProgress(score);
-                    charDialog.setText(R.string.charcompleted);
+                    updateCharacterView(true);
                     String animeforcomplete;
                     String fnameforcomplete;
 
@@ -358,33 +310,21 @@ public class FragCharacter extends Fragment{
                     String stringforcompletedialog = fnameforcomplete + " "
                             + separator + " " + animeforcomplete;
 
-                    charDialog.setText(stringforcompletedialog.toUpperCase());
-
-                    pbar.setProgress(100);
+                    updateCharacterView(true);
                     unlockingCheck(30);
 
-                    okButton.setEnabled(false);
-                    hintButton.setEnabled(false);
-                    textInput.setEnabled(false);
-                    textInput.setClickable(false);
-                    okButton.setEnabled(false);
-                    textInput.setEnabled(false);
-                    textInput.setClickable(false);
                 } else {
                     wrongAnswer();
                 }
                 break;
             case 65:
                 // Got the anime and name
-                charDialog.setText(R.string.qfname);
                 if (matches >= nameArray.length) {
                     score = score + 35;
                     charCompletedToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    pbar.setProgress(score);
-                    showScore();
-                    charDialog.setText(R.string.charcompleted);
+                    updateCharacterView(true);
                     String animeforcomplete;
                     String fnameforcomplete;
 
@@ -408,29 +348,16 @@ public class FragCharacter extends Fragment{
                     String stringforcompletedialog = fnameforcomplete + " "
                             + separator + " " + animeforcomplete;
 
-                    charDialog.setText(stringforcompletedialog.toUpperCase());
-
-                    pbar.setProgress(100);
+                    updateCharacterView(true);
                     unlockingCheck(35);
 
-                    okButton.setEnabled(false);
-                    hintButton.setEnabled(false);
-                    textInput.setEnabled(false);
-                    textInput.setClickable(false);
-                    okButton.setEnabled(false);
-                    textInput.setEnabled(false);
-                    textInput.setClickable(false);
                 } else {
                     wrongAnswer();
                 }
                 break;
             case 100:
-                charDialog.setText(R.string.charcompleted);
                 charCompletedToast.show();
                 ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                pbar.setProgress(score);
-                showScore();
-                charDialog.setEnabled(false);
                 String animeforcomplete;
                 String fnameforcomplete;
 
@@ -455,18 +382,12 @@ public class FragCharacter extends Fragment{
                 String stringforcompletedialog = fnameforcomplete + " " + separator
                         + " " + animeforcomplete;
 
-                charDialog.setText(stringforcompletedialog.toUpperCase());
 
-                pbar.setProgress(100);
-                okButton.setEnabled(false);
-                hintButton.setEnabled(false);
-                textInput.setEnabled(false);
-                textInput.setClickable(false);
+                updateCharacterView(true);
 
                 break;
         }
 
-        showScore();
     }
 
     public void showScore() {
@@ -477,7 +398,7 @@ public class FragCharacter extends Fragment{
     public void unlockingCheck(int scoreToAdd) {
 
         int totalScoreInt = Integer.parseInt(((MainFragActivity) getActivity()).getTotalScore());
-        Context context = ((MainFragActivity) getActivity()).getApplicationContext();
+        Context context = (getActivity()).getApplicationContext();
         Toast lvlunlocked = Toast.makeText(context, "", Toast.LENGTH_SHORT);
 
         for (int x = 3; x < FinalStringsUtils.lvlunlockinglogicarray.length; x++) {
@@ -621,9 +542,6 @@ public class FragCharacter extends Fragment{
     }
 
     public void setButtonsStatus() {
-        score = ((MainFragActivity) getActivity()).getCharScore(characterModel.getCharid(), characterModel.getLevel());
-
-        Log.e("Getting Score: ", String.valueOf(score));
 
         if (score < 100) {
             okButton.setEnabled(true);
@@ -637,8 +555,38 @@ public class FragCharacter extends Fragment{
             textInput.setClickable(false);
         }
 
-        pbar.setProgress(score);
+        updateCharacterView(false);
 
+    }
+
+    private void updateCharacterView(boolean animated){
+
+        if(animated){
+            ObjectAnimator animation = ObjectAnimator.ofInt(pbar, "progress", score);
+            animation.setDuration(500); // 0.5 second
+            animation.setInterpolator(new DecelerateInterpolator());
+            animation.start();
+        }
+        else {
+            pbar.setProgress(score);
+        }
+
+        if(score>= 100){
+            okButton.setEnabled(false);
+            hintButton.setEnabled(false);
+            buttonsContainer.setVisibility(View.INVISIBLE);
+            textInput.setVisibility(View.INVISIBLE);
+            textInput.setEnabled(false);
+            textInput.setClickable(false);
+        }
+        else{
+            okButton.setEnabled(true);
+            hintButton.setEnabled(true);
+            buttonsContainer.setVisibility(View.VISIBLE);
+            textInput.setVisibility(View.VISIBLE);
+            textInput.setEnabled(true);
+            textInput.setClickable(true);
+        }
 
         // Here the char dialog is settled
         switch (score) {
@@ -661,6 +609,8 @@ public class FragCharacter extends Fragment{
                 charDialog.setText(R.string.charcompleted);
                 break;
         }
+
+        showScore();
 
     }
 
