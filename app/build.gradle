@@ -46,4 +46,5 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
     compile 'com.github.Q42:AndroidScrollingImageView:1.2'
     compile project(path: ':BaseGameUtils')
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
 }

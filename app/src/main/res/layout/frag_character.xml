@@ -83,7 +83,7 @@
         android:layout_above="@+id/editText1"
         android:layout_alignRight="@+id/editText1"
         android:layout_alignLeft="@+id/editText1"
-        />
+        android:progressTint="@color/red_tomato"/>
 
     <EditText
         android:id="@+id/editText1"
