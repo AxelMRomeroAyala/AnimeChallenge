@@ -14,37 +14,7 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="title_activity_level">Nivel</string>
     <string name="tounlock"> Pts para Desbloquear</string>
-    <string name="level">Nivel 1</string>
     <string name="title_activity_character">Personaje</string>
-    <string name="level2">Nivel 2</string>
-    <string name="level3">Nivel 3</string>
-    <string name="level4">Nivel 4</string>
-    <string name="level5">Nivel 5</string>
-    <string name="level6">Nivel 6</string>
-    <string name="level7">Nivel 7</string>
-    <string name="level8">Nivel 8</string>
-    <string name="level9">Nivel 9</string>
-    <string name="level10">Nivel 10</string>
-    <string name="level11">Nivel 11</string>
-    <string name="level12">Nivel 12</string>
-    <string name="level13">Nivel 13</string>
-    <string name="level14">Nivel 14</string>
-    <string name="level15">Nivel 15</string>
-    <string name="level16">Nivel 16</string>
-    <string name="level17">Nivel 17</string>
-    <string name="level18">Nivel 18</string>
-    <string name="level19">Nivel 19</string>
-    <string name="level20">Nivel 20</string>
-    <string name="level21">Nivel 21</string>
-    <string name="level22">Nivel 22</string>
-    <string name="level23">Nivel 23</string>
-    <string name="level24">Nivel 24</string>
-    <string name="level25">Nivel 25</string>
-    <string name="level26">Nivel 26</string>
-    <string name="level27">Nivel 27</string>
-    <string name="level28">Nivel 28</string>
-    <string name="level29">Nivel 29</string>
-    <string name="level30">Nivel 30</string>
     <string name="levelpets">Nivel Pets</string>
     <string name="levelgames">Nivel Gamer</string>
     <string name="levelgames2">Nivel Gamer 2</string>
@@ -58,8 +28,6 @@
     <string name="qanime">¿Anime?</string>
     <string name="qfname">¿Sabes el nombre completo?</string>
     <string name="qall">¿Nombre o Anime?</string>
-    <string name="a">a</string>
-    <string name="b">b</string>
     <string name="title_activity_options">OptionsActivity</string>
     <string name="exit">¿Esta seguro que desea salir?</string>
     <string name="volon">Audio Activado</string>
@@ -84,30 +52,6 @@
     <string name="logoutgoogle">Salir de Google</string>
     <string name="logingooglesure">Ingresar a los Servicios de Google?</string>
     <string name="logoutgooglesure">¿Realmente desea salir de los Servicios de Google?</string>
-    
-    <string name="unlockedtoast3">Nivel 3 Desbloquado</string>
-    <string name="unlockedtoast4">Nivel 4 Desbloqueado</string>
-    <string name="unlockedtoast5">Nivel 5 Desbloqueado</string>
-    <string name="unlockedtoast6">Nivel 6 Desbloqueado</string>
-    <string name="unlockedtoast7">Nivel 7 Desbloqueado</string>
-    <string name="unlockedtoast8">Nivel 8 Desbloqueado</string>
-    <string name="unlockedtoastgamesspecial">Nivel Gamer Desbloqueado</string>
-    <string name="unlockedtoast9">Nivel 9 Desbloqueado</string>
-    <string name="unlockedtoast10">Nivel 10 Desbloqueado</string>
-    <string name="unlockedtoast11">Nivel 11 Desbloqueado</string>
-    <string name="unlockedtoast12">Nivel 12 Desbloqueado</string>
-    <string name="unlockedtoast13">Nivel 13 Desbloqueado</string>
-    <string name="unlockedtoast14">Nivel 14 Desbloqueado</string>
-    <string name="unlockedtoast15">Nivel 15 Desbloqueado</string>
-    <string name="unlockedtoast16">Nivel 16 Desbloqueado</string>
-    <string name="unlockedtoastpets">Nivel de Pets Desbloqueado</string>
-    <string name="unlockedtoast17">Nivel 17 Desbloqueado</string>
-    <string name="unlockedtoast18">Nivel 18 Desbloqueado</string>
-    <string name="unlockedtoastgamesspecial2">2ndo Nivel Gamer Desbloqueado</string>
-    <string name="unlockedtoast19">Nivel 19 Desbloqueado</string>
-    <string name="unlockedtoast20">Nivel 20 Desbloqueado</string>
-    <string name="unlockedtoastmovies">Nivel de Peliculas Desbloqueado</string>
-    <string name="unlockedtoast21">Nivel 21 Desbloqueado</string>
     <string name="lvlscore">Nivel</string>
     <string name="totalscore">Total</string>
     <string name="gamescore">Power Level: </string>
@@ -136,18 +80,14 @@
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">mas</string>
     <string name="rateuserror">No se pudo abrir Google Play</string>
-    
-        
     <string name="by">por</string>
     <string name="developer"><b>Desarrollador</b></string>
     <string name="gdesigner"><b>Diseñador Gráfico</b></string>
     <string name="specialthanks"><b>Agradecimientos</b></string>
-
     <string name="vibration">Vibración</string>
     <string name="volume">Volumen</string>
-    <string name="unlockedtoast22">Nivel 22 Desbloqueado</string>
-    <string name="unlockedtoast23">Nivel 23 Desbloqueado</string>
     <string name="unlockedtoast">Desbloqueado el nivel </string>
+    <string name="level_name">Nivel @@</string>
 
 
 </resources>

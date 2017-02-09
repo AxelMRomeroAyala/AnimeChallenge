@@ -7,14 +7,14 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.StatsTab1Fragment;
-import com.yakarex.animequiz.StatsTab2Fragment;
+import com.yakarex.animequiz.fragments.FragLevelStats;
 
 /**
  * Created by aromero on 25/01/16.
  */
 public class StatsPagerAdapter extends FragmentStatePagerAdapter {
 
-    Context context;
+    private Context context;
 
     public StatsPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
@@ -24,18 +24,21 @@ public class StatsPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        if(position== 0){
+        switch (position){
 
-            StatsTab1Fragment tab1= new StatsTab1Fragment();
+            case 0:
 
-            return tab1;
+                return new StatsTab1Fragment();
+
+            case 1:
+
+                return new FragLevelStats();
+
+            default:
+                return null;
+
         }
-        else{
 
-            StatsTab2Fragment tab2 = new StatsTab2Fragment();
-
-            return tab2;
-        }
     }
 
     @Override

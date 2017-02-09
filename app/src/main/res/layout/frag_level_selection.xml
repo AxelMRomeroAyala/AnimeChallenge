@@ -32,7 +32,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="30sp"
-                    android:text="@string/level"
                     android:textColor="@color/white"
                     android:tag="1"
                     android:onClick="openLevel"
@@ -48,7 +47,6 @@
                     android:layout_below="@+id/lvl1"
                     android:layout_marginTop="24dp"
                     android:textSize="30sp"
-                    android:text="@string/level2"
                     android:textColor="@color/white"
                     android:tag="2"
                     android:onClick="openLevel" />
@@ -63,7 +61,6 @@
                     android:layout_below="@+id/lvl2"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level3"
                     android:textColor="@color/white"
                     android:tag="3"
                     android:onClick="openLevel" />
@@ -78,7 +75,6 @@
                     android:layout_below="@+id/lvl3"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level4"
                     android:textColor="@color/white"
                     android:tag="4"
                     android:onClick="openLevel"/>
@@ -93,7 +89,6 @@
                     android:layout_below="@+id/lvl4"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level5"
                     android:textColor="@color/white"
                     android:tag="5"
                     android:onClick="openLevel"/>
@@ -108,7 +103,6 @@
                     android:layout_below="@+id/lvl5"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level6"
                     android:textColor="@color/white"
                     android:tag="6"
                     android:onClick="openLevel" />
@@ -123,7 +117,6 @@
                     android:layout_below="@+id/lvl6"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level7"
                     android:textColor="@color/white"
                     android:tag="7"
                     android:onClick="openLevel" />
@@ -153,7 +146,6 @@
                     android:layout_below="@+id/lvlgames"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level8"
                     android:textColor="@color/white"
                     android:tag="8"
                     android:onClick="openLevel" />
@@ -168,7 +160,6 @@
                     android:layout_below="@+id/lvl8"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level9"
                     android:textColor="@color/white"
                     android:tag="9"
                     android:onClick="openLevel" />
@@ -183,7 +174,6 @@
                     android:layout_below="@+id/lvl9"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level10"
                     android:textColor="@color/white"
                     android:tag="10"
                     android:onClick="openLevel" />
@@ -198,7 +188,6 @@
                     android:layout_below="@+id/lvl10"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level11"
                     android:textColor="@color/white"
                     android:tag="11"
                     android:onClick="openLevel" />
@@ -213,7 +202,6 @@
                     android:layout_below="@+id/lvl11"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level12"
                     android:textColor="@color/white"
                     android:tag="12"
                     android:onClick="openLevel"/>
@@ -228,7 +216,6 @@
                     android:layout_below="@+id/lvl12"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level13"
                     android:textColor="@color/white"
                     android:tag="13"
                     android:onClick="openLevel"/>
@@ -242,7 +229,6 @@
                     android:layout_below="@+id/lvl13"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level14"
                     android:textColor="@color/white"
                     android:tag="14"
                     android:onClick="openLevel"/>
@@ -256,7 +242,6 @@
                     android:layout_below="@+id/lvl14"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level15"
                     android:textColor="@color/white"
                     android:tag="15"
                     android:onClick="openLevel"/>
@@ -271,7 +256,6 @@
                     android:layout_below="@+id/lvl15"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level16"
                     android:textColor="@color/white"
                     android:tag="16"
                     android:onClick="openLevel"/>
@@ -301,7 +285,6 @@
                     android:layout_below="@+id/lvlpets"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level17"
                     android:textColor="@color/white"
                     android:tag="17"
                     android:onClick="openLevel"/>
@@ -316,7 +299,6 @@
                     android:layout_below="@+id/lvl17"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level18"
                     android:textColor="@color/white"
                     android:tag="18"
                     android:onClick="openLevel"/>
@@ -346,7 +328,6 @@
                     android:layout_below="@+id/lvlgames2"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level19"
                     android:textColor="@color/white"
                     android:tag="19"
                     android:onClick="openLevel"/>
@@ -361,7 +342,6 @@
                     android:layout_below="@+id/lvl19"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level20"
                     android:textColor="@color/white"
                     android:tag="20"
                     android:onClick="openLevel"/>
@@ -391,7 +371,6 @@
                     android:layout_below="@+id/lvlmovies"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level21"
                     android:textColor="@color/white"
                     android:tag="21"
                     android:onClick="openLevel"/>
@@ -406,7 +385,6 @@
                     android:layout_below="@+id/lvl21"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level22"
                     android:textColor="@color/white"
                     android:tag="22"
                     android:onClick="openLevel"/>
@@ -421,7 +399,6 @@
                     android:layout_below="@+id/lvl22"
                     android:layout_marginTop="24dp"
                     android:textSize="15sp"
-                    android:text="@string/level23"
                     android:textColor="@color/white"
                     android:tag="23"
                     android:onClick="openLevel"/>

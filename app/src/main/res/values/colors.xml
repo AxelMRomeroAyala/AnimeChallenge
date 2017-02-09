@@ -12,5 +12,8 @@
     <color name="orange">#FF8000</color>
     <color name="purple">#8904B1</color>
     <color name="blackOP">#96000000</color>
+    <color name="golden">#ffd700</color>
+    <color name="silver">#c0c0c0</color>
+    <color name="bronze">#cd7f32</color>
 	
 </resources>
