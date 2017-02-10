@@ -153,6 +153,7 @@ public class DataBaseHelper extends SQLiteOpenHelper{
 		return lvlCursor;
 		
 	}
+
 	
 	public Cursor getChallengeLvl(String lvl){
 		String query= "SELECT * FROM challenge WHERE anime = '" + lvl+ "'";

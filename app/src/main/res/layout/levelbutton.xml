@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customlvlselbuttom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lvlbutton"
+    android:layout_marginEnd="50dp"
+    android:layout_marginRight="50dp">
+
+    <TextView
+        android:id="@+id/lvlsellvlname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/customlvlselbuttom"
-        android:background="@drawable/lvlbutton" >
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="20dp"
+        android:text="Level 1"
+        android:textSize="38sp" />
 
-        <TextView
-            android:id="@+id/lvlsellvlname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:paddingRight="20dp"
-            />
-        
-        <ProgressBar
-            android:id="@+id/lvlsellvlpbar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/lvlsellvlname"
-            android:paddingTop="10dp"/>
+    <ImageView
+        android:id="@+id/lvlsellvlstar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:src="@drawable/starempty" />
 
-        <ImageView
-            android:id="@+id/lvlsellvlstar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/starempty"
-            android:layout_toRightOf="@+id/lvlsellvlpbar"
-            android:paddingRight="20dp"
-            android:maxHeight="20dp"
-            android:maxWidth="200dp"
-            android:layout_centerVertical="true"
-            />
-            
+    <ProgressBar
+        android:id="@+id/lvlsellvlpbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        tools:progress="50" />
 
-    </RelativeLayout>
+</RelativeLayout>
