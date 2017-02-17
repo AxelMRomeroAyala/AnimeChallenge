@@ -252,10 +252,16 @@ public class MainFragActivity extends FragmentActivity implements
 
             String lvlName = getLvlNamebyId(FinalStringsUtils.lvlidarray[x]);
 
+            level.setLevelId(FinalStringsUtils.lvlidarray[x]);
             level.setLevelName(lvlName);
             level.setLevelScore(getLevelScore(FinalStringsUtils.lvlidarray[x]));
             level.setStarStats(getStarStats(FinalStringsUtils.lvlidarray[x]));
             level.setLvlMaxScore(getLevelMaxScore(FinalStringsUtils.lvlidarray[x]));
+
+            if(Integer.parseInt(getTotalScore()) >= FinalStringsUtils.lvlunlockinglogicarray[x]){
+                level.setUnlocked(true);
+            }
+
             levelList.add(level);
         }
 
@@ -347,6 +353,32 @@ public class MainFragActivity extends FragmentActivity implements
 
         Bundle bundle = new Bundle();
         bundle.putInt("lvl", lvl);
+        changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle), true, false);
+
+    }
+
+    public void openLevelbyId(int lvlId) {
+
+        dataBaseHelper = new DataBaseHelper(this);
+        try {
+
+            dataBaseHelper.openDataBase();
+
+        } catch (SQLException sqle) {
+
+            String errorMessage = "Error";
+            Toast toast = Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT);
+            toast.show();
+
+            throw sqle;
+
+        }
+
+        Cursor cursor = dataBaseHelper.getLvl(lvlId);
+        lvlCursor = cursor;
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("lvl", lvlId);
         changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle), true, false);
 
     }

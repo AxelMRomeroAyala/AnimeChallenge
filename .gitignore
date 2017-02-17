@@ -9,3 +9,6 @@
 /app/build
 /captures
 .externalNativeBuild
+.idea/inspectionProfiles/Project_Default.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml

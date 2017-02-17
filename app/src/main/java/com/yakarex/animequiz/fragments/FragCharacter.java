@@ -33,12 +33,9 @@ public class FragCharacter extends Fragment{
 
     Toast wrongToast;
     int hintsNumber;
-
     Cursor cursor;
     int position;
-
     AChaCharacterModel characterModel;
-
     int score;
 
     ImageView charimage;
@@ -611,7 +608,6 @@ public class FragCharacter extends Fragment{
         }
 
         showScore();
-
     }
 
 }

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yakarex.animequiz.R;
@@ -68,6 +69,7 @@ public class LevelsStatsAdapter extends RecyclerView.Adapter<LevelsStatsAdapter.
         animation.setDuration(500); // 0.5 second
         animation.setInterpolator(new DecelerateInterpolator());
         animation.start();
+
     }
 
     @Override

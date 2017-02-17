@@ -5,10 +5,20 @@ package com.yakarex.animequiz.models;
  */
 
 public class LevelStatModel {
+    private int levelId;
     private String levelName;
     private int[] starStats;
     private int levelScore;
     private int lvlMaxScore;
+    private boolean isUnlocked= false;
+
+    public int getLevelId() {
+        return levelId;
+    }
+
+    public void setLevelId(int levelId) {
+        this.levelId = levelId;
+    }
 
     public String getLevelName() {
         return levelName;
@@ -40,5 +50,13 @@ public class LevelStatModel {
 
     public void setLvlMaxScore(int lvlMaxScore) {
         this.lvlMaxScore = lvlMaxScore;
+    }
+
+    public boolean isUnlocked() {
+        return isUnlocked;
+    }
+
+    public void setUnlocked(boolean unlocked) {
+        isUnlocked = unlocked;
     }
 }
