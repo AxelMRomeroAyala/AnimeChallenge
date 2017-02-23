@@ -1,7 +1,0 @@
-#Tue Nov 22 12:32:52 GMT-03:00 2016
-base.0=C\:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_896d578e32992e7ae7ca578e210a268dcdb14c28
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_33b3225106ea4691de9374c5e6e4fa26c61f64d9\\classes.dex
-base.1=C\:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_33b3225106ea4691de9374c5e6e4fa26c61f64d9
-file.0=C\:\\Users\\axel.romero\\Documents\\Yacarex\\AnimeChallenge\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_896d578e32992e7ae7ca578e210a268dcdb14c28\\classes.dex
