@@ -1,14 +1,10 @@
-.idea/vcs.xml
 *.iml
-.gradle
+.gradle/
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
 .DS_Store
-/build
-/app/build
+build/
 /captures
 .externalNativeBuild
-.idea/inspectionProfiles/Project_Default.xml
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/misc.xml
+.idea/
