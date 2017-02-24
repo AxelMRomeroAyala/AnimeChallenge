@@ -12,6 +12,7 @@ import com.yakarex.animequiz.utils.FinalStringsUtils;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -558,7 +559,19 @@ public class FragCharacter extends Fragment{
 
     private void updateCharacterView(boolean animated){
 
+        int charScore= 100;
+        if(score == charScore){
+            pbar.getProgressDrawable().setColorFilter(getContext().getResources().getColor(R.color.golden), PorterDuff.Mode.SRC_IN);
+        }
+        else if(score >= (charScore/2)){
+            pbar.getProgressDrawable().setColorFilter(getContext().getResources().getColor(R.color.silver), PorterDuff.Mode.SRC_IN);
+        }
+        else if(score <= (charScore/2)){
+            pbar.getProgressDrawable().setColorFilter(getContext().getResources().getColor(R.color.bronze), PorterDuff.Mode.SRC_IN);
+        }
+
         if(animated){
+
             ObjectAnimator animation = ObjectAnimator.ofInt(pbar, "progress", score);
             animation.setDuration(500); // 0.5 second
             animation.setInterpolator(new DecelerateInterpolator());

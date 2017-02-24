@@ -102,12 +102,12 @@ public class LevelsAdapter extends RecyclerView.Adapter<LevelsAdapter.ViewHolder
         int score = levels.get(position).getLevelScore();
         int maxscore = levels.get(position).getLvlMaxScore();
 
-        if (score > 0) {
+        if (score > 0 && score < maxscore/2) {
 
             view.setImageDrawable(cupper);
 
         }
-        else if (score > (maxscore / 2)) {
+        else if (score >= maxscore/2 && score < maxscore) {
 
             view.setImageDrawable(silver);
         }
