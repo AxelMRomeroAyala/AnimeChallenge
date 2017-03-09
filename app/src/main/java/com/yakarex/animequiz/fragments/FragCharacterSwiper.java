@@ -13,7 +13,13 @@ import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.adapters.CharacterPagesAdapter;
 import com.yakarex.animequiz.models.AChaCharacterModel;
+import com.yakarex.animequiz.models.MessageEvent;
+import com.yakarex.animequiz.utils.FinalStringsUtils;
 import com.yakarex.animequiz.utils.ZoomOutPageTransformer;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * Created by axel.romero on 13/12/2016.
@@ -82,6 +88,25 @@ public class FragCharacterSwiper extends Fragment {
         showScore();
 
         return rootView;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event) {
+     if(event.message.equals(FinalStringsUtils.UPDATESCORE)){
+         showScore();
+     }
     }
 
     public void showScore() {

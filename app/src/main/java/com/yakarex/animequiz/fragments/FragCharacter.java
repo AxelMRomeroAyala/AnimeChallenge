@@ -7,12 +7,16 @@ import java.util.Random;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.AChaCharacterModel;
+import com.yakarex.animequiz.models.MessageEvent;
 import com.yakarex.animequiz.utils.FinalStringsUtils;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -30,6 +34,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.greenrobot.eventbus.EventBus;
+
 public class FragCharacter extends Fragment{
 
     Toast wrongToast;
@@ -40,8 +46,6 @@ public class FragCharacter extends Fragment{
     int score;
 
     ImageView charimage;
-    ImageView prevBtn;
-    ImageView nextBtn;
     EditText textInput;
     ProgressBar pbar;
     TextView charDialog;
@@ -112,30 +116,17 @@ public class FragCharacter extends Fragment{
             }
         });
 
-        prevBtn = (ImageView) rootView.findViewById(R.id.prevButton);
-        prevBtn.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                //btnBehaviour("prev");
-            }
-        });
-
-        nextBtn = (ImageView) rootView.findViewById(R.id.nextButton);
-        nextBtn.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                //btnBehaviour("next");
-            }
-        });
-
         charimage.setImageURI(characterModel.getUri());
 
         setButtonsStatus();
 
         showScore();
+
     }
 
     private void prepareToasts(){
 
-        Context context = ((MainFragActivity) getActivity()).getApplicationContext();
+        Context context = getActivity().getApplicationContext();
         gotNameToast = Toast.makeText(context, R.string.gotname,
                 Toast.LENGTH_SHORT);
         gotNameToast.setGravity(Gravity.TOP, 0, 0);
@@ -179,9 +170,6 @@ public class FragCharacter extends Fragment{
         String[][] beforecompareanime = stringSplitter(characterModel.getAnime());
         String[] animeArray = beforecompareanime[0];
 
-        updateCharacterView(true);
-
-
         switch (score) {
             case 0:
 
@@ -191,21 +179,18 @@ public class FragCharacter extends Fragment{
                     ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 30, characterModel.getLevel());
-                    updateCharacterView(true);
                     unlockingCheck(30);
                 } else if (matches >= nameArray.length) {
                     score = score + 70;
                     gotFnameToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 70, characterModel.getLevel());
-                    updateCharacterView(true);
                     unlockingCheck(70);
                 } else if (matches > 0) {
                     score = score + 35;
                     gotNameToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    updateCharacterView(true);
                     unlockingCheck(35);
                 }
 
@@ -224,14 +209,12 @@ public class FragCharacter extends Fragment{
                     ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 30, characterModel.getLevel());
-                    updateCharacterView(true);
                     unlockingCheck(30);
                 } else if (matches >= nameArray.length) {
                     score = score + 35;
                     gotFnameToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    updateCharacterView(true);
                     unlockingCheck(35);
                 } else {
                     wrongAnswer();
@@ -263,14 +246,12 @@ public class FragCharacter extends Fragment{
                             + separator + " " + animeforcomplete;
 
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 70, characterModel.getLevel());
-                    updateCharacterView(true);
                     unlockingCheck(70);
                 } else if (matches > 0) {
                     score = score + 35;
                     gotNameToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    updateCharacterView(true);
                     unlockingCheck(35);
                 } else {
                     wrongAnswer();
@@ -284,7 +265,6 @@ public class FragCharacter extends Fragment{
                     ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 30, characterModel.getLevel());
-                    updateCharacterView(true);
                     String animeforcomplete;
                     String fnameforcomplete;
 
@@ -307,8 +287,6 @@ public class FragCharacter extends Fragment{
                     String separator = getString(R.string.from);
                     String stringforcompletedialog = fnameforcomplete + " "
                             + separator + " " + animeforcomplete;
-
-                    updateCharacterView(true);
                     unlockingCheck(30);
 
                 } else {
@@ -322,7 +300,6 @@ public class FragCharacter extends Fragment{
                     charCompletedToast.show();
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    updateCharacterView(true);
                     String animeforcomplete;
                     String fnameforcomplete;
 
@@ -346,7 +323,6 @@ public class FragCharacter extends Fragment{
                     String stringforcompletedialog = fnameforcomplete + " "
                             + separator + " " + animeforcomplete;
 
-                    updateCharacterView(true);
                     unlockingCheck(35);
 
                 } else {
@@ -381,16 +357,16 @@ public class FragCharacter extends Fragment{
                         + " " + animeforcomplete;
 
 
-                updateCharacterView(true);
-
                 break;
         }
+
+        updateCharacterView(true);
 
     }
 
     public void showScore() {
 
-        //TODO update the score in the parent
+        EventBus.getDefault().post(new MessageEvent(FinalStringsUtils.UPDATESCORE));
     }
 
     public void unlockingCheck(int scoreToAdd) {
@@ -553,21 +529,29 @@ public class FragCharacter extends Fragment{
             textInput.setClickable(false);
         }
 
-        updateCharacterView(false);
+        updateCharacterView(true);
 
     }
 
     private void updateCharacterView(boolean animated){
 
         int charScore= 100;
-        if(score == charScore){
-            pbar.getProgressDrawable().setColorFilter(getContext().getResources().getColor(R.color.golden), PorterDuff.Mode.SRC_IN);
-        }
-        else if(score >= (charScore/2)){
-            pbar.getProgressDrawable().setColorFilter(getContext().getResources().getColor(R.color.silver), PorterDuff.Mode.SRC_IN);
-        }
-        else if(score <= (charScore/2)){
-            pbar.getProgressDrawable().setColorFilter(getContext().getResources().getColor(R.color.bronze), PorterDuff.Mode.SRC_IN);
+        pbar.setMax(charScore);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+            if(score == charScore){
+                pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.golden)));
+            }
+            else if(score <= 0){
+                pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.gray)));
+            }
+            else if(score >= (charScore/2)){
+                pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.silver)));
+            }
+            else if(score <= (charScore/2)){
+                pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.bronze)));
+            }
         }
 
         if(animated){

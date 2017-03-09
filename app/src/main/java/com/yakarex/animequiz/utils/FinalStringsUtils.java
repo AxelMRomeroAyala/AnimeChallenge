@@ -34,4 +34,6 @@ public class FinalStringsUtils {
     public static final int GAMER2LEVEL= 102;
     public static final int PETSLEVEL= 101;
     public static final int MOVIESLEVEL= 103;
+
+    public static final String UPDATESCORE= "UPDATESCORE";
 }

@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.yakarex.animequiz.fragments.FragCharacter;
+import com.yakarex.animequiz.fragments.FragCharacterSwiper;
 import com.yakarex.animequiz.models.AChaCharacterModel;
 
 /**
@@ -15,8 +16,8 @@ import com.yakarex.animequiz.models.AChaCharacterModel;
 
 public class CharacterPagesAdapter extends FragmentStatePagerAdapter {
 
-    Context context;
-    Cursor charactersCursor;
+    private Context context;
+    private Cursor charactersCursor;
 
     public CharacterPagesAdapter(FragmentManager fm, Context context, Cursor cursor) {
         super(fm);
