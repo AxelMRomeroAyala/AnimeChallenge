@@ -14,8 +14,6 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,9 +26,11 @@ import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +52,8 @@ public class FragCharacter extends Fragment{
     LinearLayout buttonsContainer;
     Button okButton;
     Button hintButton;
+    RelativeLayout animeNameComponent;
+    TextView animeName;
 
     Toast gotNameToast, gotFnameToast, gotAnimeToast, charCompletedToast;
 
@@ -118,6 +120,9 @@ public class FragCharacter extends Fragment{
 
         charimage.setImageURI(characterModel.getUri());
 
+        animeNameComponent= (RelativeLayout) rootView.findViewById(R.id.character_anime_component);
+        animeName = (TextView) rootView.findViewById(R.id.character_anime_name_text_view);
+
         setButtonsStatus();
 
         showScore();
@@ -183,12 +188,14 @@ public class FragCharacter extends Fragment{
                 } else if (matches >= nameArray.length) {
                     score = score + 70;
                     gotFnameToast.show();
+                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 70, characterModel.getLevel());
                     unlockingCheck(70);
                 } else if (matches > 0) {
                     score = score + 35;
                     gotNameToast.show();
+                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
                     unlockingCheck(35);
@@ -213,6 +220,7 @@ public class FragCharacter extends Fragment{
                 } else if (matches >= nameArray.length) {
                     score = score + 35;
                     gotFnameToast.show();
+                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
                     unlockingCheck(35);
@@ -226,6 +234,7 @@ public class FragCharacter extends Fragment{
                 if (matches >= nameArray.length) {
                     score = score + 70;
                     charCompletedToast.show();
+                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     String animeforcomplete;
                     String fnameforcomplete;
@@ -250,6 +259,7 @@ public class FragCharacter extends Fragment{
                 } else if (matches > 0) {
                     score = score + 35;
                     gotNameToast.show();
+                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
                     unlockingCheck(35);
@@ -298,6 +308,7 @@ public class FragCharacter extends Fragment{
                 if (matches >= nameArray.length) {
                     score = score + 35;
                     charCompletedToast.show();
+                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
                     String animeforcomplete;
@@ -331,6 +342,7 @@ public class FragCharacter extends Fragment{
                 break;
             case 100:
                 charCompletedToast.show();
+                ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
                 ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                 String animeforcomplete;
                 String fnameforcomplete;
@@ -568,8 +580,10 @@ public class FragCharacter extends Fragment{
         if(score>= 100){
             okButton.setEnabled(false);
             hintButton.setEnabled(false);
-            buttonsContainer.setVisibility(View.INVISIBLE);
-            textInput.setVisibility(View.INVISIBLE);
+            buttonsContainer.setVisibility(View.GONE);
+            animeNameComponent.setVisibility(View.VISIBLE);
+            animeName.setText(((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid()));
+            textInput.setVisibility(View.GONE);
             textInput.setEnabled(false);
             textInput.setClickable(false);
         }
@@ -577,6 +591,7 @@ public class FragCharacter extends Fragment{
             okButton.setEnabled(true);
             hintButton.setEnabled(true);
             buttonsContainer.setVisibility(View.VISIBLE);
+            animeNameComponent.setVisibility(View.GONE);
             textInput.setVisibility(View.VISIBLE);
             textInput.setEnabled(true);
             textInput.setClickable(true);

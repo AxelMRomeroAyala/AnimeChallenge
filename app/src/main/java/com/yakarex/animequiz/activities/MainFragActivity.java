@@ -329,34 +329,6 @@ public class MainFragActivity extends FragmentActivity implements
 
     }
 
-    public void openLevel(View view) {
-
-        int lvl = Integer.parseInt((String) view.getTag());
-
-        dataBaseHelper = new DataBaseHelper(this);
-        try {
-
-            dataBaseHelper.openDataBase();
-
-        } catch (SQLException sqle) {
-
-            String errorMessage = "Error";
-            Toast toast = Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT);
-            toast.show();
-
-            throw sqle;
-
-        }
-
-        Cursor cursor = dataBaseHelper.getLvl(lvl);
-        lvlCursor = cursor;
-
-        Bundle bundle = new Bundle();
-        bundle.putInt("lvl", lvl);
-        changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle), true, false);
-
-    }
-
     public void openLevelbyId(int lvlId) {
 
         dataBaseHelper = new DataBaseHelper(this);
