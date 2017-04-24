@@ -386,7 +386,7 @@ public class ScoreDbHelper extends SQLiteOpenHelper{
 	 
 	 public void setInputedAnime(int id, String anime){
 		 
-		 String sql= "INSERT INTO Answerstable (id, animeanswer) VALUES (" +id+", '"+anime+"')";
+		 String sql= "INSERT OR REPLACE INTO Answerstable (id, animeanswer) VALUES (" +id+", '"+anime+"')";
 		 
 		 myScoreDataBase.beginTransaction();
 	   		try {
@@ -433,12 +433,19 @@ public class ScoreDbHelper extends SQLiteOpenHelper{
 	 public void setInputedName(int id, String name){
 		 
 		 String sql= "INSERT INTO Answerstable (id, nameanswer) VALUES (" +id+", '"+name+"')";
+		 String testSql= "SELECT nameanswer FROM Answerstable WHERE id = "+String.valueOf(id);
+		 String replaceSQL= "UPDATE Answerstable SET nameanswer= '"+name+"' WHERE id = "+id;
 		 
 		 myScoreDataBase.beginTransaction();
 	   		try {
 	   			myScoreDataBase.execSQL("CREATE TABLE IF NOT EXISTS Answerstable (id INTEGER, animeanswer TEXT, nameanswer TEXT)");
-	   			
-	   			myScoreDataBase.execSQL(sql);
+
+				if(myScoreDataBase.rawQuery(testSql, null).getCount() > 0){
+					myScoreDataBase.execSQL(replaceSQL);
+				}
+				else {
+					myScoreDataBase.execSQL(sql);
+				}
 	   			
 	   			myScoreDataBase.setTransactionSuccessful();
 	   			

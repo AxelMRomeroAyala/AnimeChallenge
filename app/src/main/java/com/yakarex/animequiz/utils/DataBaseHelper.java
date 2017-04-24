@@ -13,6 +13,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.yakarex.animequiz.models.AChaCharacterModel;
+
 @SuppressLint("SdCardPath")
 public class DataBaseHelper extends SQLiteOpenHelper{
 	
@@ -152,6 +154,19 @@ public class DataBaseHelper extends SQLiteOpenHelper{
 		
 		return lvlCursor;
 		
+	}
+
+	public AChaCharacterModel getCharacter(int charId){
+		String query= "SELECT * FROM characters WHERE charkey = " + charId;
+
+		myDataBase.beginTransaction();
+		Cursor lvlCursor= myDataBase.rawQuery(query, null);
+		myDataBase.setTransactionSuccessful();
+		myDataBase.endTransaction();
+		lvlCursor.moveToFirst();
+
+		return new AChaCharacterModel(lvlCursor);
+
 	}
 
 	

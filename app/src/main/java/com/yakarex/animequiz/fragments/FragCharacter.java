@@ -52,8 +52,8 @@ public class FragCharacter extends Fragment{
     LinearLayout buttonsContainer;
     Button okButton;
     Button hintButton;
-    RelativeLayout animeNameComponent;
-    TextView animeName;
+    RelativeLayout animeNameComponent, animeCharacterComponent;
+    TextView animeName, characterName;
 
     Toast gotNameToast, gotFnameToast, gotAnimeToast, charCompletedToast;
 
@@ -121,7 +121,9 @@ public class FragCharacter extends Fragment{
         charimage.setImageURI(characterModel.getUri());
 
         animeNameComponent= (RelativeLayout) rootView.findViewById(R.id.character_anime_component);
+        animeCharacterComponent= (RelativeLayout) rootView.findViewById(R.id.character_component);
         animeName = (TextView) rootView.findViewById(R.id.character_anime_name_text_view);
+        characterName = (TextView) rootView.findViewById(R.id.character_name_text_view);
 
         setButtonsStatus();
 
@@ -582,7 +584,9 @@ public class FragCharacter extends Fragment{
             hintButton.setEnabled(false);
             buttonsContainer.setVisibility(View.GONE);
             animeNameComponent.setVisibility(View.VISIBLE);
+            animeCharacterComponent.setVisibility(View.VISIBLE);
             animeName.setText(((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid()));
+            characterName.setText(((MainFragActivity) getActivity()).getCharInputedName(characterModel.getCharid(), false));
             textInput.setVisibility(View.GONE);
             textInput.setEnabled(false);
             textInput.setClickable(false);
@@ -592,6 +596,7 @@ public class FragCharacter extends Fragment{
             hintButton.setEnabled(true);
             buttonsContainer.setVisibility(View.VISIBLE);
             animeNameComponent.setVisibility(View.GONE);
+            animeCharacterComponent.setVisibility(View.GONE);
             textInput.setVisibility(View.VISIBLE);
             textInput.setEnabled(true);
             textInput.setClickable(true);
@@ -613,6 +618,9 @@ public class FragCharacter extends Fragment{
                 break;
             case 65:
                 charDialog.setText(R.string.qfname);
+
+                //the partially inputed name is showed
+                textInput.setText(((MainFragActivity) getActivity()).getCharInputedName(characterModel.getCharid(), true));
                 break;
             case 100:
                 charDialog.setText(R.string.charcompleted);

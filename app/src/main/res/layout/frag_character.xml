@@ -86,43 +86,90 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:id="@+id/character_anime_component"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                tools:visibility="visible" >
+                android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/character_anime_back"
+                <RelativeLayout
+                    android:id="@+id/character_anime_component"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/character_anime" />
+                    android:visibility="gone"
+                    tools:visibility="visible" >
 
-                <TextView
-                    android:id="@+id/character_anime_name_text_view"
+                    <ImageView
+                        android:id="@+id/character_anime_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/character_anime" />
+
+                    <TextView
+                        android:id="@+id/character_anime_name_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/character_anime_back"
+                        android:layout_alignLeft="@+id/character_anime_back"
+                        android:layout_alignRight="@+id/character_anime_back"
+                        android:layout_alignStart="@+id/character_anime_back"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginStart="20dp"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="ANIME NAME"
+                        android:textAllCaps="true"
+                        android:textSize="23sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/character_component"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/character_anime_back"
-                    android:layout_alignLeft="@+id/character_anime_back"
-                    android:layout_alignRight="@+id/character_anime_back"
-                    android:layout_alignStart="@+id/character_anime_back"
-                    android:layout_centerInParent="true"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginStart="20dp"
-                    android:ellipsize="marquee"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:text="ANIME NAME"
-                    android:textAllCaps="true"
-                    android:textSize="23sp" />
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    tools:visibility="visible" >
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/character_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/character_name" />
+
+                    <TextView
+                        android:id="@+id/character_name_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/character_back"
+                        android:layout_alignLeft="@+id/character_back"
+                        android:layout_alignRight="@+id/character_back"
+                        android:layout_alignStart="@+id/character_back"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginStart="20dp"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="CHARACTER NAME"
+                        android:textColor="@color/black"
+                        android:textAllCaps="true"
+                        android:textSize="23sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </FrameLayout>
 
@@ -131,7 +178,8 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="8dp"
-            android:layout_above="@+id/editText1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp" />
 

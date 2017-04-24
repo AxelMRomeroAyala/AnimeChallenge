@@ -301,13 +301,29 @@ public class MainFragActivity extends FragmentActivity implements
 
     public String getCharInputedAnime(int id) {
 
-        return scoreHelper.getInputedAnime(id);
+        if(scoreHelper.getInputedAnime(id)!= null){
+            return scoreHelper.getInputedAnime(id);
+        }
+        else {
+
+            return dataBaseHelper.getCharacter(id).getAnime().split("@")[0];
+        }
 
     }
 
-    public String getCharInputedName(int id) {
+    public String getCharInputedName(int id, boolean avoidHinting) {
 
-        return scoreHelper.getInputedName(id);
+        if(scoreHelper.getInputedName(id)!= null){
+            return scoreHelper.getInputedName(id);
+        }
+        else {
+            if(avoidHinting){
+                return "";
+            }
+            else{
+                return dataBaseHelper.getCharacter(id).getFullname().split("@")[0];
+            }
+        }
 
     }
 
