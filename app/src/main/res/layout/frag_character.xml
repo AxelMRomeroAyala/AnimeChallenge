@@ -5,8 +5,13 @@
     android:id="@+id/activity_character"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/charbackground"
     android:theme="@android:style/Theme.NoTitleBar">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/charbackground" />
 
     <TextView
         android:id="@+id/chardialog"

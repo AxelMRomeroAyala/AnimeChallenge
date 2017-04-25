@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.yakarex.animequiz.StatsTab1Fragment;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.AChaCharacterModel;
@@ -511,6 +512,8 @@ public class FragCharacter extends Fragment{
         // Se guardara el contador de hints como un score mas, los campos seran
         // compeltados asi: charid= 987654321, score=
         // scoreHelper.setCharScore(charid, 35, level);
+
+        ((MainFragActivity) getActivity()).setCharScore(FinalStringsUtils.HINTCOUNT, 1, 0);
 
         String hint;
         if (characterModel.getAnime().contains("@")) {

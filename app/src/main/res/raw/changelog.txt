@@ -21,16 +21,15 @@
   <body>
     $ 2.0.0
 % Version 2.0.0 The Brand new Update
-  _ February 1 2016
+  _ April 1 2016
     *Appearance updated to material design.
     *App runs only on portrait mode.
-    *Adjusted app for better performance on all devices.
-    *Now works in newer devices too.
   	*Rewrote most of the code from scrap.
   	*Heavy bug fixing.
   	*Improved achievement unlocking logic.
   	*Added animations.
-  	*Better image compression to make the app lighter.
+  	*Better image compression.
+  	*Inputted data is saved.
     $ 1.3.4
 % Version 1.3.4
   _ September 23 2014

@@ -2,8 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/lvlselmainlay"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/lvlbackground">
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lvlbackground" />
 
     <RelativeLayout
         android:id="@+id/topbar"
