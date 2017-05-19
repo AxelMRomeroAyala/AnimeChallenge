@@ -1,9 +1,0 @@
-<resources>
-
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar" >
-        <item name="colorAccent">
-            @color/cast_libraries_material_featurehighlight_outer_highlight_default_color
-        </item>
-    </style>
-
-</resources>

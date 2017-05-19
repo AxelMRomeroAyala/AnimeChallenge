@@ -17,7 +17,11 @@ import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.transition.ChangeBounds;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -69,6 +73,7 @@ public class FragCharacter extends Fragment{
         return fragment;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -77,6 +82,10 @@ public class FragCharacter extends Fragment{
 
         cursor = ((MainFragActivity) getActivity()).getLvlCursor();
         cursor.moveToPosition(position);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            this.setSharedElementEnterTransition((new ChangeBounds()));
+        }
 
         characterModel = (AChaCharacterModel) getArguments().getParcelable(CHARACTER);
 
@@ -87,6 +96,16 @@ public class FragCharacter extends Fragment{
                 false);
 
         setUpView(rootView);
+
+        Transition changeTransform = TransitionInflater.from(getContext()).
+                inflateTransition(R.transition.change_image_transform);
+        Transition explodeTransform = TransitionInflater.from(getContext()).
+                inflateTransition(android.R.transition.explode);
+
+        // Setup exit transition on first fragment
+        this.setSharedElementReturnTransition(changeTransform);
+        this.setExitTransition(explodeTransform);
+
 
         return rootView;
     }

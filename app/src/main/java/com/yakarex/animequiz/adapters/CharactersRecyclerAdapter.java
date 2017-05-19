@@ -1,35 +1,26 @@
 package com.yakarex.animequiz.adapters;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.yakarex.animequiz.activities.MainFragActivity;
-import com.yakarex.animequiz.fragments.FragCharacter;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.fragments.FragCharacterSwiper;
 import com.yakarex.animequiz.utils.ScoreDbHelper;
 
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 
 /**
  * Created by aromero on 22/10/15.
@@ -41,10 +32,12 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
     private Context context;
     private int lastPosition = -1;
     ScoreDbHelper scoreHelper;
+    private Fragment frag;
 
-    public CharactersRecyclerAdapter(Cursor charCursor, Context context){
+    public CharactersRecyclerAdapter(Cursor charCursor, Context context, Fragment frag){
         this.charactersCursor= charCursor;
         this.context= context;
+        this.frag= frag;
 
         scoreHelper = new ScoreDbHelper(context);
         scoreHelper.openDataBase();
@@ -106,8 +99,28 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
             public void onClick(View v) {
                 Bundle bundle= new Bundle();
                 bundle.putInt("position", position);
-                //((MainFragActivity)context).changeFragment(FragCharacter.instantiate(context, FragCharacter.class.getName(), bundle), true, false);
-                ((MainFragActivity)context).changeFragment(FragCharacterSwiper.instantiate(context, FragCharacterSwiper.class.getName(), bundle), true, false);
+
+                Fragment fragmentTwo= FragCharacterSwiper.instantiate(context, FragCharacterSwiper.class.getName(), bundle);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+                    holder.charImage.setTransitionName("charimage");
+                    // Inflate transitions to apply
+                    Transition changeTransform = TransitionInflater.from(context).
+                            inflateTransition(android.R.transition.fade);
+                    Transition explodeTransform = TransitionInflater.from(context).
+                            inflateTransition(android.R.transition.move);
+
+                    // Setup exit transition on first fragment
+                    frag.setSharedElementReturnTransition(explodeTransform);
+                    //frag.setExitTransition(changeTransform);
+
+                    // Setup enter transition on second fragment
+                    fragmentTwo.setSharedElementEnterTransition(explodeTransform);
+                    //fragmentTwo.setEnterTransition(changeTransform);
+                }
+
+                ((MainFragActivity)context).changeFragment(holder.charImage, fragmentTwo );
             }
         });
 

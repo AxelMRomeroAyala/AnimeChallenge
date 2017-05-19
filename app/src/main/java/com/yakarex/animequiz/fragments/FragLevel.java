@@ -55,7 +55,7 @@ public class FragLevel extends Fragment{
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        charRecyclerAdapter = new CharactersRecyclerAdapter(cursor, getActivity());
+        charRecyclerAdapter = new CharactersRecyclerAdapter(cursor, getActivity(), this);
         mRecyclerView.setAdapter(charRecyclerAdapter);
 
     }

@@ -29,12 +29,12 @@
                 android:layout_weight="1">
 
                 <com.q42.android.scrollingimageview.ScrollingImageView
-                    android:id="@+id/title_red_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="0px"
-                    android:layout_gravity="bottom"
-                    scrolling_image_view:speed="1dp"
-                    scrolling_image_view:src="@drawable/redbar480"/>
+                android:id="@+id/title_red_bar"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_gravity="bottom"
+                scrolling_image_view:speed="1dp"
+                scrolling_image_view:src="@drawable/redbar480"/>
             </FrameLayout>
 
             <FrameLayout
@@ -43,12 +43,12 @@
                 android:layout_weight="1">
 
                 <com.q42.android.scrollingimageview.ScrollingImageView
-                    android:id="@+id/title_blue_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="0px"
-                    android:layout_gravity="top"
-                    scrolling_image_view:speed="-1dp"
-                    scrolling_image_view:src="@drawable/bluebar480" />
+                android:id="@+id/title_blue_bar"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_gravity="top"
+                scrolling_image_view:speed="-1dp"
+                scrolling_image_view:src="@drawable/bluebar480" />
             </FrameLayout>
         </LinearLayout>
 
@@ -67,10 +67,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_below="@+id/main_header"
-        android:foregroundGravity="center"
         android:layout_marginTop="30dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
         android:orientation="vertical">
 
         <Button
@@ -91,7 +91,7 @@
             android:text="@string/challenge"
             android:textColor="@color/white"
             android:textSize="25sp"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/statsButton"

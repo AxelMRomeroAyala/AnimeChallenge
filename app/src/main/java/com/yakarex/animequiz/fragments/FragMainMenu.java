@@ -73,7 +73,8 @@ public class FragMainMenu extends Fragment {
         startBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                ((MainFragActivity)getActivity()).changeFragment(FragLevelSelection.instantiate(context, FragLevelSelection.class.getName()), true, false);
+                //((MainFragActivity)getActivity()).changeFragment(FragLevelSelection.instantiate(context, FragLevelSelection.class.getName()), true, false);
+                ((MainFragActivity)getActivity()).changeFragment(FragLevelSelection.instantiate(context, FragLevelSelection.class.getName()));
             }
         });
         challengeBtn.setOnClickListener(new View.OnClickListener() {
@@ -83,12 +84,14 @@ public class FragMainMenu extends Fragment {
         });
         statsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                ((MainFragActivity)getActivity()).changeFragment(FragOptions.instantiate(context, FragStats.class.getName()), true, false);
+                //((MainFragActivity)getActivity()).changeFragment(FragOptions.instantiate(context, FragStats.class.getName()), true, false);
+                ((MainFragActivity)getActivity()).changeFragment(FragLevelSelection.instantiate(context, FragStats.class.getName()));
             }
         });
         optionsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                ((MainFragActivity)getActivity()).changeFragment(FragOptions.instantiate(context, FragOptions.class.getName()), true, false);
+                //((MainFragActivity)getActivity()).changeFragment(FragOptions.instantiate(context, FragOptions.class.getName()), true, false);
+                ((MainFragActivity)getActivity()).changeFragment(FragLevelSelection.instantiate(context, FragOptions.class.getName()));
             }
         });
         audioButton.setOnClickListener(new View.OnClickListener() {

@@ -14,10 +14,12 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.os.Vibrator;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -108,7 +110,8 @@ public class MainFragActivity extends FragmentActivity implements
         backStackList = new ArrayList<String>();
 
         context = getApplicationContext();
-        changeFragment(FragMainMenu.instantiate(context, FragMainMenu.class.getName()), true, false);
+        //changeFragment(FragMainMenu.instantiate(context, FragMainMenu.class.getName()), true, false);
+        changeFragment(FragMainMenu.instantiate(context, FragMainMenu.class.getName()));
 
         // Create the Google Api Client with access to the Play Games services
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -258,7 +261,7 @@ public class MainFragActivity extends FragmentActivity implements
             level.setStarStats(getStarStats(FinalStringsUtils.lvlidarray[x]));
             level.setLvlMaxScore(getLevelMaxScore(FinalStringsUtils.lvlidarray[x]));
 
-            if(Integer.parseInt(getTotalScore()) >= FinalStringsUtils.lvlunlockinglogicarray[x]){
+            if (Integer.parseInt(getTotalScore()) >= FinalStringsUtils.lvlunlockinglogicarray[x]) {
                 level.setUnlocked(true);
             }
 
@@ -301,10 +304,9 @@ public class MainFragActivity extends FragmentActivity implements
 
     public String getCharInputedAnime(int id) {
 
-        if(scoreHelper.getInputedAnime(id)!= null){
+        if (scoreHelper.getInputedAnime(id) != null) {
             return scoreHelper.getInputedAnime(id);
-        }
-        else {
+        } else {
 
             return dataBaseHelper.getCharacter(id).getAnime().split("@")[0];
         }
@@ -313,14 +315,12 @@ public class MainFragActivity extends FragmentActivity implements
 
     public String getCharInputedName(int id, boolean avoidHinting) {
 
-        if(scoreHelper.getInputedName(id)!= null){
+        if (scoreHelper.getInputedName(id) != null) {
             return scoreHelper.getInputedName(id);
-        }
-        else {
-            if(avoidHinting){
+        } else {
+            if (avoidHinting) {
                 return "";
-            }
-            else{
+            } else {
                 return dataBaseHelper.getCharacter(id).getFullname().split("@")[0];
             }
         }
@@ -367,7 +367,8 @@ public class MainFragActivity extends FragmentActivity implements
 
         Bundle bundle = new Bundle();
         bundle.putInt("lvl", lvlId);
-        changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle), true, false);
+        //changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle), true, false);
+        changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle));
 
     }
 
@@ -598,6 +599,54 @@ public class MainFragActivity extends FragmentActivity implements
             t.add(id.mainfragment, myNewFragment, newFragment);
             t.commitAllowingStateLoss();
         }
+    }
+
+
+    public void changeFragment(Fragment myNewFragment) {
+
+        Log.e("Fragment Name", myNewFragment.getClass().getName());
+        newFragment = myNewFragment.getClass().getName();
+
+        if (currentFragment == null || currentFragment.compareTo(newFragment) != 0) {
+
+            FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+            t.setCustomAnimations(R.anim.fade_in_animation, R.anim.fade_out_animation);
+
+            t.addToBackStack(myNewFragment.getClass().getName());
+            backStackList.add(newFragment);
+            if (currentFragment != null) {
+                t.detach(getSupportFragmentManager().findFragmentByTag(currentFragment));
+            }
+            currentFragment = newFragment;
+
+            t.add(id.mainfragment, myNewFragment, newFragment);
+            t.commit();
+        }
+
+    }
+
+    public void changeFragment(View sharedView, Fragment myNewFragment) {
+
+        Log.e("Fragment Name", myNewFragment.getClass().getName());
+        newFragment = myNewFragment.getClass().getName();
+
+        if (currentFragment == null || currentFragment.compareTo(newFragment) != 0) {
+
+            FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+            t.setCustomAnimations(R.anim.fade_in_animation, R.anim.fade_out_animation);
+
+            t.addToBackStack(myNewFragment.getClass().getName());
+            backStackList.add(newFragment);
+            if (currentFragment != null) {
+                t.detach(getSupportFragmentManager().findFragmentByTag(currentFragment));
+            }
+            currentFragment = newFragment;
+
+            t.replace(id.mainfragment, myNewFragment, newFragment);
+            t.addSharedElement(sharedView, "charimage");
+            t.commit();
+        }
+
     }
 
     public Cursor getLvlCursor() {
