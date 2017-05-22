@@ -1,8 +1,8 @@
 package com.yakarex.animequiz.utils;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 
 import com.yakarex.animequiz.R;
 
@@ -11,11 +11,11 @@ import com.yakarex.animequiz.R;
  */
 public class Utils {
 
-    public static AlertDialog getAlertDialog(Context context,int message
-            ,int positiveText,DialogInterface.OnClickListener positiveListener
-            ,int negativeText,DialogInterface.OnClickListener negativeListener){
+    public static AlertDialog getAlertDialog(Context context, int message
+            , int positiveText, DialogInterface.OnClickListener positiveListener
+            , int negativeText, DialogInterface.OnClickListener negativeListener){
 
-        return new AlertDialog.Builder(context, R.style.Base_Theme_AppCompat_Dialog)
+        return new AlertDialog.Builder(context, R.style.Theme_AppCompat_Base_CompactMenu_Dialog)
                 .setMessage(message)
                 .setPositiveButton(positiveText,positiveListener)
                 .setNegativeButton(negativeText,negativeListener).create();

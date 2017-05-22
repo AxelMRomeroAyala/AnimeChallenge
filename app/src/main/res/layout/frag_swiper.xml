@@ -33,22 +33,28 @@
 
         </RelativeLayout>
 
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/background" />-->
+
         <android.support.v4.view.ViewPager
             android:id="@+id/characters_view_pager"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-
         </android.support.v4.view.ViewPager>
-
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/charimg"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerInParent="true"
-        android:transitionName="charimage"/>
+    <!--<ImageView-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:transitionName="charimage"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:layout_centerInParent="true"/>-->
+
+
 </RelativeLayout>
 

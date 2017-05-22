@@ -17,6 +17,7 @@ import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.transition.ChangeBounds;
@@ -41,7 +42,7 @@ import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 
-public class FragCharacter extends Fragment{
+public class FragCharacter extends Fragment {
 
     Toast wrongToast;
     int hintsNumber;
@@ -62,9 +63,9 @@ public class FragCharacter extends Fragment{
 
     Toast gotNameToast, gotFnameToast, gotAnimeToast, charCompletedToast;
 
-    public static String CHARACTER= "character";
+    public static String CHARACTER = "character";
 
-    public static FragCharacter newInstance(AChaCharacterModel characterModel){
+    public static FragCharacter newInstance(AChaCharacterModel characterModel) {
         FragCharacter fragment = new FragCharacter();
 
         Bundle args = new Bundle();
@@ -73,7 +74,19 @@ public class FragCharacter extends Fragment{
         return fragment;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Transition explodeTransform = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            explodeTransform = TransitionInflater.from(getContext()).
+                    inflateTransition(android.R.transition.move);
+
+        }
+        setSharedElementEnterTransition(explodeTransform);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -83,11 +96,8 @@ public class FragCharacter extends Fragment{
         cursor = ((MainFragActivity) getActivity()).getLvlCursor();
         cursor.moveToPosition(position);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            this.setSharedElementEnterTransition((new ChangeBounds()));
-        }
-
-        characterModel = (AChaCharacterModel) getArguments().getParcelable(CHARACTER);
+        characterModel = getArguments().getParcelable(CHARACTER);
+        getArguments().getParcelable(CHARACTER);
 
         Log.e("Getting Score: ", String.valueOf(score));
         score = ((MainFragActivity) getActivity()).getCharScore(characterModel.getCharid(), characterModel.getLevel());
@@ -97,20 +107,10 @@ public class FragCharacter extends Fragment{
 
         setUpView(rootView);
 
-        Transition changeTransform = TransitionInflater.from(getContext()).
-                inflateTransition(R.transition.change_image_transform);
-        Transition explodeTransform = TransitionInflater.from(getContext()).
-                inflateTransition(android.R.transition.explode);
-
-        // Setup exit transition on first fragment
-        this.setSharedElementReturnTransition(changeTransform);
-        this.setExitTransition(explodeTransform);
-
-
         return rootView;
     }
 
-    private void setUpView(View rootView){
+    private void setUpView(View rootView) {
 
         prepareToasts();
 
@@ -119,7 +119,7 @@ public class FragCharacter extends Fragment{
         pbar = (ProgressBar) rootView.findViewById(R.id.progressBar1);
         charDialog = (TextView) rootView.findViewById(R.id.chardialog);
 
-        buttonsContainer=(LinearLayout) rootView.findViewById(R.id.buttons);
+        buttonsContainer = (LinearLayout) rootView.findViewById(R.id.buttons);
 
         okButton = (Button) rootView.findViewById(R.id.okbutton);
         okButton.setOnClickListener(new OnClickListener() {
@@ -140,8 +140,12 @@ public class FragCharacter extends Fragment{
 
         charimage.setImageURI(characterModel.getUri());
 
-        animeNameComponent= (RelativeLayout) rootView.findViewById(R.id.character_anime_component);
-        animeCharacterComponent= (RelativeLayout) rootView.findViewById(R.id.character_component);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            charimage.setTransitionName("charimage");
+        }
+
+        animeNameComponent = (RelativeLayout) rootView.findViewById(R.id.character_anime_component);
+        animeCharacterComponent = (RelativeLayout) rootView.findViewById(R.id.character_component);
         animeName = (TextView) rootView.findViewById(R.id.character_anime_name_text_view);
         characterName = (TextView) rootView.findViewById(R.id.character_name_text_view);
 
@@ -151,7 +155,7 @@ public class FragCharacter extends Fragment{
 
     }
 
-    private void prepareToasts(){
+    private void prepareToasts() {
 
         Context context = getActivity().getApplicationContext();
         gotNameToast = Toast.makeText(context, R.string.gotname,
@@ -221,9 +225,7 @@ public class FragCharacter extends Fragment{
                     ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
                     ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
                     unlockingCheck(35);
-                }
-
-                else {
+                } else {
                     wrongAnswer();
                 }
 
@@ -569,39 +571,35 @@ public class FragCharacter extends Fragment{
 
     }
 
-    private void updateCharacterView(boolean animated){
+    private void updateCharacterView(boolean animated) {
 
-        int charScore= 100;
+        int charScore = 100;
         pbar.setMax(charScore);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 
-            if(score == charScore){
+            if (score == charScore) {
                 pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.golden)));
-            }
-            else if(score <= 0){
+            } else if (score <= 0) {
                 pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.gray)));
-            }
-            else if(score >= (charScore/2)){
+            } else if (score >= (charScore / 2)) {
                 pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.silver)));
-            }
-            else if(score <= (charScore/2)){
+            } else if (score <= (charScore / 2)) {
                 pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.bronze)));
             }
         }
 
-        if(animated){
+        if (animated) {
 
             ObjectAnimator animation = ObjectAnimator.ofInt(pbar, "progress", score);
             animation.setDuration(500); // 0.5 second
             animation.setInterpolator(new DecelerateInterpolator());
             animation.start();
-        }
-        else {
+        } else {
             pbar.setProgress(score);
         }
 
-        if(score>= 100){
+        if (score >= 100) {
             okButton.setEnabled(false);
             hintButton.setEnabled(false);
             buttonsContainer.setVisibility(View.GONE);
@@ -612,8 +610,7 @@ public class FragCharacter extends Fragment{
             textInput.setVisibility(View.GONE);
             textInput.setEnabled(false);
             textInput.setClickable(false);
-        }
-        else{
+        } else {
             okButton.setEnabled(true);
             hintButton.setEnabled(true);
             buttonsContainer.setVisibility(View.VISIBLE);

@@ -116,7 +116,7 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
                     //frag.setExitTransition(changeTransform);
 
                     // Setup enter transition on second fragment
-                    fragmentTwo.setSharedElementEnterTransition(explodeTransform);
+                    //fragmentTwo.setSharedElementEnterTransition(explodeTransform);
                     //fragmentTwo.setEnterTransition(changeTransform);
                 }
 

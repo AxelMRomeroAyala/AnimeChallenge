@@ -3,6 +3,7 @@ package com.yakarex.animequiz.fragments;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.transition.ChangeBounds;
@@ -46,14 +47,22 @@ public class FragCharacterSwiper extends Fragment {
     ViewPager characterPager;
     AChaCharacterModel characterModel;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        //postponeEnterTransition();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
+        }
+        setSharedElementReturnTransition(null);
+
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            this.setSharedElementEnterTransition((new ChangeBounds()));
-        }
 
         position= getArguments().getInt("position");
         cursor= ((MainFragActivity)getActivity()).getLvlCursor();

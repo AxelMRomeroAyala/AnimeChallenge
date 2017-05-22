@@ -20,15 +20,16 @@
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:maxLines="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            tools:text="Level 4"/>
 
         <TextView
             android:id="@+id/stats_level_score"
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_weight="2"
-            android:text="@string/zero"
+            android:maxLines="1"
             android:textAppearance="?android:attr/textAppearanceMedium"
             tools:text="15000"/>
 
@@ -37,7 +38,6 @@
             android:layout_width="0px"
             android:layout_height="25dp"
             android:layout_weight="1"
-            android:layout_centerVertical="true"
             android:adjustViewBounds="true"
             android:contentDescription="@string/dummy_content"
             android:src="@drawable/threestars"
@@ -47,13 +47,13 @@
             android:id="@+id/stats_level_star_string"
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_weight="3"
             android:text="@string/zero"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/white"
             android:gravity="end"
             android:paddingEnd="5dp"
+            android:maxLines="1"
             android:paddingRight="5dp"
             tools:text="10/10/10"/>
 

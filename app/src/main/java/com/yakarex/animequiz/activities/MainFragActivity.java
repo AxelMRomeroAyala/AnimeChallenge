@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,12 +20,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.os.Vibrator;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -127,9 +126,9 @@ public class MainFragActivity extends FragmentActivity implements
         dataBaseHelper = new DataBaseHelper(this);
         scoreHelper = new ScoreDbHelper(this);
 
-        adView = (AdView) this.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+//        adView = (AdView) this.findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        adView.loadAd(adRequest);
 
         audioOff = settings.getBoolean("audioOff", false);
         vibrationOff = settings.getBoolean("vibrationOff", false);
@@ -153,20 +152,20 @@ public class MainFragActivity extends FragmentActivity implements
             e.printStackTrace();
         }
 
-        // Create the interstitial.
-        interstitial = new InterstitialAd(this);
-        interstitial.setAdUnitId(getString(R.string.adunitinterad));
-
-        // Create ad request.
-        AdRequest adRequest2 = new AdRequest.Builder().build();
-
-        // Begin loading your interstitial.
-        interstitial.loadAd(adRequest2);
-
-        if (ads) {
-            adThread();
-            ads = false;
-        }
+//        // Create the interstitial.
+//        interstitial = new InterstitialAd(this);
+//        interstitial.setAdUnitId(getString(R.string.adunitinterad));
+//
+//        // Create ad request.
+//        AdRequest adRequest2 = new AdRequest.Builder().build();
+//
+//        // Begin loading your interstitial.
+//        interstitial.loadAd(adRequest2);
+//
+//        if (ads) {
+//            adThread();
+//            ads = false;
+//        }
     }
 
 
@@ -225,7 +224,7 @@ public class MainFragActivity extends FragmentActivity implements
         scoreHelper.openDataBase();
         dataBaseHelper.openDataBase();
 
-        adView.resume();
+        //adView.resume();
     }
 
     @Override
@@ -235,7 +234,7 @@ public class MainFragActivity extends FragmentActivity implements
         scoreHelper.close();
         dataBaseHelper.close();
 
-        adView.pause();
+        //adView.pause();
     }
 
     public void openOptions() {
@@ -633,7 +632,6 @@ public class MainFragActivity extends FragmentActivity implements
         if (currentFragment == null || currentFragment.compareTo(newFragment) != 0) {
 
             FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-            t.setCustomAnimations(R.anim.fade_in_animation, R.anim.fade_out_animation);
 
             t.addToBackStack(myNewFragment.getClass().getName());
             backStackList.add(newFragment);
@@ -643,7 +641,9 @@ public class MainFragActivity extends FragmentActivity implements
             currentFragment = newFragment;
 
             t.replace(id.mainfragment, myNewFragment, newFragment);
-            t.addSharedElement(sharedView, "charimage");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                t.addSharedElement(sharedView, sharedView.getTransitionName());
+            }
             t.commit();
         }
 
