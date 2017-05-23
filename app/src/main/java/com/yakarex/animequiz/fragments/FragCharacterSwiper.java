@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.transition.ChangeBounds;
 import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,11 +34,6 @@ public class FragCharacterSwiper extends Fragment {
 
     Cursor cursor;
     int position;
-    int charid;
-
-    int level;
-
-    int score;
 
     String scoreString;
     TextView charscoreView;

@@ -45,7 +45,6 @@ import org.greenrobot.eventbus.EventBus;
 public class FragCharacter extends Fragment {
 
     Toast wrongToast;
-    int hintsNumber;
     Cursor cursor;
     int position;
     AChaCharacterModel characterModel;
@@ -81,10 +80,11 @@ public class FragCharacter extends Fragment {
         Transition explodeTransform = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             explodeTransform = TransitionInflater.from(getContext()).
-                    inflateTransition(android.R.transition.move);
+                    inflateTransition(android.R.transition.explode);
 
         }
         setSharedElementEnterTransition(explodeTransform);
+
     }
 
     @Override
@@ -530,9 +530,6 @@ public class FragCharacter extends Fragment {
 
     public void showHint(View view) {
 
-        // Se guardara el contador de hints como un score mas, los campos seran
-        // compeltados asi: charid= 987654321, score=
-        // scoreHelper.setCharScore(charid, 35, level);
 
         ((MainFragActivity) getActivity()).setCharScore(FinalStringsUtils.HINTCOUNT, 1, 0);
 

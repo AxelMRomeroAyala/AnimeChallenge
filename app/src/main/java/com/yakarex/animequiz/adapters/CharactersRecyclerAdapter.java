@@ -54,7 +54,7 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
     }
 
     @Override
-    public void onBindViewHolder(final CharactersRecyclerAdapter.ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
 
         charactersCursor.moveToPosition(position);
 
@@ -70,8 +70,6 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
 
         int score = scoreHelper.getCharScore(keyCharId, lvl);
         //scoreHelper.close();
-
-        String imageStarStringUri= "drawable://";
 
         if (score >0 && score< 40){
             holder.starImage.setImageResource(R.drawable.cupperstar);
@@ -95,6 +93,10 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
         setAnimation(holder.charImage
                 ,holder.starImage, position);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            holder.charImage.setTransitionName("");
+        }
+
         holder.charImage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Bundle bundle= new Bundle();
@@ -109,7 +111,7 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
                     Transition changeTransform = TransitionInflater.from(context).
                             inflateTransition(android.R.transition.fade);
                     Transition explodeTransform = TransitionInflater.from(context).
-                            inflateTransition(android.R.transition.move);
+                            inflateTransition(android.R.transition.explode);
 
                     // Setup exit transition on first fragment
                     frag.setSharedElementReturnTransition(explodeTransform);
