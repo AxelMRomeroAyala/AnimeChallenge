@@ -609,7 +609,7 @@ public class MainFragActivity extends FragmentActivity implements
         if (currentFragment == null || currentFragment.compareTo(newFragment) != 0) {
 
             FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-            t.setCustomAnimations(R.anim.fade_in_animation, R.anim.fade_out_animation);
+            t.setCustomAnimations(R.anim.fade_in_animation, R.anim.fade_out_animation, R.anim.fade_in_animation, R.anim.fade_out_animation);
 
             t.addToBackStack(myNewFragment.getClass().getName());
             backStackList.add(newFragment);
@@ -619,31 +619,6 @@ public class MainFragActivity extends FragmentActivity implements
             currentFragment = newFragment;
 
             t.add(id.mainfragment, myNewFragment, newFragment);
-            t.commit();
-        }
-
-    }
-
-    public void changeFragment(View sharedView, Fragment myNewFragment) {
-
-        Log.e("Fragment Name", myNewFragment.getClass().getName());
-        newFragment = myNewFragment.getClass().getName();
-
-        if (currentFragment == null || currentFragment.compareTo(newFragment) != 0) {
-
-            FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-
-            t.addToBackStack(myNewFragment.getClass().getName());
-            backStackList.add(newFragment);
-            if (currentFragment != null) {
-                t.detach(getSupportFragmentManager().findFragmentByTag(currentFragment));
-            }
-            currentFragment = newFragment;
-
-            t.replace(id.mainfragment, myNewFragment, newFragment);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                t.addSharedElement(sharedView, sharedView.getTransitionName());
-            }
             t.commit();
         }
 

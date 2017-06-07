@@ -62,11 +62,11 @@ public class AChaCharacterModel implements Parcelable {
     }
 
     public String getAnime() {
-        return anime;
+        return anime.trim().toLowerCase();
     }
 
     public String getFullname() {
-        return fullname;
+        return fullname.trim().toLowerCase();
     }
 
     public Uri getUri() {

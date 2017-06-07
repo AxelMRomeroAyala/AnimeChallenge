@@ -73,7 +73,7 @@ public void onItemClick(AdapterView<?> arg0, View arg1, int itemid, long arg3) {
 	           .setCancelable(false)
 	           .setPositiveButton(yes, new DialogInterface.OnClickListener() {
 	               public void onClick(DialogInterface dialog, int id) {
-	            	   //((MainFragActivity)getActivity()).resetScore();
+	            	   ((MainFragActivity)getActivity()).resetScore();
 	               }
 	           })
 	           .setNegativeButton(no, null)

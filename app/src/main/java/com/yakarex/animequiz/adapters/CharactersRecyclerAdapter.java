@@ -104,25 +104,8 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
 
                 Fragment fragmentTwo= FragCharacterSwiper.instantiate(context, FragCharacterSwiper.class.getName(), bundle);
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 
-                    holder.charImage.setTransitionName("charimage");
-                    // Inflate transitions to apply
-                    Transition changeTransform = TransitionInflater.from(context).
-                            inflateTransition(android.R.transition.fade);
-                    Transition explodeTransform = TransitionInflater.from(context).
-                            inflateTransition(android.R.transition.explode);
-
-                    // Setup exit transition on first fragment
-                    frag.setSharedElementReturnTransition(explodeTransform);
-                    //frag.setExitTransition(changeTransform);
-
-                    // Setup enter transition on second fragment
-                    //fragmentTwo.setSharedElementEnterTransition(explodeTransform);
-                    //fragmentTwo.setEnterTransition(changeTransform);
-                }
-
-                ((MainFragActivity)context).changeFragment(holder.charImage, fragmentTwo );
+                ((MainFragActivity)context).changeFragment(fragmentTwo);
             }
         });
 

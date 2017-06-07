@@ -1,10 +1,8 @@
 package com.yakarex.animequiz.fragments;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
-import com.yakarex.animequiz.StatsTab1Fragment;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.AChaCharacterModel;
@@ -18,11 +16,7 @@ import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
-import android.transition.ChangeBounds;
-import android.transition.Transition;
-import android.transition.TransitionInflater;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -30,9 +24,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -40,9 +34,17 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.apache.commons.lang3.StringUtils;
 import org.greenrobot.eventbus.EventBus;
 
 public class FragCharacter extends Fragment {
+
+    private final static int EMPTY = 0;
+    private final static int ANIME = 30;
+    private final static int PARTIALNAME = 35;
+    private final static int ANIMEANDNAME = 65;
+    private final static int FULLNAME = 70;
+    private final static int COMPLETED = 100;
 
     Toast wrongToast;
     Cursor cursor;
@@ -76,14 +78,6 @@ public class FragCharacter extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Transition explodeTransform = null;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            explodeTransform = TransitionInflater.from(getContext()).
-                    inflateTransition(android.R.transition.explode);
-
-        }
-        setSharedElementEnterTransition(explodeTransform);
 
     }
 
@@ -126,7 +120,7 @@ public class FragCharacter extends Fragment {
 
             public void onClick(View v) {
 
-                checkInput();
+                checkInputAdvanced();
             }
         });
 
@@ -150,9 +144,6 @@ public class FragCharacter extends Fragment {
         characterName = (TextView) rootView.findViewById(R.id.character_name_text_view);
 
         setButtonsStatus();
-
-        showScore();
-
     }
 
     private void prepareToasts() {
@@ -181,223 +172,199 @@ public class FragCharacter extends Fragment {
         charDialog.setSelected(true);
     }
 
-    public void checkInput() {
-
-        String text = textInput.getText().toString().trim().toLowerCase();
-        // we clean the input
-        textInput.setText("");
-        // we create 2 arrays, one from the input and the other from the full
-        // name
-
-        int matches = comparator(text, characterModel.getFullname());
-        int animematches = comparator(text, characterModel.getAnime());
-
-        // we have an issue here, the swith that shows later compare the matches
-        // with the lenght method of the array taken from the db,
-        // we need to split it 2 times now before comparation
-        String[][] beforecompare = stringSplitter(characterModel.getFullname());
-        String[] nameArray = beforecompare[0];
-
-        String[][] beforecompareanime = stringSplitter(characterModel.getAnime());
-        String[] animeArray = beforecompareanime[0];
+    public void checkInputAdvanced() {
 
         switch (score) {
-            case 0:
+            case EMPTY:
+                //Check everything
 
-                if (animematches >= animeArray.length) {
-                    score = score + 30;
-                    gotAnimeToast.show();
-                    ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
-                    ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 30, characterModel.getLevel());
-                    unlockingCheck(30);
-                } else if (matches >= nameArray.length) {
-                    score = score + 70;
-                    gotFnameToast.show();
-                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
-                    ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 70, characterModel.getLevel());
-                    unlockingCheck(70);
-                } else if (matches > 0) {
-                    score = score + 35;
-                    gotNameToast.show();
-                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
-                    ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    unlockingCheck(35);
-                } else {
-                    wrongAnswer();
+                //one at a time
+                if (!checkAnime()) {
+                    checkName(false);
                 }
 
                 break;
-            case 35:
+            case PARTIALNAME:
                 // Only got the name partially
                 // therefore if we get the full name here we must add 35 to the
                 // value not 70
-                if (animematches >= animeArray.length) {
-                    score = score + 30;
-                    gotAnimeToast.show();
-                    ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
-                    ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 30, characterModel.getLevel());
-                    unlockingCheck(30);
-                } else if (matches >= nameArray.length) {
-                    score = score + 35;
-                    gotFnameToast.show();
-                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
-                    ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    unlockingCheck(35);
-                } else {
-                    wrongAnswer();
+
+                //one at a time
+                if (!checkAnime()) {
+                    checkName(true);
                 }
 
                 break;
-            case 30:
+            case ANIME:
                 // Only got the anime
-                if (matches >= nameArray.length) {
-                    score = score + 70;
-                    charCompletedToast.show();
-                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
-                    ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    String animeforcomplete;
-                    String fnameforcomplete;
-                    if (characterModel.getAnime().contains("@")) {
-                        String[] animearray = characterModel.getAnime().split("@");
-                        animeforcomplete = animearray[0];
-                    } else {
-                        animeforcomplete = characterModel.getAnime();
-                    }
-                    if (characterModel.getFullname().contains("@")) {
-                        String[] fnamearray = characterModel.getFullname().split("@");
-                        fnameforcomplete = fnamearray[0];
-                    } else {
-                        fnameforcomplete = characterModel.getFullname();
-                    }
-                    String separator = getString(R.string.from);
-                    String stringforcompletedialog = fnameforcomplete + " "
-                            + separator + " " + animeforcomplete;
 
-                    ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 70, characterModel.getLevel());
-                    unlockingCheck(70);
-                } else if (matches > 0) {
-                    score = score + 35;
-                    gotNameToast.show();
-                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
-                    ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    unlockingCheck(35);
-                } else {
-                    wrongAnswer();
-                }
+                checkName(false);
+
                 break;
-            case 70:
+            case FULLNAME:
                 // Only got the full name
-                if (animematches >= animeArray.length) {
-                    score = score + 30;
-                    charCompletedToast.show();
-                    ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
-                    ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 30, characterModel.getLevel());
-                    String animeforcomplete;
-                    String fnameforcomplete;
 
-                    if (((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid()) != null) {
-                        animeforcomplete = ((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid());
-                    } else {
-                        if (characterModel.getAnime().contains("@")) {
-                            String[] animearray = characterModel.getAnime().split("@");
-                            animeforcomplete = animearray[0];
-                        } else {
-                            animeforcomplete = characterModel.getAnime();
-                        }
-                    }
-                    if (characterModel.getFullname().contains("@")) {
-                        String[] fnamearray = characterModel.getFullname().split("@");
-                        fnameforcomplete = fnamearray[0];
-                    } else {
-                        fnameforcomplete = characterModel.getFullname();
-                    }
-                    String separator = getString(R.string.from);
-                    String stringforcompletedialog = fnameforcomplete + " "
-                            + separator + " " + animeforcomplete;
-                    unlockingCheck(30);
-
-                } else {
-                    wrongAnswer();
-                }
+                checkAnime();
                 break;
-            case 65:
+            case ANIMEANDNAME:
                 // Got the anime and name
-                if (matches >= nameArray.length) {
-                    score = score + 35;
-                    charCompletedToast.show();
-                    ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
-                    ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                    ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), 35, characterModel.getLevel());
-                    String animeforcomplete;
-                    String fnameforcomplete;
 
-                    if (((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid()) != null) {
-                        animeforcomplete = ((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid());
-                    } else {
-                        if (characterModel.getAnime().contains("@")) {
-                            String[] animearray = characterModel.getAnime().split("@");
-                            animeforcomplete = animearray[0];
-                        } else {
-                            animeforcomplete = characterModel.getAnime();
-                        }
-                    }
-                    if (characterModel.getFullname().contains("@")) {
-                        String[] fnamearray = characterModel.getFullname().split("@");
-                        fnameforcomplete = fnamearray[0];
-                    } else {
-                        fnameforcomplete = characterModel.getFullname();
-                    }
-                    String separator = getString(R.string.from);
-                    String stringforcompletedialog = fnameforcomplete + " "
-                            + separator + " " + animeforcomplete;
-
-                    unlockingCheck(35);
-
-                } else {
-                    wrongAnswer();
-                }
-                break;
-            case 100:
-                charCompletedToast.show();
-                ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
-                ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-                String animeforcomplete;
-                String fnameforcomplete;
-
-                if (((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid()) != null) {
-                    animeforcomplete = ((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid());
-                } else {
-                    if (characterModel.getAnime().contains("@")) {
-                        String[] animearray = characterModel.getAnime().split("@");
-                        animeforcomplete = animearray[0];
-                    } else {
-                        animeforcomplete = characterModel.getAnime();
-                    }
-                }
-
-                if (characterModel.getFullname().contains("@")) {
-                    String[] fnamearray = characterModel.getFullname().split("@");
-                    fnameforcomplete = fnamearray[0];
-                } else {
-                    fnameforcomplete = characterModel.getFullname();
-                }
-                String separator = getString(R.string.from);
-                String stringforcompletedialog = fnameforcomplete + " " + separator
-                        + " " + animeforcomplete;
-
+                checkName(true);
 
                 break;
         }
 
         updateCharacterView(true);
+    }
 
+    public boolean checkAnime() {
+
+        String text = textInput.getText().toString().trim().toLowerCase();
+
+        String[] splittedInput = text.split(" ");
+        String[] splittedAnime = characterModel.getAnime().split("@");
+
+        ArrayList<String> splittedWCoincidences = new ArrayList<>();
+
+        String regex = "\\b(";
+
+        for (String aSplittedInput : splittedInput) {
+
+            regex = regex + aSplittedInput + "|";
+            for (String aSplittedAnime : splittedAnime) {
+                if (aSplittedAnime.contains(aSplittedInput)) {
+                    if (!splittedWCoincidences.contains(aSplittedAnime)) {
+                        splittedWCoincidences.add(aSplittedAnime);
+                    }
+                }
+            }
+        }
+
+        regex = regex + ")\\b";
+        regex = regex.replace("|)", ")");
+
+        ArrayList<String> checkResult = new ArrayList<>();
+        for (String aSplittedCoincidence : splittedWCoincidences) {
+            checkResult.add(aSplittedCoincidence.replaceAll(regex, "X"));
+
+        }
+
+        for (String result : checkResult) {
+
+            int matches = StringUtils.countMatches(result, "X");
+            result = result.replace(" ", "");
+
+            if (result.length() == matches) {
+
+                gotAnime(text);
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void checkName(boolean expectFullAnswer) {
+
+        String text = textInput.getText().toString().trim().toLowerCase();
+
+        String[] splittedInput = text.split(" ");
+        String[] splittedCharName = characterModel.getFullname().split("@");
+
+        ArrayList<String> splittedWCoincidences = new ArrayList<>();
+
+        String regex = "\\b(";
+
+        for (String aSplittedInput : splittedInput) {
+
+            regex = regex + aSplittedInput + "|";
+            for (String aSplittedCharName : splittedCharName) {
+                if (aSplittedCharName.contains(aSplittedInput)) {
+                    if (!splittedWCoincidences.contains(aSplittedCharName)) {
+                        splittedWCoincidences.add(aSplittedCharName);
+                    }
+                }
+            }
+        }
+
+        regex = regex + ")\\b";
+        regex = regex.replace("|)", ")");
+
+        ArrayList<String> checkResult = new ArrayList<>();
+        for (String aSplittedCoincidence : splittedWCoincidences) {
+            checkResult.add(aSplittedCoincidence.replaceAll(regex, "X"));
+
+        }
+
+        for (String result : checkResult) {
+
+            int matches = StringUtils.countMatches(result, "X");
+            result = result.replace(" ", "");
+
+            if (result.length() == matches) {
+
+                gotNameFully(text, expectFullAnswer);
+
+                return;
+            }
+            //Don't check if you expect the full answer
+            else if (matches > 0 && !expectFullAnswer) {
+
+                gotNamePartially(text);
+                return;
+            }
+        }
+
+    }
+
+    public void gotAnime(String text) {
+
+        //score = score + ANIME;
+        gotAnimeToast.show();
+        ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
+        ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
+        ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), ANIME, characterModel.getLevel());
+        unlockingCheck(ANIME);
+
+//        Toast.makeText(getContext(), "GOT ANIME",
+//                Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void gotNamePartially(String text) {
+
+        //score = score + PARTIALNAME;
+        gotNameToast.show();
+        ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
+        ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
+        ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), PARTIALNAME, characterModel.getLevel());
+        unlockingCheck(PARTIALNAME);
+
+//        Toast.makeText(getContext(), "GOT PARTIAL NAME",
+//                Toast.LENGTH_SHORT).show();
+    }
+
+    public void gotNameFully(String text, boolean fullAnwserWasExpected) {
+
+        int scoreToBeAdded;
+
+        if (fullAnwserWasExpected) {
+            scoreToBeAdded = PARTIALNAME;
+            //score = score + PARTIALNAME;
+        } else {
+            scoreToBeAdded = FULLNAME;
+            //score = score + FULLNAME;
+        }
+
+        charCompletedToast.show();
+        ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
+        ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
+        ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), scoreToBeAdded, characterModel.getLevel());
+        unlockingCheck(scoreToBeAdded);
+
+//        Toast.makeText(getContext(), "GOT FULL NAME",
+//                Toast.LENGTH_SHORT).show();
     }
 
     public void showScore() {
@@ -463,69 +430,7 @@ public class FragCharacter extends Fragment {
         wrongToast.show();
         //The haptics manager also checks the achievements
         ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.WRONG);
-
         ((MainFragActivity) getActivity()).manageAchievements(FinalStringsUtils.INCREMENT, FinalStringsUtils.FAILACHIEV, 1);
-    }
-
-    private String[][] stringSplitter(String tosplit) {
-        String[] splitted1 = tosplit.split("@");
-        List<String[]> bdarraylist = new ArrayList<String[]>();
-        int lenght = splitted1.length;
-        for (int x = 0; x < lenght; x++) {
-            bdarraylist.add(splitted1[x].split(" "));
-        }
-        String[][] array2D = new String[bdarraylist.size()][];
-        bdarraylist.toArray(array2D);
-
-        return array2D;
-    }
-
-    private int comparator(String ctext, String dbfield) {
-        String text = ctext;
-        String[] inputArray = text.split(" ");
-
-        dbfield = dbfield.toLowerCase().trim();
-
-        if (dbfield.contains("@")) {
-            String[][] bidircomparativearray = stringSplitter(dbfield);
-            int outmatches = 0;
-
-            for (int outx = 0; outx < bidircomparativearray.length; outx++) {
-                int inmatches = 0;
-                // Log.d("comparator", "inmatches"+String.valueOf(inmatches));
-
-                for (int x = 0; x < inputArray.length; x++) {
-                    String[] inarray = bidircomparativearray[outx];
-                    for (int y = 0; y < inarray.length; y++) {
-                        if (inputArray[x].compareTo(inarray[y]) == 0) {
-                            // Log.d("comparator", "comparing: "+inputArray[x]);
-                            // Log.d("comparator", "with: "+inarray[y]);
-                            inmatches = inmatches + 1;
-                        }
-                    }
-                }
-
-                if (inmatches > outmatches) {
-                    outmatches = inmatches;
-                }
-
-            }
-            return outmatches;
-        } else {
-            String[] nameArray = dbfield.split(" ");
-
-            int matches = 0;
-            for (int x = 0; x < inputArray.length; x++) {
-                for (String word : nameArray) {
-                    if (inputArray[x].compareTo(word) == 0) {
-                        matches = matches + 1;
-                    }
-                }
-            }
-            // Log.d("comparator", "matches "+String.valueOf(matches));
-            return matches;
-
-        }
     }
 
     public void showHint(View view) {
@@ -570,6 +475,8 @@ public class FragCharacter extends Fragment {
 
     private void updateCharacterView(boolean animated) {
 
+        score= ((MainFragActivity) getActivity()).getCharScore(characterModel.getCharid(), characterModel.getLevel());
+
         int charScore = 100;
         pbar.setMax(charScore);
 
@@ -604,6 +511,8 @@ public class FragCharacter extends Fragment {
             animeCharacterComponent.setVisibility(View.VISIBLE);
             animeName.setText(((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid()));
             characterName.setText(((MainFragActivity) getActivity()).getCharInputedName(characterModel.getCharid(), false));
+            characterName.setSelected(true);
+            animeName.setSelected(true);
             textInput.setVisibility(View.GONE);
             textInput.setEnabled(false);
             textInput.setClickable(false);
@@ -616,6 +525,8 @@ public class FragCharacter extends Fragment {
             textInput.setVisibility(View.VISIBLE);
             textInput.setEnabled(true);
             textInput.setClickable(true);
+            characterName.setSelected(true);
+            animeName.setSelected(true);
         }
 
         // Here the char dialog is settled
@@ -640,6 +551,8 @@ public class FragCharacter extends Fragment {
                 break;
             case 100:
                 charDialog.setText(R.string.charcompleted);
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(charimage.getWindowToken(), 0);
                 break;
         }
 
