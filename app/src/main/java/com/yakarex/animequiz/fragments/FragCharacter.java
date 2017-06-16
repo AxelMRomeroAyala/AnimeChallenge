@@ -326,6 +326,7 @@ public class FragCharacter extends Fragment {
         ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
         ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), ANIME, characterModel.getLevel());
         unlockingCheck(ANIME);
+        textInput.setText("");
 
 //        Toast.makeText(getContext(), "GOT ANIME",
 //                Toast.LENGTH_SHORT).show();
@@ -362,6 +363,8 @@ public class FragCharacter extends Fragment {
         ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
         ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), scoreToBeAdded, characterModel.getLevel());
         unlockingCheck(scoreToBeAdded);
+
+        textInput.setText("");
 
 //        Toast.makeText(getContext(), "GOT FULL NAME",
 //                Toast.LENGTH_SHORT).show();
