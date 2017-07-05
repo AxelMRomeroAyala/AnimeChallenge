@@ -17,7 +17,7 @@ import android.content.Intent;
 public class SplashActivity extends Activity {
 	
 	// Set the display time, in milliseconds (or extract it out as a configurable parameter)
-    private final int SPLASH_DISPLAY_LENGTH = 3000;
+    private final int SPLASH_DISPLAY_LENGTH = 1600;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class SplashActivity extends Activity {
         super.onResume();
         
         AlphaAnimation animation1 = new AlphaAnimation(0.0f, 1.0f);
-        animation1.setDuration(2900);
+        animation1.setDuration(1500);
         animation1.setStartOffset(5);
         
         ImageView splash= (ImageView) findViewById(id.challengeview);

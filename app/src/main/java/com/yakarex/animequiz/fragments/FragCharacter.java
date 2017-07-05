@@ -17,12 +17,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -61,8 +64,11 @@ public class FragCharacter extends Fragment {
     Button hintButton;
     RelativeLayout animeNameComponent, animeCharacterComponent;
     TextView animeName, characterName;
+    CardView imageFrame;
 
     Toast gotNameToast, gotFnameToast, gotAnimeToast, charCompletedToast;
+
+    Animation shake;
 
     public static String CHARACTER = "character";
 
@@ -78,6 +84,8 @@ public class FragCharacter extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        shake = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
 
     }
 
@@ -108,6 +116,7 @@ public class FragCharacter extends Fragment {
 
         prepareToasts();
 
+        imageFrame= (CardView) rootView.findViewById(R.id.characterframefragcardview);
         charimage = (ImageView) rootView.findViewById(R.id.characterframefrag);
         textInput = (EditText) rootView.findViewById(R.id.editText1);
         pbar = (ProgressBar) rootView.findViewById(R.id.progressBar1);
@@ -120,7 +129,10 @@ public class FragCharacter extends Fragment {
 
             public void onClick(View v) {
 
-                checkInputAdvanced();
+                if(textInput.getText().length()>0 && textInput.getText().toString().trim().length() > 0){
+                    checkInputAdvanced();
+                }
+
             }
         });
 
@@ -180,7 +192,9 @@ public class FragCharacter extends Fragment {
 
                 //one at a time
                 if (!checkAnime()) {
-                    checkName(false);
+                    if(!checkName(false)){
+                        wrongAnswer();
+                    }
                 }
 
                 break;
@@ -191,25 +205,34 @@ public class FragCharacter extends Fragment {
 
                 //one at a time
                 if (!checkAnime()) {
-                    checkName(true);
+                    if(!checkName(true)){
+                        wrongAnswer();
+                    }
                 }
 
                 break;
             case ANIME:
                 // Only got the anime
 
-                checkName(false);
+                if(!checkName(false)){
+                    wrongAnswer();
+                }
 
                 break;
             case FULLNAME:
                 // Only got the full name
 
-                checkAnime();
+                if(!checkAnime()){
+                    wrongAnswer();
+                }
+
                 break;
             case ANIMEANDNAME:
                 // Got the anime and name
 
-                checkName(true);
+                if(!checkName(true)){
+                    wrongAnswer();
+                }
 
                 break;
         }
@@ -265,7 +288,7 @@ public class FragCharacter extends Fragment {
         return false;
     }
 
-    public void checkName(boolean expectFullAnswer) {
+    public boolean checkName(boolean expectFullAnswer) {
 
         String text = textInput.getText().toString().trim().toLowerCase();
 
@@ -306,15 +329,29 @@ public class FragCharacter extends Fragment {
 
                 gotNameFully(text, expectFullAnswer);
 
-                return;
+                return true;
             }
             //Don't check if you expect the full answer
             else if (matches > 0 && !expectFullAnswer) {
 
-                gotNamePartially(text);
-                return;
+                String[] inputArray= text.split(" ");
+
+                String inputToSave= "";
+                for(String input: inputArray){
+                    if(characterModel.getFullname().contains(input)){
+                      inputToSave= inputToSave + input+ " ";
+                    }
+                }
+
+                inputToSave= inputToSave.trim();
+
+                gotNamePartially(inputToSave);
+                textInput.setText(inputToSave);
+                return true;
             }
         }
+
+        return false;
 
     }
 
@@ -430,10 +467,13 @@ public class FragCharacter extends Fragment {
 
     public void wrongAnswer() {
 
+        imageFrame.startAnimation(shake);
+
         wrongToast.show();
         //The haptics manager also checks the achievements
         ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.WRONG);
         ((MainFragActivity) getActivity()).manageAchievements(FinalStringsUtils.INCREMENT, FinalStringsUtils.FAILACHIEV, 1);
+
     }
 
     public void showHint(View view) {
