@@ -68,8 +68,6 @@
     <string name="changelog_title">What\'s New</string>
     <string name="changelog_ok_button">OK</string>
     <string name="changelog_show_full">more</string>
-	<string name="changelog">1.0.0 - First Release March 4, 2013.
-	    1.1.1 - March 11. Fixed some bugs, database was corrected, added a new level, added facebook and rate us buttons. </string>
     <string name="viboff">Vibração Desativado</string>
     <string name="by">de</string>
     <string name="developer"><b>Desenvolvedor</b></string>
