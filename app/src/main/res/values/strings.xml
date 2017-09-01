@@ -100,8 +100,6 @@
     <string name="betatesters" translatable="false">Santiago Alberto Diaz\nRaul Hernan Luna</string>
     <string name="specialthanks"><b>Special Thanks</b></string>
     <string name="specialthanksto" translatable="false">Cristian Quiroz\nEdgar Luna\nBryan Eata </string>
-    <string name="adunitid" translatable="false">ca-app-pub-5318551320912238/6158016309</string>
-    <string name="adunitinterad" translatable="false">ca-app-pub-5318551320912238/7634749508</string>
     <string name="leaderboardPLVL" translatable="false">CgkIrIfuxeQKEAIQEg</string>
     <string name="play10" translatable="false">CgkIrIfuxeQKEAIQAQ</string>
     <string name="play100" translatable="false">CgkIrIfuxeQKEAIQAg</string>
@@ -125,5 +123,9 @@
     <string name="volume">Volume</string>
     <string name="signin_other_error" translatable="false">Sign in error, try again later.</string>
     <string name="signin_failure" translatable="false">Sign in Failed</string>
+
+    <string name="admob_app_id" translatable="false">ca-app-pub-5318551320912238~7571251500</string>
+    <string name="adunitid" translatable="false">ca-app-pub-5318551320912238/6158016309</string>
+    <string name="adunitinterad" translatable="false">ca-app-pub-5318551320912238/7634749508</string>
 
 </resources>
