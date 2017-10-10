@@ -22,6 +22,6 @@ public class AchaApplication extends Application {
 
         MobileAds.initialize(this, this.getString(R.string.admob_app_id));
 
-
     }
+
 }

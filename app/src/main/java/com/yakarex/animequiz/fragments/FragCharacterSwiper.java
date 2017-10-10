@@ -17,6 +17,7 @@ import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.adapters.CharacterPagesAdapter;
 import com.yakarex.animequiz.models.AChaCharacterModel;
 import com.yakarex.animequiz.models.MessageEvent;
+import com.yakarex.animequiz.utils.DBUtil;
 import com.yakarex.animequiz.utils.FinalStringsUtils;
 import com.yakarex.animequiz.utils.ZoomOutPageTransformer;
 
@@ -41,9 +42,13 @@ public class FragCharacterSwiper extends Fragment {
     ViewPager characterPager;
     AChaCharacterModel characterModel;
 
+    private DBUtil dbUtil;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        dbUtil= new DBUtil(getContext());
 
         //postponeEnterTransition();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -112,6 +117,12 @@ public class FragCharacterSwiper extends Fragment {
         EventBus.getDefault().unregister(this);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        dbUtil.finish();
+    }
+
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(MessageEvent event) {
      if(event.message.equals(FinalStringsUtils.UPDATESCORE)){
@@ -126,9 +137,9 @@ public class FragCharacterSwiper extends Fragment {
             String lvlscoreText = (String) getText(R.string.lvlscore);
             String lvlname = (String) getText(R.string.games);
             scoreString = lvlscoreText + " " + lvlname + ": "
-                    + String.valueOf(((MainFragActivity) getActivity()).getLevelScore(characterModel.getLevel())) + " "
+                    + String.valueOf(dbUtil.getLevelScore(characterModel.getLevel())) + " "
                     + totalscoreText + ": "
-                    + String.valueOf(((MainFragActivity) getActivity()).getTotalScore());
+                    + String.valueOf(dbUtil.getTotalScore());
 
         }
 
@@ -137,17 +148,17 @@ public class FragCharacterSwiper extends Fragment {
             String lvlscoreText = (String) getText(R.string.lvlscore);
             String lvlname = "Pets";
             scoreString = lvlscoreText + " " + lvlname + ": "
-                    + String.valueOf(((MainFragActivity) getActivity()).getLevelScore(characterModel.getLevel())) + " "
+                    + String.valueOf(dbUtil.getLevelScore(characterModel.getLevel())) + " "
                     + totalscoreText + ": "
-                    + String.valueOf(((MainFragActivity) getActivity()).getTotalScore());
+                    + String.valueOf(dbUtil.getTotalScore());
 
         } else {
             String totalscoreText = (String) getText(R.string.totalscore);
             String lvlscoreText = (String) getText(R.string.lvlscore);
             scoreString = lvlscoreText + " " + String.valueOf(characterModel.getLevel()) + ": "
-                    + String.valueOf(((MainFragActivity) getActivity()).getLevelScore(characterModel.getLevel())) + " "
+                    + String.valueOf(dbUtil.getLevelScore(characterModel.getLevel())) + " "
                     + totalscoreText + ": "
-                    + String.valueOf(((MainFragActivity) getActivity()).getTotalScore());
+                    + String.valueOf(dbUtil.getTotalScore());
         }
 
         charscoreView.setText(scoreString);

@@ -4,6 +4,7 @@ import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.adapters.CharactersRecyclerAdapter;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.R.id;
+import com.yakarex.animequiz.utils.DBUtil;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -16,29 +17,31 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.TextView;
 
-public class FragLevel extends Fragment{
-	
-	static int indexgridposition;
-	int lvl;
-	Cursor cursor;
+public class FragLevel extends Fragment {
+
+    static int indexgridposition;
+    int lvl;
+    Cursor cursor;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter charRecyclerAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-	GridView gv;
-	TextView scoreView;
-	
+    GridView gv;
+    TextView scoreView;
+    private DBUtil dbUtil;
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		
-		indexgridposition= 0;
 
-		cursor= ((MainFragActivity)getActivity()).getLvlCursor();
-		lvl= this.getArguments().getInt("lvl");
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-		return inflater.inflate(R.layout.frag_level, container, false);
-	}
+        dbUtil = new DBUtil(getContext());
+        indexgridposition = 0;
+
+        cursor = ((MainFragActivity) getActivity()).getLvlCursor();
+        lvl = this.getArguments().getInt("lvl");
+
+        return inflater.inflate(R.layout.frag_level, container, false);
+    }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -61,49 +64,54 @@ public class FragLevel extends Fragment{
     }
 
     @Override
-	public void onResume() {
-		super.onResume();
+    public void onResume() {
+        super.onResume();
 
-		charRecyclerAdapter.notifyDataSetChanged();
-		updateScoreView();
-		
-	}
-	
-	@Override
-	public void onPause() {
-		super.onPause();
-		
-	}
+        charRecyclerAdapter.notifyDataSetChanged();
+        updateScoreView();
 
-	@Override
-	public void onHiddenChanged(boolean hidden) {
-		super.onHiddenChanged(hidden);
-		if (hidden) {
-			//do when hidden
-		} else {
-			//do when show
-			mRecyclerView.setAdapter(charRecyclerAdapter);
-			updateScoreView();
-		}
-	}
-	
-	public void updateScoreView(){
-		String scoreString;	 
-		 
-		if(lvl == 100){
-			String totalscoreText= (String) getText(R.string.totalscore);
-			String lvlscoreText= (String) getText(R.string.lvlscore);
-			String lvlname= (String) getText(R.string.games);
-			scoreString = lvlscoreText+" "+lvlname+": "+String.valueOf(((MainFragActivity)getActivity()).getLevelScore(lvl))+" "+totalscoreText+": "+String.valueOf(((MainFragActivity)getActivity()).getTotalScore()) ;
-		}
-		
-		else{
-		String totalscoreText= (String) getText(R.string.totalscore);
-		String lvlscoreText= (String) getText(R.string.lvlscore);
-		scoreString = lvlscoreText+" "+String.valueOf(lvl)+": "+String.valueOf(((MainFragActivity)getActivity()).getLevelScore(lvl))+" "+totalscoreText+": "+String.valueOf(((MainFragActivity)getActivity()).getTotalScore());
-		}
-		//Find and set the score data on the level
-		scoreView= (TextView) getActivity().findViewById(id.scoreView);
-		scoreView.setText(scoreString);
-	}
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        dbUtil.finish();
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if (hidden) {
+            //do when hidden
+        } else {
+            //do when show
+            mRecyclerView.setAdapter(charRecyclerAdapter);
+            updateScoreView();
+        }
+    }
+
+    public void updateScoreView() {
+        String scoreString;
+
+        if (lvl == 100) {
+            String totalscoreText = (String) getText(R.string.totalscore);
+            String lvlscoreText = (String) getText(R.string.lvlscore);
+            String lvlname = (String) getText(R.string.games);
+            scoreString = lvlscoreText + " " + lvlname + ": " + String.valueOf(dbUtil.getLevelScore(lvl)) + " " + totalscoreText + ": " + String.valueOf(dbUtil.getTotalScore());
+        } else {
+            String totalscoreText = (String) getText(R.string.totalscore);
+            String lvlscoreText = (String) getText(R.string.lvlscore);
+            scoreString = lvlscoreText + " " + String.valueOf(lvl) + ": " + String.valueOf(dbUtil.getLevelScore(lvl)) + " " + totalscoreText + ": " + String.valueOf(dbUtil.getTotalScore());
+        }
+        //Find and set the score data on the level
+        scoreView = (TextView) getActivity().findViewById(id.scoreView);
+        scoreView.setText(scoreString);
+    }
 }

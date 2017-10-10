@@ -15,7 +15,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.media.AudioManager;
 import android.media.SoundPool;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -33,7 +32,6 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
@@ -41,7 +39,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.example.games.basegameutils.BaseGameUtils;
-import com.yakarex.animequiz.models.LevelStatModel;
+import com.yakarex.animequiz.utils.DBUtil;
 import com.yakarex.animequiz.utils.DataBaseHelper;
 import com.yakarex.animequiz.fragments.FragLevel;
 import com.yakarex.animequiz.fragments.FragOptions;
@@ -65,8 +63,8 @@ public class MainFragActivity extends FragmentActivity implements
     private Cursor lvlCursor;
 
     FragmentManager fragmentManager;
-    ScoreDbHelper scoreHelper;
-    DataBaseHelper dataBaseHelper;
+//    ScoreDbHelper scoreHelper;
+//    DataBaseHelper dataBaseHelper;
     private boolean audioOff;
     private boolean vibrationOff;
     static boolean ads = true;
@@ -98,11 +96,14 @@ public class MainFragActivity extends FragmentActivity implements
     final Handler mHandler = new Handler();
 
     private AdView mAdView;
+    private DBUtil dbUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_frag);
+
+        dbUtil= new DBUtil(this);
 
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.SMART_BANNER);
@@ -135,10 +136,6 @@ public class MainFragActivity extends FragmentActivity implements
                 .build();
 
         startTime = SystemClock.elapsedRealtime();
-
-
-        dataBaseHelper = new DataBaseHelper(this);
-        scoreHelper = new ScoreDbHelper(this);
 
 //        adView = (AdView) this.findViewById(R.id.adView);
 //        AdRequest adRequest = new AdRequest.Builder().build();
@@ -229,14 +226,7 @@ public class MainFragActivity extends FragmentActivity implements
     protected void onResume() {
         super.onResume();
 
-        scoreHelper.createDb();
-        try {
-            dataBaseHelper.createDatabase();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        scoreHelper.openDataBase();
-        dataBaseHelper.openDataBase();
+
 
         //adView.resume();
     }
@@ -245,8 +235,6 @@ public class MainFragActivity extends FragmentActivity implements
     protected void onPause() {
         super.onPause();
 
-        scoreHelper.close();
-        dataBaseHelper.close();
 
         //adView.pause();
     }
@@ -258,131 +246,6 @@ public class MainFragActivity extends FragmentActivity implements
         FragOptions fragment = new FragOptions();
         fragmentTransaction.replace(R.id.mainfragment, fragment).addToBackStack(null);
         fragmentTransaction.commit();
-    }
-
-    public List<LevelStatModel> getLevels() {
-
-        List<LevelStatModel> levelList = new ArrayList<>();
-        for (int x = 0; x <= FinalStringsUtils.lvlidarray.length - 1; x++) {
-            LevelStatModel level = new LevelStatModel();
-
-            String lvlName = getLvlNamebyId(FinalStringsUtils.lvlidarray[x]);
-
-            level.setLevelId(FinalStringsUtils.lvlidarray[x]);
-            level.setLevelName(lvlName);
-            level.setLevelScore(getLevelScore(FinalStringsUtils.lvlidarray[x]));
-            level.setStarStats(getStarStats(FinalStringsUtils.lvlidarray[x]));
-            level.setLvlMaxScore(getLevelMaxScore(FinalStringsUtils.lvlidarray[x]));
-
-            if (Integer.parseInt(getTotalScore()) >= FinalStringsUtils.lvlunlockinglogicarray[x]) {
-                level.setUnlocked(true);
-            }
-
-            levelList.add(level);
-        }
-
-        return levelList;
-    }
-
-    public String getTotalScore() {
-
-        return String.valueOf(scoreHelper.getTotalScore());
-    }
-
-    public int getLevelScore(int level) {
-
-
-        return scoreHelper.getLevelScore(level);
-    }
-
-    public int getLevelMaxScore(int level) {
-
-        return dataBaseHelper.getLvlmaxScore(level);
-    }
-
-    public int[] getStarStats(int level) {
-        return scoreHelper.starsStats(level);
-    }
-
-    public int getCharScore(int id, int level) {
-
-        return scoreHelper.getCharScore(id, level);
-    }
-
-    public void setCharScore(int charId, int score, int level) {
-
-        scoreHelper.setCharScore(charId, score, level);
-
-    }
-
-    public String getCharInputedAnime(int id) {
-
-        if (scoreHelper.getInputedAnime(id) != null) {
-            return scoreHelper.getInputedAnime(id);
-        } else {
-
-            return dataBaseHelper.getCharacter(id).getAnime().split("@")[0];
-        }
-
-    }
-
-    public String getCharInputedName(int id, boolean avoidHinting) {
-
-        if (scoreHelper.getInputedName(id) != null) {
-            return scoreHelper.getInputedName(id);
-        } else {
-            if (avoidHinting) {
-                return "";
-            } else {
-                return dataBaseHelper.getCharacter(id).getFullname().split("@")[0];
-            }
-        }
-
-    }
-
-    public void setCharInputedAnime(int id, String anime) {
-
-        scoreHelper.setInputedAnime(id, anime);
-
-    }
-
-    public void setCharInputedName(int id, String name) {
-
-        scoreHelper.setInputedName(id, name);
-
-    }
-
-    public void resetScore() {
-
-        scoreHelper.deleteScoretable();
-
-    }
-
-    public void openLevelbyId(int lvlId) {
-
-        dataBaseHelper = new DataBaseHelper(this);
-        try {
-
-            dataBaseHelper.openDataBase();
-
-        } catch (SQLException sqle) {
-
-            String errorMessage = "Error";
-            Toast toast = Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT);
-            toast.show();
-
-            throw sqle;
-
-        }
-
-        Cursor cursor = dataBaseHelper.getLvl(lvlId);
-        lvlCursor = cursor;
-
-        Bundle bundle = new Bundle();
-        bundle.putInt("lvl", lvlId);
-        //changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle), true, false);
-        changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle));
-
     }
 
     public void audioManager() {
@@ -533,6 +396,8 @@ public class MainFragActivity extends FragmentActivity implements
         // TODO Auto-generated method stub
         super.onDestroy();
 
+        dbUtil.finish();
+
         long endTime = SystemClock.elapsedRealtime();
 
         playTime = endTime - startTime;
@@ -640,6 +505,17 @@ public class MainFragActivity extends FragmentActivity implements
 
     public Cursor getLvlCursor() {
         return lvlCursor;
+    }
+
+    public void openLevelbyId(int lvlId) {
+
+        lvlCursor = dbUtil.getDataBaseHelper().getLvl(lvlId);
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("lvl", lvlId);
+        //changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle), true, false);
+        changeFragment(FragLevel.instantiate(context, FragLevel.class.getName(), bundle));
+
     }
 
     public void onConnected(Bundle bundle) {
@@ -784,7 +660,7 @@ public class MainFragActivity extends FragmentActivity implements
                         break;
                 }
             } else if (type.equals(FinalStringsUtils.UNLOCK)) {
-                int totalScore = Integer.parseInt(getTotalScore());
+                int totalScore = Integer.parseInt(dbUtil.getTotalScore());
                 Log.e("TOTAL SCORE", String.valueOf(totalScore));
                 Games.Leaderboards.submitScore(mGoogleApiClient, getString(R.string.leaderboardPLVL), totalScore);
                 if (totalScore >= 9000) {
@@ -797,52 +673,26 @@ public class MainFragActivity extends FragmentActivity implements
                     Log.e("ACHIEVEMENT", "MORE THAN 60k");
                     Games.Achievements.unlock(mGoogleApiClient, getString(R.string.score60k));
                 }
-                Log.e("ACHIEVEMENT", "GAMER LVL SCORE:" + String.valueOf(getLevelScore(FinalStringsUtils.GAMER1LEVEL)) + "MAX SCORE" + String.valueOf(getLevelMaxScore(FinalStringsUtils.GAMER1LEVEL)));
-                if (getLevelScore(FinalStringsUtils.GAMER1LEVEL) >= getLevelMaxScore(FinalStringsUtils.GAMER1LEVEL)) {
+                Log.e("ACHIEVEMENT", "GAMER LVL SCORE:" + String.valueOf(dbUtil.getLevelScore(FinalStringsUtils.GAMER1LEVEL)) + "MAX SCORE" + String.valueOf(dbUtil.getLevelMaxScore(FinalStringsUtils.GAMER1LEVEL)));
+                if (dbUtil.getLevelScore(FinalStringsUtils.GAMER1LEVEL) >= dbUtil.getLevelMaxScore(FinalStringsUtils.GAMER1LEVEL)) {
                     Log.e("ACHIEVEMENT", "GAMER LVL UNLOCKED");
                     Games.Achievements.unlock(mGoogleApiClient, getString(R.string.player1achievement));
                 }
-                Log.e("ACHIEVEMENT", "GAMER LVL 2 SCORE:" + String.valueOf(getLevelScore(FinalStringsUtils.GAMER2LEVEL)) + "MAX SCORE" + String.valueOf(getLevelMaxScore(FinalStringsUtils.GAMER2LEVEL)));
-                if (getLevelScore(FinalStringsUtils.GAMER2LEVEL) >= getLevelMaxScore(FinalStringsUtils.GAMER2LEVEL)) {
+                Log.e("ACHIEVEMENT", "GAMER LVL 2 SCORE:" + String.valueOf(dbUtil.getLevelScore(FinalStringsUtils.GAMER2LEVEL)) + "MAX SCORE" + String.valueOf(dbUtil.getLevelMaxScore(FinalStringsUtils.GAMER2LEVEL)));
+                if (dbUtil.getLevelScore(FinalStringsUtils.GAMER2LEVEL) >= dbUtil.getLevelMaxScore(FinalStringsUtils.GAMER2LEVEL)) {
                     Games.Achievements.unlock(mGoogleApiClient, getString(R.string.gamerachievement));
                 }
-                Log.e("ACHIEVEMENT", "PETS LVL SCORE:" + String.valueOf(getLevelScore(FinalStringsUtils.PETSLEVEL)) + "MAX SCORE" + String.valueOf(getLevelMaxScore(FinalStringsUtils.PETSLEVEL)));
-                if (getLevelScore(FinalStringsUtils.PETSLEVEL) >= getLevelMaxScore(FinalStringsUtils.PETSLEVEL)) {
+                Log.e("ACHIEVEMENT", "PETS LVL SCORE:" + String.valueOf(dbUtil.getLevelScore(FinalStringsUtils.PETSLEVEL)) + "MAX SCORE" + String.valueOf(dbUtil.getLevelMaxScore(FinalStringsUtils.PETSLEVEL)));
+                if (dbUtil.getLevelScore(FinalStringsUtils.PETSLEVEL) >= dbUtil.getLevelMaxScore(FinalStringsUtils.PETSLEVEL)) {
                     Games.Achievements.unlock(mGoogleApiClient, getString(R.string.petsachievement));
                 }
-                Log.e("ACHIEVEMENT", "MOVIES LVL SCORE:" + String.valueOf(getLevelScore(FinalStringsUtils.MOVIESLEVEL)) + "MAX SCORE" + String.valueOf(getLevelMaxScore(FinalStringsUtils.MOVIESLEVEL)));
-                if (getLevelScore(FinalStringsUtils.MOVIESLEVEL) >= getLevelMaxScore(FinalStringsUtils.MOVIESLEVEL)) {
+                Log.e("ACHIEVEMENT", "MOVIES LVL SCORE:" + String.valueOf(dbUtil.getLevelScore(FinalStringsUtils.MOVIESLEVEL)) + "MAX SCORE" + String.valueOf(dbUtil.getLevelMaxScore(FinalStringsUtils.MOVIESLEVEL)));
+                if (dbUtil.getLevelScore(FinalStringsUtils.MOVIESLEVEL) >= dbUtil.getLevelMaxScore(FinalStringsUtils.MOVIESLEVEL)) {
                     Games.Achievements.unlock(mGoogleApiClient, getString(R.string.moviesachievement));
                 }
             }
 
         }
-    }
-
-    public String getLvlNamebyId(int lvlId) {
-
-        String name = getResources().getString(R.string.level_name);
-
-        switch (lvlId) {
-            case 100:
-                name = getResources().getString(R.string.levelgames);
-                break;
-            case 101:
-                name = getResources().getString(R.string.levelpets);
-                break;
-            case 102:
-                name = getResources().getString(R.string.levelgames2);
-                break;
-            case 103:
-                name = getResources().getString(R.string.levelmovies);
-                break;
-            default:
-                name = name.replace("@@", String.valueOf(lvlId));
-                break;
-        }
-
-
-        return name;
     }
 
     public boolean isSignedIn() {

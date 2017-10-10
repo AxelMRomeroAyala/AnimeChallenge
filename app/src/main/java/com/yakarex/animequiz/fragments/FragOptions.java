@@ -4,6 +4,7 @@ import com.yakarex.animequiz.activities.CreditsActivity;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.utils.ChangeLog;
+import com.yakarex.animequiz.utils.DBUtil;
 
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
@@ -15,6 +16,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +36,15 @@ public class FragOptions extends Fragment implements OnItemClickListener{
 	Context context;
 	ListView lview;
 	TextView textSing;
-	
+	private DBUtil dbUtil;
+
+	@Override
+	public void onCreate(@Nullable Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		dbUtil= new DBUtil(getContext());
+
+	}
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -59,8 +69,15 @@ public class FragOptions extends Fragment implements OnItemClickListener{
 		
 		return rootView;
 	}
-	
-public void onItemClick(AdapterView<?> arg0, View arg1, int itemid, long arg3) {
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+
+		dbUtil.finish();
+	}
+
+	public void onItemClick(AdapterView<?> arg0, View arg1, int itemid, long arg3) {
 		
 		if (itemid==0){
 			
@@ -73,7 +90,7 @@ public void onItemClick(AdapterView<?> arg0, View arg1, int itemid, long arg3) {
 	           .setCancelable(false)
 	           .setPositiveButton(yes, new DialogInterface.OnClickListener() {
 	               public void onClick(DialogInterface dialog, int id) {
-	            	   ((MainFragActivity)getActivity()).resetScore();
+					   dbUtil.resetScore();
 	               }
 	           })
 	           .setNegativeButton(no, null)

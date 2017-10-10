@@ -7,6 +7,7 @@ import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.AChaCharacterModel;
 import com.yakarex.animequiz.models.MessageEvent;
+import com.yakarex.animequiz.utils.DBUtil;
 import com.yakarex.animequiz.utils.FinalStringsUtils;
 
 import android.animation.ObjectAnimator;
@@ -71,6 +72,7 @@ public class FragCharacter extends Fragment {
     Animation shake;
 
     public static String CHARACTER = "character";
+    private DBUtil dbUtil;
 
     public static FragCharacter newInstance(AChaCharacterModel characterModel) {
         FragCharacter fragment = new FragCharacter();
@@ -85,6 +87,7 @@ public class FragCharacter extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        dbUtil= new DBUtil(getContext());
         shake = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
 
     }
@@ -102,7 +105,7 @@ public class FragCharacter extends Fragment {
         getArguments().getParcelable(CHARACTER);
 
         Log.e("Getting Score: ", String.valueOf(score));
-        score = ((MainFragActivity) getActivity()).getCharScore(characterModel.getCharid(), characterModel.getLevel());
+        score = dbUtil.getCharScore(characterModel.getCharid(), characterModel.getLevel());
 
         View rootView = inflater.inflate(R.layout.frag_character, container,
                 false);
@@ -263,7 +266,7 @@ public class FragCharacter extends Fragment {
             }
         }
 
-        regex = regex + ")\\b";
+        regex = regex + ")";
         regex = regex.replace("|)", ")");
 
         ArrayList<String> checkResult = new ArrayList<>();
@@ -311,7 +314,7 @@ public class FragCharacter extends Fragment {
             }
         }
 
-        regex = regex + ")\\b";
+        regex = regex + ")";
         regex = regex.replace("|)", ")");
 
         ArrayList<String> checkResult = new ArrayList<>();
@@ -359,9 +362,9 @@ public class FragCharacter extends Fragment {
 
         //score = score + ANIME;
         gotAnimeToast.show();
-        ((MainFragActivity) getActivity()).setCharInputedAnime(characterModel.getCharid(), text);
+        dbUtil.setCharInputedAnime(characterModel.getCharid(), text);
         ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-        ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), ANIME, characterModel.getLevel());
+        dbUtil.setCharScore(characterModel.getCharid(), ANIME, characterModel.getLevel());
         unlockingCheck(ANIME);
         textInput.setText("");
 
@@ -374,9 +377,9 @@ public class FragCharacter extends Fragment {
 
         //score = score + PARTIALNAME;
         gotNameToast.show();
-        ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
+        dbUtil.setCharInputedName(characterModel.getCharid(), text);
         ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-        ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), PARTIALNAME, characterModel.getLevel());
+        dbUtil.setCharScore(characterModel.getCharid(), PARTIALNAME, characterModel.getLevel());
         unlockingCheck(PARTIALNAME);
 
 //        Toast.makeText(getContext(), "GOT PARTIAL NAME",
@@ -396,9 +399,9 @@ public class FragCharacter extends Fragment {
         }
 
         charCompletedToast.show();
-        ((MainFragActivity) getActivity()).setCharInputedName(characterModel.getCharid(), text);
+        dbUtil.setCharInputedName(characterModel.getCharid(), text);
         ((MainFragActivity) getActivity()).hapticsManager(FinalStringsUtils.GOOD);
-        ((MainFragActivity) getActivity()).setCharScore(characterModel.getCharid(), scoreToBeAdded, characterModel.getLevel());
+        dbUtil.setCharScore(characterModel.getCharid(), scoreToBeAdded, characterModel.getLevel());
         unlockingCheck(scoreToBeAdded);
 
         textInput.setText("");
@@ -414,7 +417,7 @@ public class FragCharacter extends Fragment {
 
     public void unlockingCheck(int scoreToAdd) {
 
-        int totalScoreInt = Integer.parseInt(((MainFragActivity) getActivity()).getTotalScore());
+        int totalScoreInt = Integer.parseInt(dbUtil.getTotalScore());
         Context context = (getActivity()).getApplicationContext();
         Toast lvlunlocked = Toast.makeText(context, "", Toast.LENGTH_SHORT);
 
@@ -479,7 +482,7 @@ public class FragCharacter extends Fragment {
     public void showHint(View view) {
 
 
-        ((MainFragActivity) getActivity()).setCharScore(FinalStringsUtils.HINTCOUNT, 1, 0);
+        dbUtil.setCharScore(FinalStringsUtils.HINTCOUNT, 1, 0);
 
         String hint;
         if (characterModel.getAnime().contains("@")) {
@@ -518,7 +521,7 @@ public class FragCharacter extends Fragment {
 
     private void updateCharacterView(boolean animated) {
 
-        score= ((MainFragActivity) getActivity()).getCharScore(characterModel.getCharid(), characterModel.getLevel());
+        score= dbUtil.getCharScore(characterModel.getCharid(), characterModel.getLevel());
 
         int charScore = 100;
         pbar.setMax(charScore);
@@ -552,8 +555,8 @@ public class FragCharacter extends Fragment {
             buttonsContainer.setVisibility(View.GONE);
             animeNameComponent.setVisibility(View.VISIBLE);
             animeCharacterComponent.setVisibility(View.VISIBLE);
-            animeName.setText(((MainFragActivity) getActivity()).getCharInputedAnime(characterModel.getCharid()));
-            characterName.setText(((MainFragActivity) getActivity()).getCharInputedName(characterModel.getCharid(), false));
+            animeName.setText(dbUtil.getCharInputedAnime(characterModel.getCharid()));
+            characterName.setText(dbUtil.getCharInputedName(characterModel.getCharid(), false));
             characterName.setSelected(true);
             animeName.setSelected(true);
             textInput.setVisibility(View.GONE);
@@ -590,7 +593,7 @@ public class FragCharacter extends Fragment {
                 charDialog.setText(R.string.qfname);
 
                 //the partially inputed name is showed
-                textInput.setText(((MainFragActivity) getActivity()).getCharInputedName(characterModel.getCharid(), true));
+                textInput.setText(dbUtil.getCharInputedName(characterModel.getCharid(), true));
                 break;
             case 100:
                 charDialog.setText(R.string.charcompleted);

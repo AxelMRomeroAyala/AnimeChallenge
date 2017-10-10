@@ -13,6 +13,7 @@ import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.adapters.LevelsStatsAdapter;
 import com.yakarex.animequiz.models.LevelStatModel;
+import com.yakarex.animequiz.utils.DBUtil;
 import com.yakarex.animequiz.utils.DataBaseHelper;
 import com.yakarex.animequiz.utils.FinalStringsUtils;
 import com.yakarex.animequiz.utils.ScoreDbHelper;
@@ -28,6 +29,13 @@ public class FragLevelStats extends Fragment {
 
     RecyclerView levelStatsRecycler;
     MainFragActivity mainFragActivityInstance;
+    DBUtil dbUtil;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        dbUtil= new DBUtil(getContext());
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,10 +52,15 @@ public class FragLevelStats extends Fragment {
         mainFragActivityInstance= ((MainFragActivity)getActivity());
 
         levelStatsRecycler= (RecyclerView) view.findViewById(R.id.levels_stats_recycler);
-        LevelsStatsAdapter adapter= new LevelsStatsAdapter(mainFragActivityInstance.getLevels(), getContext());
+        LevelsStatsAdapter adapter= new LevelsStatsAdapter(dbUtil.getLevels(), getContext());
         RecyclerView.LayoutManager layoutManager= new LinearLayoutManager(getContext());
         levelStatsRecycler.setLayoutManager(layoutManager);
         levelStatsRecycler.setAdapter(adapter);
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        dbUtil.finish();
+    }
 }
