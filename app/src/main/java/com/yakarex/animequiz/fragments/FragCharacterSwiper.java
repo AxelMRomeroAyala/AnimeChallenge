@@ -34,7 +34,7 @@ public class FragCharacterSwiper extends Fragment {
     CharacterPagesAdapter charAdapter;
 
     Cursor cursor;
-    int position;
+    int position= 0;
 
     String scoreString;
     TextView charscoreView;
@@ -50,7 +50,6 @@ public class FragCharacterSwiper extends Fragment {
 
         dbUtil= new DBUtil(getContext());
 
-        //postponeEnterTransition();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
         }
@@ -63,7 +62,9 @@ public class FragCharacterSwiper extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        position= getArguments().getInt("position");
+        if(getArguments()!= null){
+            position= getArguments().getInt("position");
+        }
         cursor= ((MainFragActivity)getActivity()).getLvlCursor();
         cursor.moveToPosition(position);
 

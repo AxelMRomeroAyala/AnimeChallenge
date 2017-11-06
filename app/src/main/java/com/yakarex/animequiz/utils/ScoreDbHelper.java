@@ -3,10 +3,13 @@ package com.yakarex.animequiz.utils;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.CursorIndexOutOfBoundsException;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.crashlytics.android.Crashlytics;
 
 @SuppressLint("SdCardPath")
 public class ScoreDbHelper extends SQLiteOpenHelper{
@@ -423,9 +426,20 @@ public class ScoreDbHelper extends SQLiteOpenHelper{
 		 
 		 
 		 cursor.moveToFirst();
-		 
-		 String inputedAnime= cursor.getString(0);
-		 cursor.close();
+
+		 String inputedAnime;
+		 try{
+			 inputedAnime= cursor.getString(0);
+
+		 }
+		 catch (CursorIndexOutOfBoundsException cioobe){
+			 inputedAnime= "";
+			 cioobe.printStackTrace();
+			 Crashlytics.logException(cioobe);
+		 }
+		 finally {
+			 cursor.close();
+		 }
 		 
 		 return inputedAnime;
 	 }
@@ -476,9 +490,19 @@ public class ScoreDbHelper extends SQLiteOpenHelper{
 		 
 		 
 		 cursor.moveToFirst();
-		 
-		 String inputedName= cursor.getString(0);
-		 cursor.close();
+
+		 String inputedName;
+		 try {
+			 inputedName= cursor.getString(0);
+		 }
+		 catch (CursorIndexOutOfBoundsException cioobe){
+			 inputedName= "";
+			 cioobe.printStackTrace();
+			 Crashlytics.logException(cioobe);
+		 }
+		 finally {
+			 cursor.close();
+		 }
 		 
 		 return inputedName;
 	 }

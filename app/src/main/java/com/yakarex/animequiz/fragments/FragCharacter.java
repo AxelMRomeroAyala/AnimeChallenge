@@ -3,6 +3,7 @@ package com.yakarex.animequiz.fragments;
 import java.util.ArrayList;
 import java.util.Random;
 
+import com.crashlytics.android.Crashlytics;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.AChaCharacterModel;
@@ -96,7 +97,14 @@ public class FragCharacter extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //we get the position from the bundle and the cursor from the mainactivity, then we set the data
-        position = getArguments().getInt("position");
+        try{
+            position = getArguments().getInt("position");
+        }
+        catch (NullPointerException npe){
+            position = 0;
+            npe.printStackTrace();
+            Crashlytics.logException(npe);
+        }
 
         cursor = ((MainFragActivity) getActivity()).getLvlCursor();
         cursor.moveToPosition(position);
