@@ -52,7 +52,9 @@ public class FragLevelStats extends Fragment {
         mainFragActivityInstance= ((MainFragActivity)getActivity());
 
         levelStatsRecycler= (RecyclerView) view.findViewById(R.id.levels_stats_recycler);
-        LevelsStatsAdapter adapter= new LevelsStatsAdapter(dbUtil.getLevels(), getContext());
+        List<LevelStatModel> levels= dbUtil.getLevels();
+        levels.remove(0);
+        LevelsStatsAdapter adapter= new LevelsStatsAdapter(levels, getContext());
         RecyclerView.LayoutManager layoutManager= new LinearLayoutManager(getContext());
         levelStatsRecycler.setLayoutManager(layoutManager);
         levelStatsRecycler.setAdapter(adapter);

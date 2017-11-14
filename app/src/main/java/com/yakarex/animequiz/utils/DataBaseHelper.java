@@ -1,18 +1,25 @@
 package com.yakarex.animequiz.utils;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.crashlytics.android.Crashlytics;
+import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.AChaCharacterModel;
 
 @SuppressLint("SdCardPath")
@@ -142,25 +149,79 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 
     public Cursor getLvl(int lvl) {
-        String query = "SELECT * FROM characters WHERE level = " + lvl;
+        if(lvl == 0){
+            return getCollectionLvl();
+        }
+        else {
+            String query = "SELECT * FROM characters WHERE level = " + lvl;
 
-        myDataBase.beginTransaction();
-        Cursor lvlCursor = myDataBase.rawQuery(query, null);
-        myDataBase.setTransactionSuccessful();
-        myDataBase.endTransaction();
+            myDataBase.beginTransaction();
+            Cursor lvlCursor = myDataBase.rawQuery(query, null);
+            myDataBase.setTransactionSuccessful();
+            myDataBase.endTransaction();
+
+            return lvlCursor;
+        }
+    }
+
+    public Cursor getCollectionLvl() {
+        String query = "SELECT * FROM characters WHERE level IS NOT NULL ORDER BY RANDOM() LIMIT 99";
+
+        Cursor lvlCursor;
+        try {
+            lvlCursor= loadRandomCursor();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Crashlytics.logException(e);
+
+            myDataBase.beginTransaction();
+            lvlCursor = myDataBase.rawQuery(query, null);
+            myDataBase.setTransactionSuccessful();
+            myDataBase.endTransaction();
+
+            saveRandomCursor(lvlCursor);
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            Crashlytics.logException(e);
+
+            myDataBase.beginTransaction();
+            lvlCursor = myDataBase.rawQuery(query, null);
+            myDataBase.setTransactionSuccessful();
+            myDataBase.endTransaction();
+
+            saveRandomCursor(lvlCursor);
+        }
+
 
         return lvlCursor;
     }
 
-    public Cursor getCollectionLvl() {
-        String query = "SELECT * FROM characters WHERE level IS NOT NULL ORDER BY RANDOM() LIMIT 100";
+    private void saveRandomCursor(Cursor randomLevelCursor){
+        FileOutputStream fos = null;
+        try {
+            fos = myContext.openFileOutput("RandomCursor", Context.MODE_PRIVATE);
+            ObjectOutputStream os = new ObjectOutputStream(fos);
+            os.writeObject(randomLevelCursor);
+            os.close();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            Crashlytics.logException(e);
+        } catch (IOException e) {
+            e.printStackTrace();
+            Crashlytics.logException(e);
+        }
+    }
 
-        myDataBase.beginTransaction();
-        Cursor lvlCursor = myDataBase.rawQuery(query, null);
-        myDataBase.setTransactionSuccessful();
-        myDataBase.endTransaction();
+    private Cursor loadRandomCursor() throws IOException, ClassNotFoundException {
+        FileInputStream fis = myContext.openFileInput("RandomCursor");
+        ObjectInputStream is = new ObjectInputStream(fis);
+        Cursor savedCursor = (Cursor) is.readObject();
+        is.close();
+        fis.close();
 
-        return lvlCursor;
+        return savedCursor;
     }
 
     public AChaCharacterModel getCharacter(int charId) {

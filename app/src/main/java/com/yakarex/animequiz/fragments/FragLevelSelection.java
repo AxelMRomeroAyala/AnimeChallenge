@@ -20,7 +20,6 @@ import android.widget.TextView;
 public class FragLevelSelection extends Fragment implements LevelsAdapter.LevelInteractor{
 
     TextView totalScoreView;
-    static int[] lvlunlockinglogicarray;
     int totalScoreInt;
     View rootView;
     RecyclerView levelsRecycler;
@@ -39,8 +38,6 @@ public class FragLevelSelection extends Fragment implements LevelsAdapter.LevelI
 
         totalScoreView = (TextView) rootView.findViewById(R.id.totalScoreView);
         levelsRecycler = (RecyclerView) rootView.findViewById(id.level_selection_recycler);
-
-        lvlunlockinglogicarray = FinalStringsUtils.lvlunlockinglogicarray;
 
         return rootView;
     }

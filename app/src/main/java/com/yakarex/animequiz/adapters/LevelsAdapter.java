@@ -24,11 +24,14 @@ import java.util.List;
  * Created by axel.romero on 06/01/2017.
  */
 
-public class LevelsAdapter extends RecyclerView.Adapter<LevelsAdapter.ViewHolder> {
+public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<LevelStatModel> levels;
     private Context context;
     private LevelInteractor levelInteractor;
+
+    private final static int RANDOMIZED_LEVEL= 7474;
+    private final static int NORMAL_LEVEL= 8080;
 
     public LevelsAdapter(List<LevelStatModel> levels, Context context, LevelInteractor interactor){
         this.levels= levels;
@@ -37,55 +40,88 @@ public class LevelsAdapter extends RecyclerView.Adapter<LevelsAdapter.ViewHolder
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.levelbutton, parent, false);
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        return new ViewHolder(v);
+        if(viewType== NORMAL_LEVEL){
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.levelbutton, parent, false);
+
+            return new ViewHolder(v);
+        }
+        else {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.random_level_button, parent, false);
+
+            return new ViewHolderRandom(v);
+        }
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public int getItemViewType(int position) {
 
-        int lvlScore= levels.get(position).getLevelScore();
-        int lvlMaxScore= levels.get(position).getLvlMaxScore();
-
-
-        holder.levelName.setText(levels.get(position).getLevelName());
-
-        holder.levePBar.setMax(lvlMaxScore);
-
-        ObjectAnimator animation = ObjectAnimator.ofInt(holder.levePBar, "progress", levels.get(position).getLevelScore());
-        animation.setDuration(500); // 0.5 second
-        animation.setInterpolator(new DecelerateInterpolator());
-        animation.start();
-
-        if(lvlScore == lvlMaxScore){
-            holder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.golden), PorterDuff.Mode.SRC_IN);
+        if(position== 0){
+            return RANDOMIZED_LEVEL;
         }
-        else if(lvlScore >= (lvlMaxScore/2)){
-            holder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.silver), PorterDuff.Mode.SRC_IN);
-        }
-        else if(lvlScore <= (lvlMaxScore/2)){
-            holder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.bronze), PorterDuff.Mode.SRC_IN);
-        }
-
-        if(levels.get(position).isUnlocked()){
-
-            holder.levelButton.setClickable(true);
-            setlvlStar(position, holder.levelStar);
-            holder.levelButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    levelInteractor.onLevelClicked(FinalStringsUtils.lvlidarray[position]);
-                }
-            });
-        }
-
         else {
-            holder.levelButton.setClickable(false);
-            holder.levelStar.setImageResource(R.drawable.locked);
+            return NORMAL_LEVEL;
         }
+    }
 
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+
+        switch (holder.getItemViewType()) {
+            case NORMAL_LEVEL:
+                ViewHolder viewHolder = (ViewHolder)holder;
+                int lvlScore= levels.get(position).getLevelScore();
+                int lvlMaxScore= levels.get(position).getLvlMaxScore();
+
+                viewHolder.levelName.setText(levels.get(position).getLevelName());
+
+                viewHolder.levePBar.setMax(lvlMaxScore);
+
+                ObjectAnimator animation = ObjectAnimator.ofInt(viewHolder.levePBar, "progress", levels.get(position).getLevelScore());
+                animation.setDuration(500); // 0.5 second
+                animation.setInterpolator(new DecelerateInterpolator());
+                animation.start();
+
+                if(lvlScore == lvlMaxScore){
+                    viewHolder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.golden), PorterDuff.Mode.SRC_IN);
+                }
+                else if(lvlScore >= (lvlMaxScore/2)){
+                    viewHolder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.silver), PorterDuff.Mode.SRC_IN);
+                }
+                else if(lvlScore <= (lvlMaxScore/2)){
+                    viewHolder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.bronze), PorterDuff.Mode.SRC_IN);
+                }
+
+                if(levels.get(position).isUnlocked()){
+
+                    viewHolder.levelButton.setClickable(true);
+                    setlvlStar(position, viewHolder.levelStar);
+                    viewHolder.levelButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            levelInteractor.onLevelClicked(FinalStringsUtils.lvlidarray[position]);
+                        }
+                    });
+                }
+
+                else {
+                    viewHolder.levelButton.setClickable(false);
+                    viewHolder.levelStar.setImageResource(R.drawable.locked);
+                }
+                break;
+
+            case RANDOMIZED_LEVEL:
+                ViewHolderRandom viewHolderRandom = (ViewHolderRandom) holder;
+                viewHolderRandom.levelName.setText(levels.get(position).getLevelName());
+                viewHolderRandom.levelButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        levelInteractor.onLevelClicked(FinalStringsUtils.lvlidarray[position]);
+                    }
+                });
+                break;
+        }
     }
 
     @Override
@@ -143,4 +179,19 @@ public class LevelsAdapter extends RecyclerView.Adapter<LevelsAdapter.ViewHolder
 
     }
 }
+
+    public class ViewHolderRandom extends RecyclerView.ViewHolder {
+        // each data item is just a string in this case
+
+        RelativeLayout levelButton;
+        TextView levelName;
+
+        public ViewHolderRandom(View v) {
+            super(v);
+
+            levelButton= (RelativeLayout)  v.findViewById(R.id.customlvlselbuttom);
+            levelName= (TextView) v.findViewById(R.id.lvlsellvlname);
+
+        }
+    }
 }

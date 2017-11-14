@@ -145,6 +145,9 @@ public class DBUtil {
         String name = context.getResources().getString(R.string.level_name);
 
         switch (lvlId) {
+            case 0:
+                name= context.getResources().getString(R.string.levelrandom);
+                break;
             case 100:
                 name = context.getResources().getString(R.string.levelgames);
                 break;
