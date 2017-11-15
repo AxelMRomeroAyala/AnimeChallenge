@@ -16,6 +16,7 @@ import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.adapters.CharacterPagesAdapter;
 import com.yakarex.animequiz.models.AChaCharacterModel;
+import com.yakarex.animequiz.models.LevelStatModel;
 import com.yakarex.animequiz.models.MessageEvent;
 import com.yakarex.animequiz.utils.DBUtil;
 import com.yakarex.animequiz.utils.FinalStringsUtils;
@@ -31,6 +32,9 @@ import org.greenrobot.eventbus.ThreadMode;
 
 public class FragCharacterSwiper extends Fragment {
 
+    public static final String LEVEL= "LEVEL";
+    public static final String POSITION= "POS";
+
     CharacterPagesAdapter charAdapter;
 
     Cursor cursor;
@@ -41,14 +45,31 @@ public class FragCharacterSwiper extends Fragment {
 
     ViewPager characterPager;
     AChaCharacterModel characterModel;
+    LevelStatModel levelStatModel;
 
     private DBUtil dbUtil;
+
+    public static FragCharacterSwiper newInstance(LevelStatModel levelStatModel, int position) {
+        FragCharacterSwiper fragment = new FragCharacterSwiper();
+
+        Bundle args = new Bundle();
+        args.putParcelable(LEVEL, levelStatModel);
+        args.putInt(POSITION, position);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         dbUtil= new DBUtil(getContext());
+
+        if(getArguments()!= null){
+
+            levelStatModel= getArguments().getParcelable(LEVEL);
+            position= getArguments().getInt(POSITION);
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             setSharedElementEnterTransition(TransitionInflater.from(getContext()).inflateTransition(android.R.transition.move));
@@ -62,13 +83,10 @@ public class FragCharacterSwiper extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        if(getArguments()!= null){
-            position= getArguments().getInt("position");
-        }
         cursor= ((MainFragActivity)getActivity()).getLvlCursor();
         cursor.moveToPosition(position);
 
-        charAdapter= new CharacterPagesAdapter(getFragmentManager(), getContext(), cursor);
+        charAdapter= new CharacterPagesAdapter(getFragmentManager(), getContext(), levelStatModel.getCharacterModels());
 
         View rootView = inflater.inflate(R.layout.frag_swiper, container,
                 false);
@@ -79,14 +97,13 @@ public class FragCharacterSwiper extends Fragment {
         characterPager.setAdapter(charAdapter);
         characterPager.setCurrentItem(position);
 
-        characterModel= new AChaCharacterModel(cursor);
+        characterModel= levelStatModel.getCharacterModels().get(position);
 
         characterPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-                cursor.moveToPosition(position);
-                characterModel= new AChaCharacterModel(cursor);
+                characterModel= levelStatModel.getCharacterModels().get(position);
 
             }
 

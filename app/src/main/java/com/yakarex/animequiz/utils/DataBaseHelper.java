@@ -17,6 +17,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.net.Uri;
 
 import com.crashlytics.android.Crashlytics;
 import com.yakarex.animequiz.R;
@@ -233,7 +234,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         myDataBase.endTransaction();
         lvlCursor.moveToFirst();
 
-        return new AChaCharacterModel(lvlCursor);
+        return new AChaCharacterModel(
+                lvlCursor.getInt(1),
+                lvlCursor.getInt(2),
+                lvlCursor.getString(3),
+                lvlCursor.getString(4),
+                lvlCursor.getString(5),
+                Uri.parse(lvlCursor.getString(6))
+        );
 
     }
 

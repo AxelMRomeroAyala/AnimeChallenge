@@ -9,6 +9,9 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.yakarex.animequiz.fragments.FragCharacter;
 import com.yakarex.animequiz.fragments.FragCharacterSwiper;
 import com.yakarex.animequiz.models.AChaCharacterModel;
+import com.yakarex.animequiz.models.LevelStatModel;
+
+import java.util.List;
 
 /**
  * Created by axel.romero on 13/12/2016.
@@ -17,23 +20,22 @@ import com.yakarex.animequiz.models.AChaCharacterModel;
 public class CharacterPagesAdapter extends FragmentStatePagerAdapter {
 
     private Context context;
-    private Cursor charactersCursor;
+    private List<AChaCharacterModel> characterList;
 
-    public CharacterPagesAdapter(FragmentManager fm, Context context, Cursor cursor) {
+    public CharacterPagesAdapter(FragmentManager fm, Context context, List<AChaCharacterModel> charactersList) {
         super(fm);
         this.context= context;
-        this.charactersCursor= cursor;
+        this.characterList= characterList;
     }
 
     @Override
     public Fragment getItem(int position) {
 
-        charactersCursor.moveToPosition(position);
-        return FragCharacter.newInstance(new AChaCharacterModel(charactersCursor));
+        return FragCharacter.newInstance(characterList.get(position));
     }
 
     @Override
     public int getCount() {
-        return charactersCursor.getCount();
+        return characterList.size();
     }
 }

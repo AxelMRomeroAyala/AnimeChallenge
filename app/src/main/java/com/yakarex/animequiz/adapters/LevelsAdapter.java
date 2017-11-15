@@ -93,21 +93,24 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     viewHolder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.bronze), PorterDuff.Mode.SRC_IN);
                 }
 
+                viewHolder.levelButton.setClickable(true);
+                setlvlStar(position, viewHolder.levelStar);
+                viewHolder.levelButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        levelInteractor.onLevelClicked(FinalStringsUtils.lvlidarray[position]);
+                    }
+                });
+
                 if(levels.get(position).isUnlocked()){
 
-                    viewHolder.levelButton.setClickable(true);
-                    setlvlStar(position, viewHolder.levelStar);
-                    viewHolder.levelButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            levelInteractor.onLevelClicked(FinalStringsUtils.lvlidarray[position]);
-                        }
-                    });
+
                 }
 
                 else {
-                    viewHolder.levelButton.setClickable(false);
-                    viewHolder.levelStar.setImageResource(R.drawable.locked);
+                    //TODO Lock the levels
+                    //viewHolder.levelButton.setClickable(false);
+                    //viewHolder.levelStar.setImageResource(R.drawable.locked);
                 }
                 break;
 

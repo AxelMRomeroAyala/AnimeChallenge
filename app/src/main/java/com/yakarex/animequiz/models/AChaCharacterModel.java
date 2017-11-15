@@ -17,14 +17,14 @@ public class AChaCharacterModel implements Parcelable {
     private String genre, anime, fullname;
     private Uri uri;
 
-    public AChaCharacterModel(Cursor cursor){
+    public AChaCharacterModel(int id, int lvl, String genre, String anime, String fullName, Uri uri){
 
-        charid = cursor.getInt(1);
-        level = cursor.getInt(2);
-        genre = cursor.getString(3);
-        anime = cursor.getString(4);
-        fullname = cursor.getString(5);
-        uri = Uri.parse(cursor.getString(6));
+        this.charid = id;
+        this.level = lvl;
+        this.genre = genre;
+        this.anime = anime;
+        this.fullname = fullName;
+        this.uri = uri;
 
     }
 

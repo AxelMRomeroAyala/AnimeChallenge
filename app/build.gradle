@@ -57,8 +57,8 @@ dependencies {
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.google.android.gms:play-services-ads:10.2.4'
     compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
     compile 'com.github.Q42:AndroidScrollingImageView:1.2'
+    compile 'io.paperdb:paperdb:2.6'
     compile project(path: ':BaseGameUtils')
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     compile('com.crashlytics.sdk.android:crashlytics:2.7.0@aar') {

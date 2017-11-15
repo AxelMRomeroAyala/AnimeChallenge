@@ -1,13 +1,10 @@
 package com.yakarex.animequiz.adapters;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
-import android.transition.Transition;
-import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +12,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.fragments.FragCharacterSwiper;
+import com.yakarex.animequiz.models.AChaCharacterModel;
+import com.yakarex.animequiz.models.LevelStatModel;
 import com.yakarex.animequiz.utils.ScoreDbHelper;
+
+import java.util.List;
 
 
 /**
@@ -28,14 +28,14 @@ import com.yakarex.animequiz.utils.ScoreDbHelper;
 
 public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRecyclerAdapter.ViewHolder>  {
 
-    private Cursor charactersCursor;
+    private LevelStatModel levelStatModel;
     private Context context;
     private int lastPosition = -1;
     ScoreDbHelper scoreHelper;
     private Fragment frag;
 
-    public CharactersRecyclerAdapter(Cursor charCursor, Context context, Fragment frag){
-        this.charactersCursor= charCursor;
+    public CharactersRecyclerAdapter(LevelStatModel levelStatModel, Context context, Fragment frag){
+        this.levelStatModel= levelStatModel;
         this.context= context;
         this.frag= frag;
 
@@ -56,17 +56,17 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
 
-        charactersCursor.moveToPosition(position);
+        final AChaCharacterModel model = levelStatModel.getCharacterModels().get(position);
 
-        String imgPath=charactersCursor.getString(6);
+        String imgPath=model.getUri().getPath();
 
-        imgPath= imgPath.replace("android.resource://com.yakarex.animequiz/drawable/", "");
+        //imgPath= imgPath.replace("android.resource://com.yakarex.animequiz/drawable/", "");
 
         int resourceId = context.getResources().getIdentifier(imgPath, "drawable", context.getPackageName());
         String imageCharStringUri= "drawable://" + resourceId;
 
-        int keyCharId= charactersCursor.getInt(1);
-        int lvl =charactersCursor.getInt(2);
+        int keyCharId= model.getCharid();
+        int lvl =model.getLevel();
 
         int score = scoreHelper.getCharScore(keyCharId, lvl);
         //scoreHelper.close();
@@ -88,7 +88,9 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
             //ImageLoader.getInstance().displayImage(imageStarStringUri + R.drawable.starempty, holder.starImage);
         }
 
-        ImageLoader.getInstance().displayImage(imageCharStringUri, holder.charImage);
+        //ImageLoader.getInstance().displayImage(model.getUri(), holder.charImage);
+
+        holder.charImage.setImageURI(model.getUri());
 
         setAnimation(holder.charImage
                 ,holder.starImage, position);
@@ -99,20 +101,13 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
 
         holder.charImage.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Bundle bundle= new Bundle();
-                bundle.putInt("position", position);
 
-                Fragment fragmentTwo= FragCharacterSwiper.instantiate(context, FragCharacterSwiper.class.getName(), bundle);
+                Fragment fragmentTwo= FragCharacterSwiper.newInstance(levelStatModel, position);
 
 
                 ((MainFragActivity)context).changeFragment(fragmentTwo);
             }
         });
-
-        if(position== charactersCursor.getCount()){
-        charactersCursor.close();
-        }
-
     }
 
     private void setAnimation(View viewToAnimate1, View viewToAnimate2, int position)
@@ -129,7 +124,7 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
 
     @Override
     public int getItemCount() {
-        return charactersCursor.getCount();
+        return levelStatModel.getCharacterModels().size();
     }
 
     // Provide a reference to the views for each data item

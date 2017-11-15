@@ -1,12 +1,11 @@
 package com.yakarex.animequiz.fragments;
 
-import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.adapters.CharactersRecyclerAdapter;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.R.id;
+import com.yakarex.animequiz.models.LevelStatModel;
 import com.yakarex.animequiz.utils.DBUtil;
 
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -17,17 +16,19 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import io.paperdb.Paper;
+
 public class FragLevel extends Fragment {
 
-    static int indexgridposition;
+    static int indexgridposition= 0;
     int lvl;
-    Cursor cursor;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter charRecyclerAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     GridView gv;
     TextView scoreView;
     private DBUtil dbUtil;
+    private LevelStatModel levelStatModel;
 
 
     @Override
@@ -35,10 +36,19 @@ public class FragLevel extends Fragment {
                              Bundle savedInstanceState) {
 
         dbUtil = new DBUtil(getContext());
-        indexgridposition = 0;
 
-        cursor = ((MainFragActivity) getActivity()).getLvlCursor();
         lvl = this.getArguments().getInt("lvl");
+
+        levelStatModel= dbUtil.getLevels().get(lvl);
+
+        if(lvl == 0){
+            if (Paper.book().read("randomLevel")!= null) {
+                levelStatModel = Paper.book().read("randomLevel");
+            }
+            else {
+                Paper.book().write("randomLevel", levelStatModel);
+            }
+        }
 
         return inflater.inflate(R.layout.frag_level, container, false);
     }
@@ -58,7 +68,7 @@ public class FragLevel extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        charRecyclerAdapter = new CharactersRecyclerAdapter(cursor, getActivity(), this);
+        charRecyclerAdapter = new CharactersRecyclerAdapter(levelStatModel, getActivity(), this);
         mRecyclerView.setAdapter(charRecyclerAdapter);
 
     }

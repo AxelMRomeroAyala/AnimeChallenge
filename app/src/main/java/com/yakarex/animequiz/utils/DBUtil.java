@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.fragments.FragLevel;
+import com.yakarex.animequiz.models.AChaCharacterModel;
 import com.yakarex.animequiz.models.LevelStatModel;
 
 import java.io.IOException;
@@ -55,6 +57,7 @@ public class DBUtil {
             level.setLevelScore(getLevelScore(FinalStringsUtils.lvlidarray[x]));
             level.setStarStats(getStarStats(FinalStringsUtils.lvlidarray[x]));
             level.setLvlMaxScore(getLevelMaxScore(FinalStringsUtils.lvlidarray[x]));
+            level.setCharacterModels(cursorToCharList(dataBaseHelper.getLvl(x)));
 
             if (Integer.parseInt(getTotalScore()) >= FinalStringsUtils.lvlunlockinglogicarray[x]) {
                 level.setUnlocked(true);
@@ -64,6 +67,26 @@ public class DBUtil {
         }
 
         return levelList;
+    }
+
+    private List<AChaCharacterModel> cursorToCharList(Cursor cursor){
+
+        List<AChaCharacterModel> charList= new ArrayList<>();
+
+        cursor.moveToFirst();
+
+        try{
+            do {
+                charList.add(new AChaCharacterModel(cursor.getInt()));
+            }
+            while (cursor.moveToNext());
+        }
+        catch (IndexOutOfBoundsException ioobe){
+            ioobe.printStackTrace();
+            Crashlytics.logException(ioobe);
+        }
+
+        return charList;
     }
 
     public String getTotalScore() {

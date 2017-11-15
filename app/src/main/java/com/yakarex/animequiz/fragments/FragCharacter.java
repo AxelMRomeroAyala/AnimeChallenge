@@ -52,8 +52,6 @@ public class FragCharacter extends Fragment {
     private final static int COMPLETED = 100;
 
     Toast wrongToast;
-    Cursor cursor;
-    int position;
     AChaCharacterModel characterModel;
     int score;
 
@@ -97,17 +95,6 @@ public class FragCharacter extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         //we get the position from the bundle and the cursor from the mainactivity, then we set the data
-        try{
-            position = getArguments().getInt("position");
-        }
-        catch (NullPointerException npe){
-            position = 0;
-            npe.printStackTrace();
-            Crashlytics.logException(npe);
-        }
-
-        cursor = ((MainFragActivity) getActivity()).getLvlCursor();
-        cursor.moveToPosition(position);
 
         characterModel = getArguments().getParcelable(CHARACTER);
         getArguments().getParcelable(CHARACTER);
