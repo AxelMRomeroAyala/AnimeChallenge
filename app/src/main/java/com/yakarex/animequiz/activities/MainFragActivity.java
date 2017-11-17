@@ -32,6 +32,10 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
@@ -39,6 +43,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.example.games.basegameutils.BaseGameUtils;
+import com.yakarex.animequiz.models.MessageEvent;
 import com.yakarex.animequiz.utils.DBUtil;
 import com.yakarex.animequiz.utils.DataBaseHelper;
 import com.yakarex.animequiz.fragments.FragLevel;
@@ -50,12 +55,18 @@ import com.yakarex.animequiz.utils.ScoreDbHelper;
 import com.yakarex.animequiz.utils.FinalStringsUtils;
 import com.yakarex.animequiz.utils.Utils;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 public class MainFragActivity extends FragmentActivity implements
         GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener {
+        GoogleApiClient.OnConnectionFailedListener,
+        RewardedVideoAdListener{
 
     private AdView adView;
     private InterstitialAd interstitial;
+    private RewardedVideoAd mRewardedVideoAd;
     private String currentFragment;
     private String newFragment;
     private List<String> backStackList;
@@ -63,8 +74,6 @@ public class MainFragActivity extends FragmentActivity implements
     private Cursor lvlCursor;
 
     FragmentManager fragmentManager;
-//    ScoreDbHelper scoreHelper;
-//    DataBaseHelper dataBaseHelper;
     private boolean audioOff;
     private boolean vibrationOff;
     static boolean ads = true;
@@ -107,13 +116,17 @@ public class MainFragActivity extends FragmentActivity implements
 
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.SMART_BANNER);
-        adView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+        adView.setAdUnitId(getResources().getString(R.string.adunitid));
 
         mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("90FF8FB418074AAB3EAAE3A12C474257")
                 .build();
         mAdView.loadAd(adRequest);
+
+        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+        mRewardedVideoAd.setRewardedVideoAdListener(this);
+
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -177,19 +190,78 @@ public class MainFragActivity extends FragmentActivity implements
 //            adThread();
 //            ads = false;
 //        }
+
+        loadRewardedVideoAd();
     }
 
+    private void loadRewardedVideoAd() {
+        mRewardedVideoAd.loadAd("ca-app-pub-5318551320912238/7160028352",
+                new AdRequest.Builder().build());
+    }
 
     @Override
     protected void onStart() {
         super.onStart();
         mGoogleApiClient.connect();
+        EventBus.getDefault().register(this);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         mGoogleApiClient.disconnect();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        mRewardedVideoAd.resume(this);
+        //adView.resume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        mRewardedVideoAd.pause(this);
+        //adView.pause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        // TODO Auto-generated method stub
+        super.onDestroy();
+
+        dbUtil.finish();
+        mRewardedVideoAd.destroy(this);
+
+        long endTime = SystemClock.elapsedRealtime();
+
+        playTime = endTime - startTime;
+
+        Log.d("Play Time Was", String.valueOf(playTime) + " Miliseconds");
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if (backStackList.size() == 1 && backStackList.get(backStackList.size() - 1).compareTo(currentFragment) == 0) {
+            Utils.getAlertDialog(MainFragActivity.this
+                    , R.string.exit, R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    }, R.string.no, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    }).show();
+
+        } else {
+            popFragment();
+        }
     }
 
     @Override
@@ -222,27 +294,8 @@ public class MainFragActivity extends FragmentActivity implements
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-
-
-        //adView.resume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-
-        //adView.pause();
-    }
-
     public void openOptions() {
-
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         FragOptions fragment = new FragOptions();
         fragmentTransaction.replace(R.id.mainfragment, fragment).addToBackStack(null);
         fragmentTransaction.commit();
@@ -390,41 +443,6 @@ public class MainFragActivity extends FragmentActivity implements
         }
     };
 
-
-    @Override
-    protected void onDestroy() {
-        // TODO Auto-generated method stub
-        super.onDestroy();
-
-        dbUtil.finish();
-
-        long endTime = SystemClock.elapsedRealtime();
-
-        playTime = endTime - startTime;
-
-        Log.d("Play Time Was", String.valueOf(playTime) + " Miliseconds");
-    }
-
-    @Override
-    public void onBackPressed() {
-
-        if (backStackList.size() == 1 && backStackList.get(backStackList.size() - 1).compareTo(currentFragment) == 0) {
-            Utils.getAlertDialog(MainFragActivity.this
-                    , R.string.exit, R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    }, R.string.no, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    }).show();
-
-        } else {
-            popFragment();
-        }
-    }
-
     private void popFragment() {
         int lastPos = backStackList.size() - 1;
         FragmentTransaction t = getSupportFragmentManager().beginTransaction();
@@ -503,8 +521,13 @@ public class MainFragActivity extends FragmentActivity implements
 
     }
 
-    public Cursor getLvlCursor() {
-        return lvlCursor;
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event) {
+        if(event.message.equals(FinalStringsUtils.RANDOMCLICKED)){
+            if (mRewardedVideoAd.isLoaded()) {
+                mRewardedVideoAd.show();
+            }
+        }
     }
 
     public void openLevelbyId(int lvlId) {
@@ -701,5 +724,48 @@ public class MainFragActivity extends FragmentActivity implements
 
     public void setIsSignedIn(boolean isSigned) {
         isSignedIn = isSigned;
+    }
+
+    @Override
+    public void onRewardedVideoAdLoaded() {
+        Toast.makeText(this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onRewardedVideoAdOpened() {
+        Toast.makeText(this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onRewardedVideoStarted() {
+        Toast.makeText(this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onRewardedVideoAdClosed() {
+        Toast.makeText(this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onRewarded(RewardItem rewardItem) {
+        Toast.makeText(this, "onRewarded!" , Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onRewardedVideoAdLeftApplication() {
+        Toast.makeText(this, "onRewardedVideoAdLeftApplication",
+                Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void onRewardedVideoAdFailedToLoad(int i) {
+        Toast.makeText(this, "onRewardedVideoAdFailedToLoad", Toast.LENGTH_SHORT).show();
+
     }
 }

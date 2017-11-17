@@ -127,6 +127,7 @@
     <string name="admob_app_id" translatable="false">ca-app-pub-5318551320912238~7571251500</string>
     <string name="adunitid" translatable="false">ca-app-pub-5318551320912238/6158016309</string>
     <string name="adunitinterad" translatable="false">ca-app-pub-5318551320912238/7634749508</string>
+    <string name="adunitrewarded" translatable="false">ca-app-pub-5318551320912238/7160028352</string>
     <string name="levelrandom">Random Level</string>
 
 </resources>

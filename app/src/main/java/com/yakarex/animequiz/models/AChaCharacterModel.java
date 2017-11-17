@@ -1,11 +1,7 @@
 package com.yakarex.animequiz.models;
 
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import java.io.Serializable;
 
 /**
  * Created by axel.romero on 13/12/2016.
@@ -14,10 +10,8 @@ import java.io.Serializable;
 public class AChaCharacterModel implements Parcelable {
 
     private int charid, level;
-    private String genre, anime, fullname;
-    private Uri uri;
-
-    public AChaCharacterModel(int id, int lvl, String genre, String anime, String fullName, Uri uri){
+    private String genre, anime, fullname, uri;
+    public AChaCharacterModel(int id, int lvl, String genre, String anime, String fullName, String uri){
 
         this.charid = id;
         this.level = lvl;
@@ -34,7 +28,7 @@ public class AChaCharacterModel implements Parcelable {
         genre = in.readString();
         anime = in.readString();
         fullname = in.readString();
-        uri = in.readParcelable(Uri.class.getClassLoader());
+        uri = in.readString();
     }
 
     public static final Creator<AChaCharacterModel> CREATOR = new Creator<AChaCharacterModel>() {
@@ -69,7 +63,7 @@ public class AChaCharacterModel implements Parcelable {
         return fullname.trim().toLowerCase();
     }
 
-    public Uri getUri() {
+    public String getUri() {
         return uri;
     }
 
@@ -85,6 +79,6 @@ public class AChaCharacterModel implements Parcelable {
         parcel.writeString(genre);
         parcel.writeString(anime);
         parcel.writeString(fullname);
-        parcel.writeParcelable(uri, i);
+        parcel.writeString(uri);
     }
 }

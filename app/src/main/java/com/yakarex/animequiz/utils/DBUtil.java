@@ -3,6 +3,7 @@ package com.yakarex.animequiz.utils;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -77,7 +78,14 @@ public class DBUtil {
 
         try{
             do {
-                charList.add(new AChaCharacterModel(cursor.getInt()));
+                charList.add(new AChaCharacterModel(
+                        cursor.getInt(1),
+                        cursor.getInt(2),
+                        cursor.getString(3),
+                        cursor.getString(4),
+                        cursor.getString(5),
+                        cursor.getString(6)
+                        ));
             }
             while (cursor.moveToNext());
         }

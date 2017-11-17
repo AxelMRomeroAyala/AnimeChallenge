@@ -16,7 +16,10 @@ import android.widget.TextView;
 
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.LevelStatModel;
+import com.yakarex.animequiz.models.MessageEvent;
 import com.yakarex.animequiz.utils.FinalStringsUtils;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
@@ -123,6 +126,13 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                         levelInteractor.onLevelClicked(FinalStringsUtils.lvlidarray[position]);
                     }
                 });
+
+                viewHolderRandom.rerandomizeButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        EventBus.getDefault().post(new MessageEvent(FinalStringsUtils.RANDOMCLICKED));
+                    }
+                });
                 break;
         }
     }
@@ -188,12 +198,14 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         RelativeLayout levelButton;
         TextView levelName;
+        ImageView rerandomizeButton;
 
         public ViewHolderRandom(View v) {
             super(v);
 
             levelButton= (RelativeLayout)  v.findViewById(R.id.customlvlselbuttom);
             levelName= (TextView) v.findViewById(R.id.lvlsellvlname);
+            rerandomizeButton= (ImageView) v.findViewById(R.id.rerandomize_level);
 
         }
     }

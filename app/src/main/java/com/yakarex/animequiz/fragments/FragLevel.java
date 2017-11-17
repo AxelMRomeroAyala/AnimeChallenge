@@ -29,6 +29,7 @@ public class FragLevel extends Fragment {
     TextView scoreView;
     private DBUtil dbUtil;
     private LevelStatModel levelStatModel;
+    private boolean shouldOverrideSavedRandom= true;
 
 
     @Override
@@ -43,10 +44,10 @@ public class FragLevel extends Fragment {
 
         if(lvl == 0){
             if (Paper.book().read("randomLevel")!= null) {
+                if (shouldOverrideSavedRandom) {
+                    Paper.book().write("randomLevel", levelStatModel);
+                }
                 levelStatModel = Paper.book().read("randomLevel");
-            }
-            else {
-                Paper.book().write("randomLevel", levelStatModel);
             }
         }
 

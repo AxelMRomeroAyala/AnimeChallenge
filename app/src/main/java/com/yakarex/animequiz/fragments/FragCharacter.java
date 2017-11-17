@@ -3,7 +3,6 @@ package com.yakarex.animequiz.fragments;
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.crashlytics.android.Crashlytics;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.AChaCharacterModel;
@@ -14,7 +13,6 @@ import com.yakarex.animequiz.utils.FinalStringsUtils;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -142,7 +140,10 @@ public class FragCharacter extends Fragment {
             }
         });
 
-        charimage.setImageURI(characterModel.getUri());
+        int resID = getResources().getIdentifier(characterModel.getUri(), "drawable",  getContext().getPackageName());
+        charimage.setImageResource(resID);
+
+        //charimage.setImageURI(characterModel.getUri());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             charimage.setTransitionName("charimage");
@@ -315,7 +316,6 @@ public class FragCharacter extends Fragment {
         ArrayList<String> checkResult = new ArrayList<>();
         for (String aSplittedCoincidence : splittedWCoincidences) {
             checkResult.add(aSplittedCoincidence.replaceAll(regex, "X"));
-
         }
 
         for (String result : checkResult) {

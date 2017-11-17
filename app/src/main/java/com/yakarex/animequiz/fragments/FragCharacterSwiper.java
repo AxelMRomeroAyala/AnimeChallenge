@@ -37,7 +37,7 @@ public class FragCharacterSwiper extends Fragment {
 
     CharacterPagesAdapter charAdapter;
 
-    Cursor cursor;
+    //Cursor cursor;
     int position= 0;
 
     String scoreString;
@@ -83,8 +83,8 @@ public class FragCharacterSwiper extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        cursor= ((MainFragActivity)getActivity()).getLvlCursor();
-        cursor.moveToPosition(position);
+//        cursor= ((MainFragActivity)getActivity()).getLvlCursor();
+//        cursor.moveToPosition(position);
 
         charAdapter= new CharacterPagesAdapter(getFragmentManager(), getContext(), levelStatModel.getCharacterModels());
 

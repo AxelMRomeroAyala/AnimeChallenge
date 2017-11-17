@@ -58,7 +58,7 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
 
         final AChaCharacterModel model = levelStatModel.getCharacterModels().get(position);
 
-        String imgPath=model.getUri().getPath();
+        String imgPath=model.getUri();
 
         //imgPath= imgPath.replace("android.resource://com.yakarex.animequiz/drawable/", "");
 
@@ -90,7 +90,9 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
 
         //ImageLoader.getInstance().displayImage(model.getUri(), holder.charImage);
 
-        holder.charImage.setImageURI(model.getUri());
+        int resID = context.getResources().getIdentifier(model.getUri(), "drawable",  context.getPackageName());
+        holder.charImage.setImageResource(resID);
+        //holder.charImage.setImageURI(model.getUri());
 
         setAnimation(holder.charImage
                 ,holder.starImage, position);

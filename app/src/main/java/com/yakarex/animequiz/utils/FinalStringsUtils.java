@@ -3,7 +3,7 @@ package com.yakarex.animequiz.utils;
 /**
  * Created by aromero on 22/10/15.
  */
-public class FinalStringsUtils {
+public final class FinalStringsUtils {
 
 
     public final static int [] lvlunlockinglogicarray= {0,0,0,0, 2300, 3500, 4200, 5900, 7600, 9300, 10800, 12500,
@@ -38,4 +38,5 @@ public class FinalStringsUtils {
     public static final int MOVIESLEVEL= 103;
 
     public static final String UPDATESCORE= "UPDATESCORE";
+    public static final String RANDOMCLICKED= "CLICKRANDOM";
 }

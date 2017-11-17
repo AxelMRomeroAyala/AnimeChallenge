@@ -240,7 +240,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 lvlCursor.getString(3),
                 lvlCursor.getString(4),
                 lvlCursor.getString(5),
-                Uri.parse(lvlCursor.getString(6))
+                lvlCursor.getString(6)
         );
 
     }
