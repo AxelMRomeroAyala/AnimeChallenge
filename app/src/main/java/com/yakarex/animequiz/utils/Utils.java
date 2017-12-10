@@ -23,4 +23,9 @@ public class Utils {
 
         return builder.create();
     }
+
+    public static boolean hasDailyRandom(){
+
+        return false;
+    }
 }

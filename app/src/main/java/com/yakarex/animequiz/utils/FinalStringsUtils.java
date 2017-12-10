@@ -39,4 +39,5 @@ public final class FinalStringsUtils {
 
     public static final String UPDATESCORE= "UPDATESCORE";
     public static final String RANDOMCLICKED= "CLICKRANDOM";
+    public static final String REWARDED= "REWARDED";
 }

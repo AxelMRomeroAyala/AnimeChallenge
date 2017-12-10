@@ -61,8 +61,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
 public class MainFragActivity extends FragmentActivity implements
         GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener,
-        RewardedVideoAdListener{
+        GoogleApiClient.OnConnectionFailedListener{
 
     private AdView adView;
     private InterstitialAd interstitial;
@@ -112,20 +111,20 @@ public class MainFragActivity extends FragmentActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_frag);
 
-        dbUtil= new DBUtil(this);
+        dbUtil = new DBUtil(this);
 
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.SMART_BANNER);
         adView.setAdUnitId(getResources().getString(R.string.adunitid));
 
-        mAdView = (AdView) findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("90FF8FB418074AAB3EAAE3A12C474257")
                 .build();
         mAdView.loadAd(adRequest);
 
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
-        mRewardedVideoAd.setRewardedVideoAdListener(this);
+
 
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -134,7 +133,7 @@ public class MainFragActivity extends FragmentActivity implements
 
         mAutoStartSignInflow = settings.getBoolean("AutoSingIn", false);
 
-        backStackList = new ArrayList<String>();
+        backStackList = new ArrayList<>();
 
         context = getApplicationContext();
         //changeFragment(FragMainMenu.instantiate(context, FragMainMenu.class.getName()), true, false);
@@ -190,13 +189,6 @@ public class MainFragActivity extends FragmentActivity implements
 //            adThread();
 //            ads = false;
 //        }
-
-        loadRewardedVideoAd();
-    }
-
-    private void loadRewardedVideoAd() {
-        mRewardedVideoAd.loadAd("ca-app-pub-5318551320912238/7160028352",
-                new AdRequest.Builder().build());
     }
 
     @Override
@@ -523,7 +515,7 @@ public class MainFragActivity extends FragmentActivity implements
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(MessageEvent event) {
-        if(event.message.equals(FinalStringsUtils.RANDOMCLICKED)){
+        if (event.message.equals(FinalStringsUtils.RANDOMCLICKED)) {
             if (mRewardedVideoAd.isLoaded()) {
                 mRewardedVideoAd.show();
             }
@@ -726,46 +718,4 @@ public class MainFragActivity extends FragmentActivity implements
         isSignedIn = isSigned;
     }
 
-    @Override
-    public void onRewardedVideoAdLoaded() {
-        Toast.makeText(this, "onRewardedVideoAdLoaded", Toast.LENGTH_SHORT).show();
-
-    }
-
-    @Override
-    public void onRewardedVideoAdOpened() {
-        Toast.makeText(this, "onRewardedVideoAdOpened", Toast.LENGTH_SHORT).show();
-
-    }
-
-    @Override
-    public void onRewardedVideoStarted() {
-        Toast.makeText(this, "onRewardedVideoStarted", Toast.LENGTH_SHORT).show();
-
-    }
-
-    @Override
-    public void onRewardedVideoAdClosed() {
-        Toast.makeText(this, "onRewardedVideoAdClosed", Toast.LENGTH_SHORT).show();
-
-    }
-
-    @Override
-    public void onRewarded(RewardItem rewardItem) {
-        Toast.makeText(this, "onRewarded!" , Toast.LENGTH_SHORT).show();
-
-    }
-
-    @Override
-    public void onRewardedVideoAdLeftApplication() {
-        Toast.makeText(this, "onRewardedVideoAdLeftApplication",
-                Toast.LENGTH_SHORT).show();
-
-    }
-
-    @Override
-    public void onRewardedVideoAdFailedToLoad(int i) {
-        Toast.makeText(this, "onRewardedVideoAdFailedToLoad", Toast.LENGTH_SHORT).show();
-
-    }
 }

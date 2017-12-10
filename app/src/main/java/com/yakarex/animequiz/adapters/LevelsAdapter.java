@@ -33,24 +33,23 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private Context context;
     private LevelInteractor levelInteractor;
 
-    private final static int RANDOMIZED_LEVEL= 7474;
-    private final static int NORMAL_LEVEL= 8080;
+    private final static int RANDOMIZED_LEVEL = 7474;
+    private final static int NORMAL_LEVEL = 8080;
 
-    public LevelsAdapter(List<LevelStatModel> levels, Context context, LevelInteractor interactor){
-        this.levels= levels;
-        this.context= context;
-        this.levelInteractor= interactor;
+    public LevelsAdapter(List<LevelStatModel> levels, Context context, LevelInteractor interactor) {
+        this.levels = levels;
+        this.context = context;
+        this.levelInteractor = interactor;
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        if(viewType== NORMAL_LEVEL){
+        if (viewType == NORMAL_LEVEL) {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.levelbutton, parent, false);
 
             return new ViewHolder(v);
-        }
-        else {
+        } else {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.random_level_button, parent, false);
 
             return new ViewHolderRandom(v);
@@ -60,10 +59,9 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public int getItemViewType(int position) {
 
-        if(position== 0){
+        if (position == 0) {
             return RANDOMIZED_LEVEL;
-        }
-        else {
+        } else {
             return NORMAL_LEVEL;
         }
     }
@@ -73,9 +71,9 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         switch (holder.getItemViewType()) {
             case NORMAL_LEVEL:
-                ViewHolder viewHolder = (ViewHolder)holder;
-                int lvlScore= levels.get(position).getLevelScore();
-                int lvlMaxScore= levels.get(position).getLvlMaxScore();
+                ViewHolder viewHolder = (ViewHolder) holder;
+                int lvlScore = levels.get(position).getLevelScore();
+                int lvlMaxScore = levels.get(position).getLvlMaxScore();
 
                 viewHolder.levelName.setText(levels.get(position).getLevelName());
 
@@ -86,13 +84,11 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 animation.setInterpolator(new DecelerateInterpolator());
                 animation.start();
 
-                if(lvlScore == lvlMaxScore){
+                if (lvlScore == lvlMaxScore) {
                     viewHolder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.golden), PorterDuff.Mode.SRC_IN);
-                }
-                else if(lvlScore >= (lvlMaxScore/2)){
+                } else if (lvlScore >= (lvlMaxScore / 2)) {
                     viewHolder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.silver), PorterDuff.Mode.SRC_IN);
-                }
-                else if(lvlScore <= (lvlMaxScore/2)){
+                } else if (lvlScore <= (lvlMaxScore / 2)) {
                     viewHolder.levePBar.getProgressDrawable().setColorFilter(context.getResources().getColor(R.color.bronze), PorterDuff.Mode.SRC_IN);
                 }
 
@@ -105,12 +101,10 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     }
                 });
 
-                if(levels.get(position).isUnlocked()){
+                if (levels.get(position).isUnlocked()) {
 
 
-                }
-
-                else {
+                } else {
                     //TODO Lock the levels
                     //viewHolder.levelButton.setClickable(false);
                     //viewHolder.levelStar.setImageResource(R.drawable.locked);
@@ -127,12 +121,6 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     }
                 });
 
-                viewHolderRandom.rerandomizeButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        EventBus.getDefault().post(new MessageEvent(FinalStringsUtils.RANDOMCLICKED));
-                    }
-                });
                 break;
         }
     }
@@ -146,52 +134,49 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         Drawable cupper = context.getResources().getDrawable(R.drawable.cupperstar);
         Drawable silver = context.getResources().getDrawable(R.drawable.silver);
         Drawable gold = context.getResources().getDrawable(R.drawable.goldstar);
-        Drawable empty= context.getResources().getDrawable(R.drawable.starempty);
+        Drawable empty = context.getResources().getDrawable(R.drawable.starempty);
 
         int score = levels.get(position).getLevelScore();
         int maxscore = levels.get(position).getLvlMaxScore();
 
-        if (score > 0 && score < maxscore/2) {
+        if (score > 0 && score < maxscore / 2) {
 
             view.setImageDrawable(cupper);
 
-        }
-        else if (score >= maxscore/2 && score < maxscore) {
+        } else if (score >= maxscore / 2 && score < maxscore) {
 
             view.setImageDrawable(silver);
-        }
-        else if (score >= maxscore) {
+        } else if (score >= maxscore) {
 
             view.setImageDrawable(gold);
 
-        }
-        else{
+        } else {
             view.setImageDrawable(empty);
         }
     }
 
-    public interface LevelInteractor{
+    public interface LevelInteractor {
         void onLevelClicked(int lvlId);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-    // each data item is just a string in this case
+        // each data item is just a string in this case
 
         RelativeLayout levelButton;
         TextView levelName;
         ImageView levelStar;
         ProgressBar levePBar;
 
-    public ViewHolder(View v) {
-        super(v);
+        public ViewHolder(View v) {
+            super(v);
 
-        levelButton= (RelativeLayout)  v.findViewById(R.id.customlvlselbuttom);
-        levelName= (TextView) v.findViewById(R.id.lvlsellvlname);
-        levelStar= (ImageView) v.findViewById(R.id.lvlsellvlstar);
-        levePBar= (ProgressBar) v.findViewById(R.id.lvlsellvlpbar);
+            levelButton = v.findViewById(R.id.customlvlselbuttom);
+            levelName = v.findViewById(R.id.lvlsellvlname);
+            levelStar = v.findViewById(R.id.lvlsellvlstar);
+            levePBar = v.findViewById(R.id.lvlsellvlpbar);
 
+        }
     }
-}
 
     public class ViewHolderRandom extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
@@ -203,9 +188,9 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         public ViewHolderRandom(View v) {
             super(v);
 
-            levelButton= (RelativeLayout)  v.findViewById(R.id.customlvlselbuttom);
-            levelName= (TextView) v.findViewById(R.id.lvlsellvlname);
-            rerandomizeButton= (ImageView) v.findViewById(R.id.rerandomize_level);
+            levelButton = v.findViewById(R.id.customlvlselbuttom);
+            levelName = v.findViewById(R.id.lvlsellvlname);
+            rerandomizeButton = v.findViewById(R.id.rerandomize_level);
 
         }
     }

@@ -43,6 +43,13 @@ public class CharactersRecyclerAdapter extends RecyclerView.Adapter<CharactersRe
         scoreHelper.openDataBase();
     }
 
+    public LevelStatModel getLevelStatModel() {
+        return levelStatModel;
+    }
+
+    public void setLevelStatModel(LevelStatModel levelStatModel) {
+        this.levelStatModel = levelStatModel;
+    }
 
     @Override
     public CharactersRecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

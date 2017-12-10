@@ -26,8 +26,8 @@
             android:fadingEdge="horizontal"
             android:gravity="center"
             android:marqueeRepeatLimit="marquee_forever"
-            android:maxLines="1"
             android:scrollHorizontally="true"
+            android:singleLine="true"
             android:text="@string/dummy_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/white" />
@@ -35,12 +35,36 @@
 
     </RelativeLayout>
 
+    <FrameLayout
+        android:id="@+id/re_randomize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/topbar">
+
+        <Button
+            android:id="@+id/re_randomize_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:text="RE RANDOMIZE"/>
+
+        <ProgressBar
+            android:id="@+id/re_randomize_button_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/bronze"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/characters_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/topbar"
+        android:layout_below="@+id/re_randomize"
         android:layout_centerHorizontal="true" />
 
 
