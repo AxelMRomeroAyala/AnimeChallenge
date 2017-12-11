@@ -22,7 +22,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
-        versionCode 14
+        versionCode 16
         versionName "2.1.0"
         multiDexEnabled true
         applicationId "com.yakarex.animequiz"
