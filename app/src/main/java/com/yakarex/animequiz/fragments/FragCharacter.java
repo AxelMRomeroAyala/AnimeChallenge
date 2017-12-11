@@ -1,5 +1,6 @@
 package com.yakarex.animequiz.fragments;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -254,9 +255,16 @@ public class FragCharacter extends Fragment {
     public boolean checkAnime() {
 
         String text = textInput.getText().toString().trim().toLowerCase();
+        text=Normalizer.normalize(text, Normalizer.Form.NFD).replaceAll
+                ("[^a-zA-Z0-9@ ]", "");
+
 
         String[] splittedInput = text.split(" ");
-        String[] splittedAnime = characterModel.getAnime().split("@");
+        String charModelAnimeString= characterModel.getAnime();
+        charModelAnimeString=Normalizer.normalize(charModelAnimeString, Normalizer.Form.NFD).replaceAll
+                ("[^a-zA-Z0-9@ ]", "");
+
+        String[] splittedAnime = charModelAnimeString.split("@");
 
         ArrayList<String> splittedWCoincidences = new ArrayList<>();
 
@@ -274,7 +282,7 @@ public class FragCharacter extends Fragment {
             }
         }
 
-        regex = regex + ")";
+        regex = regex + ")\\b";
         regex = regex.replace("|)", ")");
 
         ArrayList<String> checkResult = new ArrayList<>();
@@ -302,9 +310,14 @@ public class FragCharacter extends Fragment {
     public boolean checkName(boolean expectFullAnswer) {
 
         String text = textInput.getText().toString().trim().toLowerCase();
+        text=Normalizer.normalize(text, Normalizer.Form.NFD).replaceAll
+                ("[^a-zA-Z0-9@ ]", "");
 
         String[] splittedInput = text.split(" ");
-        String[] splittedCharName = characterModel.getFullname().split("@");
+        String fullNameString= characterModel.getFullname();
+        fullNameString= Normalizer.normalize(fullNameString, Normalizer.Form.NFD).replaceAll
+                ("[^a-zA-Z0-9@ ]", "");
+        String[] splittedCharName = fullNameString.split("@");
 
         ArrayList<String> splittedWCoincidences = new ArrayList<>();
 
@@ -322,15 +335,14 @@ public class FragCharacter extends Fragment {
             }
         }
 
-        regex = regex + ")";
+        regex = regex + ")\\b";
         regex = regex.replace("|)", ")");
 
         ArrayList<String> checkResult = new ArrayList<>();
         for (String aSplittedCoincidence : splittedWCoincidences) {
             checkResult.add(aSplittedCoincidence.replaceAll(regex, "X"));
-
         }
-
+//search for full answer
         for (String result : checkResult) {
 
             int matches = StringUtils.countMatches(result, "X");
@@ -342,15 +354,19 @@ public class FragCharacter extends Fragment {
 
                 return true;
             }
-            //Don't check if you expect the full answer
-            else if (matches > 0 && !expectFullAnswer) {
+        }
+//THEN search for a partial one
+        for (String result : checkResult) {
+
+            int matches = StringUtils.countMatches(result, "X");
+            if (matches > 0 && !expectFullAnswer) {
 
                 String[] inputArray= text.split(" ");
 
                 String inputToSave= "";
                 for(String input: inputArray){
                     if(characterModel.getFullname().contains(input)){
-                      inputToSave= inputToSave + input+ " ";
+                        inputToSave= inputToSave + input+ " ";
                     }
                 }
 

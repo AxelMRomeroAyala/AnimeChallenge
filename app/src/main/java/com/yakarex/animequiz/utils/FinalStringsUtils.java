@@ -6,10 +6,8 @@ package com.yakarex.animequiz.utils;
 public class FinalStringsUtils {
 
 
-    public final static int [] lvlunlockinglogicarray= {0,0,0,0, 2300, 3500, 4200, 5900, 7600, 9300, 10800, 12500,
-            14500, 16500, 18000, 20000, 22000, 24000, 26000, 28000, 30000, 32000, 34000, 36000, 38000, 40000, 41000, 43000, 45000, 46500, 48000};
-    public final static int [] lvlidarray= {0,1,2,3,4,5,6,7,100,8,9,10,11,12,13,14,15,16,101,17,18,102,19,20,103,21,
-            22,23};
+    public final static int [] lvlunlockinglogicarray= {0,0,0, 2300, 3500, 4200, 5900, 7600, 9300, 10800, 12500, 14500, 16500, 18000, 20000, 22000, 24000, 26000, 28000, 30000, 32000, 34000, 36000, 38000, 40000, 41000, 43000, 45000, 46500, 48000};
+    public final static int [] lvlidarray= {1,2,3,4,5,6,7,100,8,9,10,11,12,13,14,15,16,101,17,18,102,19,20,103,21,22,23};
 
     public static final int GOOD= 777;
     public static final int WRONG= 666;

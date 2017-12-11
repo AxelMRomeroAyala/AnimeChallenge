@@ -15,7 +15,7 @@ android {
         yacarex {
             keyAlias 'yakarex'
             keyPassword '31343535'
-            storeFile file('C:/Users/axel.romero/Documents/Yacarex/AnimeQuizKeystone')
+            storeFile file('src/AnimeQuizKeystone')
             storePassword '31343535'
         }
     }
