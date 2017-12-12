@@ -4,6 +4,7 @@ import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Random;
 
+import com.crashlytics.android.Crashlytics;
 import com.yakarex.animequiz.activities.MainFragActivity;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.AChaCharacterModel;
@@ -16,6 +17,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
@@ -85,21 +87,22 @@ public class FragCharacter extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        dbUtil= new DBUtil(getContext());
+        dbUtil = new DBUtil(getContext());
         shake = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
 
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //we get the position from the bundle and the cursor from the mainactivity, then we set the data
 
-        characterModel = getArguments().getParcelable(CHARACTER);
-        getArguments().getParcelable(CHARACTER);
-
-        Log.e("Getting Score: ", String.valueOf(score));
-        score = dbUtil.getCharScore(characterModel.getCharid(), characterModel.getLevel());
+        try {
+            characterModel = getArguments().getParcelable(CHARACTER);
+            score = dbUtil.getCharScore(characterModel.getCharid(), characterModel.getLevel());
+        } catch (NullPointerException npe) {
+            Crashlytics.logException(npe);
+            npe.printStackTrace();
+        }
 
         View rootView = inflater.inflate(R.layout.frag_character, container,
                 false);
@@ -113,20 +116,20 @@ public class FragCharacter extends Fragment {
 
         prepareToasts();
 
-        imageFrame= (CardView) rootView.findViewById(R.id.characterframefragcardview);
-        charimage = (ImageView) rootView.findViewById(R.id.characterframefrag);
-        textInput = (EditText) rootView.findViewById(R.id.editText1);
-        pbar = (ProgressBar) rootView.findViewById(R.id.progressBar1);
-        charDialog = (TextView) rootView.findViewById(R.id.chardialog);
+        imageFrame = rootView.findViewById(R.id.characterframefragcardview);
+        charimage = rootView.findViewById(R.id.characterframefrag);
+        textInput = rootView.findViewById(R.id.editText1);
+        pbar = rootView.findViewById(R.id.progressBar1);
+        charDialog = rootView.findViewById(R.id.chardialog);
 
-        buttonsContainer = (LinearLayout) rootView.findViewById(R.id.buttons);
+        buttonsContainer = rootView.findViewById(R.id.buttons);
 
-        okButton = (Button) rootView.findViewById(R.id.okbutton);
+        okButton = rootView.findViewById(R.id.okbutton);
         okButton.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
 
-                if(textInput.getText().length()>0 && textInput.getText().toString().trim().length() > 0){
+                if (textInput.getText().length() > 0 && textInput.getText().toString().trim().length() > 0) {
                     checkInputAdvanced();
                 }
 
@@ -141,7 +144,7 @@ public class FragCharacter extends Fragment {
             }
         });
 
-        int resID = getResources().getIdentifier(characterModel.getUri(), "drawable",  getContext().getPackageName());
+        int resID = getResources().getIdentifier(characterModel.getUri(), "drawable", getContext().getPackageName());
         charimage.setImageResource(resID);
 
         //charimage.setImageURI(characterModel.getUri());
@@ -192,7 +195,7 @@ public class FragCharacter extends Fragment {
 
                 //one at a time
                 if (!checkAnime()) {
-                    if(!checkName(false)){
+                    if (!checkName(false)) {
                         wrongAnswer();
                     }
                 }
@@ -205,7 +208,7 @@ public class FragCharacter extends Fragment {
 
                 //one at a time
                 if (!checkAnime()) {
-                    if(!checkName(true)){
+                    if (!checkName(true)) {
                         wrongAnswer();
                     }
                 }
@@ -214,7 +217,7 @@ public class FragCharacter extends Fragment {
             case ANIME:
                 // Only got the anime
 
-                if(!checkName(false)){
+                if (!checkName(false)) {
                     wrongAnswer();
                 }
 
@@ -222,7 +225,7 @@ public class FragCharacter extends Fragment {
             case FULLNAME:
                 // Only got the full name
 
-                if(!checkAnime()){
+                if (!checkAnime()) {
                     wrongAnswer();
                 }
 
@@ -230,7 +233,7 @@ public class FragCharacter extends Fragment {
             case ANIMEANDNAME:
                 // Got the anime and name
 
-                if(!checkName(true)){
+                if (!checkName(true)) {
                     wrongAnswer();
                 }
 
@@ -243,13 +246,13 @@ public class FragCharacter extends Fragment {
     public boolean checkAnime() {
 
         String text = textInput.getText().toString().trim().toLowerCase();
-        text=Normalizer.normalize(text, Normalizer.Form.NFD).replaceAll
+        text = Normalizer.normalize(text, Normalizer.Form.NFD).replaceAll
                 ("[^a-zA-Z0-9@ ]", "");
 
 
         String[] splittedInput = text.split(" ");
-        String charModelAnimeString= characterModel.getAnime();
-        charModelAnimeString=Normalizer.normalize(charModelAnimeString, Normalizer.Form.NFD).replaceAll
+        String charModelAnimeString = characterModel.getAnime();
+        charModelAnimeString = Normalizer.normalize(charModelAnimeString, Normalizer.Form.NFD).replaceAll
                 ("[^a-zA-Z0-9@ ]", "");
 
         String[] splittedAnime = charModelAnimeString.split("@");
@@ -298,12 +301,12 @@ public class FragCharacter extends Fragment {
     public boolean checkName(boolean expectFullAnswer) {
 
         String text = textInput.getText().toString().trim().toLowerCase();
-        text=Normalizer.normalize(text, Normalizer.Form.NFD).replaceAll
+        text = Normalizer.normalize(text, Normalizer.Form.NFD).replaceAll
                 ("[^a-zA-Z0-9@ ]", "");
 
         String[] splittedInput = text.split(" ");
-        String fullNameString= characterModel.getFullname();
-        fullNameString= Normalizer.normalize(fullNameString, Normalizer.Form.NFD).replaceAll
+        String fullNameString = characterModel.getFullname();
+        fullNameString = Normalizer.normalize(fullNameString, Normalizer.Form.NFD).replaceAll
                 ("[^a-zA-Z0-9@ ]", "");
         String[] splittedCharName = fullNameString.split("@");
 
@@ -349,16 +352,16 @@ public class FragCharacter extends Fragment {
             int matches = StringUtils.countMatches(result, "X");
             if (matches > 0 && !expectFullAnswer) {
 
-                String[] inputArray= text.split(" ");
+                String[] inputArray = text.split(" ");
 
-                String inputToSave= "";
-                for(String input: inputArray){
-                    if(characterModel.getFullname().contains(input)){
-                        inputToSave= inputToSave + input+ " ";
+                String inputToSave = "";
+                for (String input : inputArray) {
+                    if (characterModel.getFullname().contains(input)) {
+                        inputToSave = inputToSave + input + " ";
                     }
                 }
 
-                inputToSave= inputToSave.trim();
+                inputToSave = inputToSave.trim();
 
                 gotNamePartially(inputToSave);
                 textInput.setText(inputToSave);
@@ -379,10 +382,6 @@ public class FragCharacter extends Fragment {
         dbUtil.setCharScore(characterModel.getCharid(), ANIME, characterModel.getLevel());
         unlockingCheck(ANIME);
         textInput.setText("");
-
-//        Toast.makeText(getContext(), "GOT ANIME",
-//                Toast.LENGTH_SHORT).show();
-
     }
 
     public void gotNamePartially(String text) {
@@ -394,8 +393,6 @@ public class FragCharacter extends Fragment {
         dbUtil.setCharScore(characterModel.getCharid(), PARTIALNAME, characterModel.getLevel());
         unlockingCheck(PARTIALNAME);
 
-//        Toast.makeText(getContext(), "GOT PARTIAL NAME",
-//                Toast.LENGTH_SHORT).show();
     }
 
     public void gotNameFully(String text, boolean fullAnwserWasExpected) {
@@ -418,8 +415,6 @@ public class FragCharacter extends Fragment {
 
         textInput.setText("");
 
-//        Toast.makeText(getContext(), "GOT FULL NAME",
-//                Toast.LENGTH_SHORT).show();
     }
 
     public void showScore() {
@@ -533,22 +528,29 @@ public class FragCharacter extends Fragment {
 
     private void updateCharacterView(boolean animated) {
 
-        score= dbUtil.getCharScore(characterModel.getCharid(), characterModel.getLevel());
+        score = dbUtil.getCharScore(characterModel.getCharid(), characterModel.getLevel());
 
         int charScore = 100;
         pbar.setMax(charScore);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 
-            if (score == charScore) {
-                pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.golden)));
-            } else if (score <= 0) {
-                pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.gray)));
-            } else if (score >= (charScore / 2)) {
-                pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.silver)));
-            } else if (score <= (charScore / 2)) {
-                pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.bronze)));
+            try{
+                if (score == charScore) {
+                    pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.golden)));
+                } else if (score <= 0) {
+                    pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.gray)));
+                } else if (score >= (charScore / 2)) {
+                    pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.silver)));
+                } else if (score <= (charScore / 2)) {
+                    pbar.setProgressTintList(ColorStateList.valueOf(getContext().getResources().getColor(R.color.bronze)));
+                }
             }
+            catch (NullPointerException npe){
+                npe.printStackTrace();
+                Crashlytics.logException(npe);
+            }
+
         }
 
         if (animated) {
@@ -610,7 +612,9 @@ public class FragCharacter extends Fragment {
             case 100:
                 charDialog.setText(R.string.charcompleted);
                 InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(charimage.getWindowToken(), 0);
+                if (imm != null) {
+                    imm.hideSoftInputFromWindow(charimage.getWindowToken(), 0);
+                }
                 break;
         }
 
