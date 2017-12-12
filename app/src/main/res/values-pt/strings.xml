@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Anime Challenge</string>
     <string name="hello_world">Hola Mundo!</string>
     <string name="menu_settings">Opções</string>
     <string name="title_activity_main">Challenge Anime</string>

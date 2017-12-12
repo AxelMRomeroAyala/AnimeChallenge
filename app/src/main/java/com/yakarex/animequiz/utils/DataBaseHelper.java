@@ -11,22 +11,18 @@ import java.io.OutputStream;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.net.Uri;
 
 import com.crashlytics.android.Crashlytics;
-import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.AChaCharacterModel;
 
 @SuppressLint("SdCardPath")
 public class DataBaseHelper extends SQLiteOpenHelper {
 
-    private static String DB_PATH = "/data/data/com.yakarex.animequiz/databases/";
     private static String DB_NAME = "CharactersDBv4.ydb";
     private SQLiteDatabase myDataBase;
     private final Context myContext;
@@ -81,7 +77,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase checkDB = null;
 
         try {
-            String path = DB_PATH + DB_NAME;
+            String path = myContext.getDatabasePath(DB_NAME).getPath();
             checkDB = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READWRITE);
         } catch (SQLiteException e) {
             //database doesn't exist yet
@@ -104,7 +100,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         InputStream myInput = myContext.getAssets().open(DB_NAME);
 
         // Path to the just created empty db
-        String outFileName = DB_PATH + DB_NAME;
+        String outFileName = myContext.getDatabasePath(DB_NAME).getPath();
 
         //Open the empty db as the output stream
         OutputStream myOutput = new FileOutputStream(outFileName);
@@ -125,7 +121,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public void openDataBase() throws SQLException {
         //Open the database
-        String mypath = DB_PATH + DB_NAME;
+        String mypath = myContext.getDatabasePath(DB_NAME).getPath();
         myDataBase = SQLiteDatabase.openDatabase(mypath, null, SQLiteDatabase.OPEN_READWRITE);
 
     }

@@ -58,7 +58,7 @@ public class DBUtil {
             level.setLevelScore(getLevelScore(FinalStringsUtils.lvlidarray[x]));
             level.setStarStats(getStarStats(FinalStringsUtils.lvlidarray[x]));
             level.setLvlMaxScore(getLevelMaxScore(FinalStringsUtils.lvlidarray[x]));
-            level.setCharacterModels(cursorToCharList(dataBaseHelper.getLvl(x)));
+            level.setCharacterModels(cursorToCharList(dataBaseHelper.getLvl(FinalStringsUtils.lvlidarray[x])));
 
             if (Integer.parseInt(getTotalScore()) >= FinalStringsUtils.lvlunlockinglogicarray[x]) {
                 level.setUnlocked(true);
@@ -68,6 +68,20 @@ public class DBUtil {
         }
 
         return levelList;
+    }
+
+    public LevelStatModel getLevelById(int lvlId) {
+
+        List<LevelStatModel> levelList = getLevels();
+
+        for (LevelStatModel level:
+             levelList) {
+
+            if(level.getLevelId()== lvlId){
+                return level;
+            }
+        }
+        return null;
     }
 
     private List<AChaCharacterModel> cursorToCharList(Cursor cursor){

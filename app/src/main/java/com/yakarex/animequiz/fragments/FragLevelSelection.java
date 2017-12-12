@@ -5,7 +5,6 @@ import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.R.id;
 import com.yakarex.animequiz.adapters.LevelsAdapter;
 import com.yakarex.animequiz.utils.DBUtil;
-import com.yakarex.animequiz.utils.FinalStringsUtils;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -36,8 +35,8 @@ public class FragLevelSelection extends Fragment implements LevelsAdapter.LevelI
                              Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.frag_level_selection_new, container, false);
 
-        totalScoreView = (TextView) rootView.findViewById(R.id.totalScoreView);
-        levelsRecycler = (RecyclerView) rootView.findViewById(id.level_selection_recycler);
+        totalScoreView = rootView.findViewById(R.id.totalScoreView);
+        levelsRecycler = rootView.findViewById(id.level_selection_recycler);
 
         return rootView;
     }

@@ -56,7 +56,7 @@ public class FragLevel extends Fragment implements RewardedVideoAdListener {
 
         lvl = this.getArguments().getInt("lvl");
 
-        levelStatModel = dbUtil.getLevels().get(lvl);
+        levelStatModel = dbUtil.getLevelById(lvl);
 
         return inflater.inflate(R.layout.frag_level, container, false);
     }
@@ -113,7 +113,7 @@ public class FragLevel extends Fragment implements RewardedVideoAdListener {
     }
 
     private void reRandomize() {
-        levelStatModel = dbUtil.getLevels().get(lvl);
+        levelStatModel = dbUtil.getLevelById(lvl);
         charRecyclerAdapter.setLevelStatModel(levelStatModel);
         charRecyclerAdapter.notifyDataSetChanged();
 

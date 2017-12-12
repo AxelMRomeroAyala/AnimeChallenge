@@ -11,13 +11,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.crashlytics.android.Crashlytics;
 
-@SuppressLint("SdCardPath")
 public class ScoreDbHelper extends SQLiteOpenHelper {
 
-    String sqlCreate = "CREATE TABLE Scoretable (id INTEGER, score INTEGER, level INTEGER)";
-    String sqlCreateAnsTable = "CREATE TABLE AnswerTable (id INTEGER, nameAns TEXT, animeAns TEXT)";
+    private String sqlCreate = "CREATE TABLE Scoretable (id INTEGER, score INTEGER, level INTEGER)";
+    private String sqlCreateAnsTable = "CREATE TABLE AnswerTable (id INTEGER, nameAns TEXT, animeAns TEXT)";
 
-    private static String DB_PATH = "/data/data/com.yakarex.animequiz/databases/";
     private static String DB_NAME = "Scores";
 
     private static final int HINTCOUNT = 999999999;
@@ -62,7 +60,7 @@ public class ScoreDbHelper extends SQLiteOpenHelper {
     private boolean checkDataBase() {
         SQLiteDatabase checkDB = null;
         try {
-            String path = DB_PATH + DB_NAME;
+            String path = myContext.getDatabasePath(DB_NAME).getPath();
             checkDB = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READWRITE);
         } catch (SQLiteException e) {
             //database doesn't exist yet
@@ -76,7 +74,7 @@ public class ScoreDbHelper extends SQLiteOpenHelper {
 
     public void openDataBase() throws SQLException {
         //Open the database
-        String mypath = DB_PATH + DB_NAME;
+        String mypath = myContext.getDatabasePath(DB_NAME).getPath();
         myScoreDataBase = SQLiteDatabase.openDatabase(mypath, null, SQLiteDatabase.OPEN_READWRITE);
         //myScoreDataBase.rawQuery("CREATE TABLE IF NOT EXISTS Scoretable (id INTEGER, score INTEGER)", null);
     }

@@ -31,11 +31,13 @@ android {
     }
     buildTypes {
         release {
+            signingConfig signingConfigs.yacarex
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
         debug {
             signingConfig signingConfigs.yacarex
+            applicationIdSuffix ".debug"
         }
     }
 

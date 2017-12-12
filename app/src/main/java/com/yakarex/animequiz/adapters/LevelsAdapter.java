@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.yakarex.animequiz.BuildConfig;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.models.LevelStatModel;
 import com.yakarex.animequiz.models.MessageEvent;
@@ -101,13 +102,12 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     }
                 });
 
-                if (levels.get(position).isUnlocked()) {
+                if (!levels.get(position).isUnlocked()) {
 
-
-                } else {
-                    //TODO Lock the levels
-                    //viewHolder.levelButton.setClickable(false);
-                    //viewHolder.levelStar.setImageResource(R.drawable.locked);
+                    if(!BuildConfig.DEBUG){
+                        viewHolder.levelButton.setClickable(false);
+                        viewHolder.levelStar.setImageResource(R.drawable.locked);
+                    }
                 }
                 break;
 
