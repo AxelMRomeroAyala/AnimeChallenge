@@ -65,7 +65,6 @@ public class MainFragActivity extends FragmentActivity implements
 
     private AdView adView;
     private InterstitialAd interstitial;
-    private RewardedVideoAd mRewardedVideoAd;
     private String currentFragment;
     private String newFragment;
     private List<String> backStackList;
@@ -122,10 +121,6 @@ public class MainFragActivity extends FragmentActivity implements
                 .addTestDevice("90FF8FB418074AAB3EAAE3A12C474257")
                 .build();
         mAdView.loadAd(adRequest);
-
-        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
-
-
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -195,21 +190,18 @@ public class MainFragActivity extends FragmentActivity implements
     protected void onStart() {
         super.onStart();
         mGoogleApiClient.connect();
-        EventBus.getDefault().register(this);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         mGoogleApiClient.disconnect();
-        EventBus.getDefault().unregister(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        mRewardedVideoAd.resume(this);
         //adView.resume();
     }
 
@@ -217,7 +209,6 @@ public class MainFragActivity extends FragmentActivity implements
     protected void onPause() {
         super.onPause();
 
-        mRewardedVideoAd.pause(this);
         //adView.pause();
     }
 
@@ -227,7 +218,6 @@ public class MainFragActivity extends FragmentActivity implements
         super.onDestroy();
 
         dbUtil.finish();
-        mRewardedVideoAd.destroy(this);
 
         long endTime = SystemClock.elapsedRealtime();
 
@@ -453,43 +443,6 @@ public class MainFragActivity extends FragmentActivity implements
         t.commitAllowingStateLoss();
     }
 
-    public void changeFragment(Fragment myNewFragment, Boolean addToBackStack, boolean clearStack) {
-        Log.e("Fragment Name", myNewFragment.getClass().getName());
-        newFragment = myNewFragment.getClass().getName();
-
-        if (currentFragment == null || currentFragment.compareTo(newFragment) != 0) {
-
-            FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-            t.setCustomAnimations(R.anim.fade_in_animation, R.anim.fade_out_animation);
-
-            if (clearStack) {
-                backStackList.clear();
-            }
-
-            if (addToBackStack) {
-                t.addToBackStack(myNewFragment.getClass().getName());
-                backStackList.add(newFragment);
-                if (currentFragment != null) {
-                    t.detach(getSupportFragmentManager().findFragmentByTag(currentFragment));
-                }
-                currentFragment = newFragment;
-
-            } else {
-
-                if (backStackList.size() > 1) {
-                    t.remove(getSupportFragmentManager().findFragmentByTag(backStackList.get(backStackList.size() - 1)));
-                    if (currentFragment != null && currentFragment.compareTo(backStackList.get(backStackList.size() - 1)) != 0) {
-                        t.remove(getSupportFragmentManager().findFragmentByTag(currentFragment));
-                    }
-                }
-                currentFragment = newFragment;
-            }
-            t.add(id.mainfragment, myNewFragment, newFragment);
-            t.commitAllowingStateLoss();
-        }
-    }
-
-
     public void changeFragment(Fragment myNewFragment) {
 
         Log.e("Fragment Name", myNewFragment.getClass().getName());
@@ -511,15 +464,6 @@ public class MainFragActivity extends FragmentActivity implements
             t.commit();
         }
 
-    }
-
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMessageEvent(MessageEvent event) {
-        if (event.message.equals(FinalStringsUtils.RANDOMCLICKED)) {
-            if (mRewardedVideoAd.isLoaded()) {
-                mRewardedVideoAd.show();
-            }
-        }
     }
 
     public void openLevelbyId(int lvlId) {

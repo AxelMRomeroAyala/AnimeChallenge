@@ -40,4 +40,6 @@ public final class FinalStringsUtils {
     public static final String UPDATESCORE= "UPDATESCORE";
     public static final String RANDOMCLICKED= "CLICKRANDOM";
     public static final String REWARDED= "REWARDED";
+
+    public static final String DAILY_RANDOM= "DAYRAN";
 }

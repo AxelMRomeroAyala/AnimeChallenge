@@ -23,6 +23,9 @@ public class FragLevelSelection extends Fragment implements LevelsAdapter.LevelI
     View rootView;
     RecyclerView levelsRecycler;
     DBUtil dbUtil;
+    LevelsAdapter levelsAdapter;
+    LinearLayoutManager layoutManager;
+    private int listPosition= 0;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,6 +40,11 @@ public class FragLevelSelection extends Fragment implements LevelsAdapter.LevelI
 
         totalScoreView = rootView.findViewById(R.id.totalScoreView);
         levelsRecycler = rootView.findViewById(id.level_selection_recycler);
+
+        levelsAdapter= new LevelsAdapter(dbUtil.getLevels(), getContext(), this);
+        layoutManager= new LinearLayoutManager(getContext());
+        levelsRecycler.setLayoutManager(layoutManager);
+        levelsRecycler.setAdapter(levelsAdapter);
 
         return rootView;
     }
@@ -54,10 +62,7 @@ public class FragLevelSelection extends Fragment implements LevelsAdapter.LevelI
 
         totalScoreInt = Integer.parseInt(totalScore);
 
-        LevelsAdapter levelsAdapter= new LevelsAdapter(dbUtil.getLevels(), getContext(), this);
-        RecyclerView.LayoutManager layoutManager= new LinearLayoutManager(getContext());
-        levelsRecycler.setLayoutManager(layoutManager);
-        levelsRecycler.setAdapter(levelsAdapter);
+        layoutManager.scrollToPosition(listPosition);
 
         super.onResume();
     }
@@ -71,6 +76,8 @@ public class FragLevelSelection extends Fragment implements LevelsAdapter.LevelI
 
     @Override
     public void onLevelClicked(int lvlId) {
+
+        listPosition= layoutManager.findFirstVisibleItemPosition();
 
         ((MainFragActivity) getActivity()).openLevelbyId(lvlId);
 

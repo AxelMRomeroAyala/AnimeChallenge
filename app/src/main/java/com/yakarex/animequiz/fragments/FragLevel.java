@@ -1,5 +1,6 @@
 package com.yakarex.animequiz.fragments;
 
+import com.esotericsoftware.kryo.util.Util;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
@@ -10,9 +11,12 @@ import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.R.id;
 import com.yakarex.animequiz.models.LevelStatModel;
 import com.yakarex.animequiz.utils.DBUtil;
+import com.yakarex.animequiz.utils.FinalStringsUtils;
 import com.yakarex.animequiz.utils.SimpleCacheController;
 import com.yakarex.animequiz.utils.Utils;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -83,10 +87,6 @@ public class FragLevel extends Fragment implements RewardedVideoAdListener {
         mLayoutManager = new GridLayoutManager(getContext(), 3);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        // specify an adapter (see also next example)
-        charRecyclerAdapter = new CharactersRecyclerAdapter(levelStatModel, getActivity(), this);
-        mRecyclerView.setAdapter(charRecyclerAdapter);
-
         if(lvl==0){
             reRandomizeLayout.setVisibility(View.VISIBLE);
             loadRewardedVideoAd();
@@ -97,15 +97,29 @@ public class FragLevel extends Fragment implements RewardedVideoAdListener {
             }
         }
 
+        charRecyclerAdapter = new CharactersRecyclerAdapter(levelStatModel, getActivity(), this);
+        mRecyclerView.setAdapter(charRecyclerAdapter);
+
         reRandomizeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (Utils.hasDailyRandom()) {
                     reRandomize();
                 } else {
-                    if (mRewardedVideoAd.isLoaded()) {
-                        mRewardedVideoAd.show();
-                    }
+
+                    AlertDialog dialog= Utils.getAlertDialog(getContext(),R.string.levelrandommessage , R.string.yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            mRewardedVideoAd.show();
+                        }
+                    }, R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
+
+                    dialog.show();
                 }
             }
         });
@@ -118,12 +132,14 @@ public class FragLevel extends Fragment implements RewardedVideoAdListener {
         charRecyclerAdapter.notifyDataSetChanged();
 
         Paper.book().write("randomLevel", levelStatModel);
+        Paper.book().write(FinalStringsUtils.DAILY_RANDOM, Utils.getTimeStamp());
     }
 
 
     @Override
     public void onResume() {
         super.onResume();
+        updateScoreView();
         charRecyclerAdapter.notifyDataSetChanged();
     }
 

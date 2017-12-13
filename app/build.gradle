@@ -62,6 +62,7 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.github.Q42:AndroidScrollingImageView:1.2'
     compile 'io.paperdb:paperdb:2.6'
+    compile 'joda-time:joda-time:2.9.4'
     compile project(path: ':BaseGameUtils')
     compile 'com.android.support.constraint:constraint-layout:1.1.0-beta3'
     compile('com.crashlytics.sdk.android:crashlytics:2.7.0@aar') {
