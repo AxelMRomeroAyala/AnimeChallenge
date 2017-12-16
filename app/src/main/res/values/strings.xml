@@ -130,6 +130,6 @@
     <string name="adunitrewarded" translatable="false">ca-app-pub-5318551320912238/7160028352</string>
     <string name="levelrandom" translatable="false">Random Level</string>
 
-    <string name="levelrandommessage" translatable="false">You already spent you daily free reroll, but you can still watch a video ang earn a free reroll</string>
+    <string name="levelrandommessage">You already spent you daily free reroll, but you can still watch a video ang earn a free reroll</string>
 
 </resources>

@@ -59,13 +59,13 @@ public class Utils {
 
             try {
                 lastRandomDate = dateFormat.parse(lastRandomTimestamp);
-                days = Days.daysBetween(new DateTime(nowDate), new DateTime(lastRandomDate)).getDays();
+                days = Days.daysBetween(new DateTime(lastRandomDate), new DateTime(nowDate)).getDays();
 
             } catch (ParseException e) {
                 e.printStackTrace();
                 return true;
             }
-
+            
             return days >= 1;
         }
         else {
