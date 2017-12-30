@@ -1,6 +1,5 @@
 package com.yakarex.animequiz.fragments;
 
-import com.esotericsoftware.kryo.util.Util;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
@@ -34,7 +33,6 @@ import io.paperdb.Paper;
 
 public class FragLevel extends Fragment implements RewardedVideoAdListener {
 
-    static int indexgridposition = 0;
     int lvl;
     private RecyclerView mRecyclerView;
     private CharactersRecyclerAdapter charRecyclerAdapter;
@@ -187,7 +185,7 @@ public class FragLevel extends Fragment implements RewardedVideoAdListener {
     }
 
     private void loadRewardedVideoAd() {
-        mRewardedVideoAd.loadAd("ca-app-pub-3940256099942544/5224354917",
+        mRewardedVideoAd.loadAd(getString(R.string.adunitrewarded),
                 new AdRequest.Builder().build());
 
         reRandomizePBar.setVisibility(View.VISIBLE);

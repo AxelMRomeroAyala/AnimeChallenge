@@ -3,4 +3,6 @@
 
     <string name="app_name" translatable="false">Debug Challenge</string>
 
+    <string name="adunitrewarded" translatable="false">ca-app-pub-3940256099942544/5224354917</string>
+
 </resources>
