@@ -12,7 +12,6 @@ import android.content.SharedPreferences;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -32,10 +31,6 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.reward.RewardItem;
-import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
@@ -43,21 +38,14 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.example.games.basegameutils.BaseGameUtils;
-import com.yakarex.animequiz.models.MessageEvent;
 import com.yakarex.animequiz.utils.DBUtil;
-import com.yakarex.animequiz.utils.DataBaseHelper;
 import com.yakarex.animequiz.fragments.FragLevel;
 import com.yakarex.animequiz.fragments.FragOptions;
 import com.yakarex.animequiz.fragments.FragMainMenu;
 import com.yakarex.animequiz.R;
 import com.yakarex.animequiz.R.id;
-import com.yakarex.animequiz.utils.ScoreDbHelper;
 import com.yakarex.animequiz.utils.FinalStringsUtils;
 import com.yakarex.animequiz.utils.Utils;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 public class MainFragActivity extends FragmentActivity implements
         GoogleApiClient.ConnectionCallbacks,
@@ -428,6 +416,7 @@ public class MainFragActivity extends FragmentActivity implements
     private void popFragment() {
         int lastPos = backStackList.size() - 1;
         FragmentTransaction t = getSupportFragmentManager().beginTransaction();
+        t.setCustomAnimations(R.anim.fade_in_from_top, R.anim.fade_out_down_animation);
 
         if (currentFragment.compareTo(backStackList.get(lastPos)) == 0) {
             t.detach(getSupportFragmentManager().findFragmentByTag(backStackList.get(lastPos)));
@@ -451,7 +440,7 @@ public class MainFragActivity extends FragmentActivity implements
         if (currentFragment == null || currentFragment.compareTo(newFragment) != 0) {
 
             FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-            t.setCustomAnimations(R.anim.fade_in_animation, R.anim.fade_out_animation, R.anim.fade_in_animation, R.anim.fade_out_animation);
+            t.setCustomAnimations(R.anim.fade_in_from_bottom, R.anim.fade_out_up_animation, R.anim.fade_in_from_top, R.anim.fade_out_down_animation);
 
             t.addToBackStack(myNewFragment.getClass().getName());
             backStackList.add(newFragment);
