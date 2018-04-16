@@ -162,7 +162,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
     public Cursor getCollectionLvl() {
-        String query = "SELECT * FROM characters WHERE level IS NOT NULL ORDER BY RANDOM() LIMIT 33";
+        String query = "SELECT * FROM characters WHERE level IS NOT NULL ORDER BY RANDOM() LIMIT 42";
 
         Cursor lvlCursor;
         try {

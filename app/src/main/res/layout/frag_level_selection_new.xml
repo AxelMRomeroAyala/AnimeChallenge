@@ -25,11 +25,11 @@
             android:fadingEdge="horizontal"
             android:gravity="center"
             android:marqueeRepeatLimit="marquee_forever"
-            android:maxLines="1"
             android:scrollHorizontally="true"
             android:text="@string/dummy_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:singleLine="true" />
 
     </RelativeLayout>
 

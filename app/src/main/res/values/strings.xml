@@ -131,5 +131,6 @@
     <string name="levelrandom" translatable="false">Random Level</string>
 
     <string name="levelrandommessage">You already spent you daily free reroll, but you can still watch a video ang earn a free reroll</string>
+    <string name="rerandom">Re-Randomize</string>
 
 </resources>

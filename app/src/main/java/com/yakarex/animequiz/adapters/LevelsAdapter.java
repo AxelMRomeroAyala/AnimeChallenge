@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -181,7 +182,7 @@ public class LevelsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public class ViewHolderRandom extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
 
-        RelativeLayout levelButton;
+        LinearLayout levelButton;
         TextView levelName;
         ImageView rerandomizeButton;
 

@@ -26,6 +26,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -38,7 +39,7 @@ public class FragLevel extends Fragment implements RewardedVideoAdListener {
     private CharactersRecyclerAdapter charRecyclerAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private FrameLayout reRandomizeLayout;
-    private Button reRandomizeButton;
+    private LinearLayout reRandomizeButton;
     private ProgressBar reRandomizePBar;
     GridView gv;
     TextView scoreView;

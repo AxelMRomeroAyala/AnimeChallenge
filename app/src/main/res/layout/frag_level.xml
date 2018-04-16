@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/lvlmainlay"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -39,24 +40,44 @@
         android:id="@+id/re_randomize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/topbar"
         android:visibility="gone"
-        android:layout_below="@id/topbar">
+        tools:visibility="visible">
 
-        <Button
+        <LinearLayout
             android:id="@+id/re_randomize_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
             android:visibility="gone"
-            android:text="RE RANDOMIZE"/>
+            android:background="@drawable/randombutton"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rerandom"
+                android:textSize="21sp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shuffle_icon" />
+
+
+        </LinearLayout>
 
         <ProgressBar
             android:id="@+id/re_randomize_button_progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:progressTint="@color/bronze"
-            android:layout_gravity="center"/>
+            tools:visibility="gone" />
     </FrameLayout>
 
 
@@ -65,7 +86,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/re_randomize"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        tools:listitem="@layout/gridchar" />
 
 
 </RelativeLayout>
